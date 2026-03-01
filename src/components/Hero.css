@@ -3,7 +3,7 @@
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 13rem 1.5rem 4rem;
   overflow: visible;
@@ -140,6 +140,7 @@
 @media (max-width: 768px) {
   .hero {
     padding: 10rem 1rem 2.5rem;
+    align-items: flex-start;
   }
 
   .hero-content {
