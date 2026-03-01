@@ -1,0 +1,110 @@
+/* City landing pages - distinct look from home */
+
+.city-landing main {
+  padding-top: 0;
+}
+
+/* City banner strip below header */
+.city-banner {
+  background: linear-gradient(90deg, var(--orange-dark), var(--orange-primary));
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.city-banner span {
+  opacity: 0.95;
+}
+
+/* Compact hero - different from home's full-height */
+.city-landing .hero {
+  min-height: 55vh;
+  padding: 5rem 1.5rem 3rem;
+  align-items: flex-start;
+  padding-top: 7rem;
+}
+
+.city-landing .hero-bg {
+  background: 
+    linear-gradient(160deg, rgba(26, 82, 118, 0.95) 0%, rgba(41, 128, 185, 0.9) 40%, rgba(52, 152, 219, 0.85) 100%),
+    url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80') center/cover no-repeat;
+}
+
+.city-landing .hero-overlay {
+  background: linear-gradient(90deg, rgba(230, 126, 34, 0.35) 0%, transparent 60%);
+}
+
+/* City badge in hero */
+.city-badge {
+  display: inline-block;
+  background: var(--orange-primary);
+  color: var(--white);
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.city-landing .hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+/* Services - darker background, orange-accented cards */
+.city-landing .services {
+  background: linear-gradient(180deg, var(--gray-100) 0%, var(--gray-50) 100%);
+}
+
+.city-landing .service-card {
+  border-top-color: var(--orange-primary);
+  box-shadow: 0 4px 20px rgba(230, 126, 34, 0.08);
+}
+
+.city-landing .service-card:hover {
+  box-shadow: 0 8px 30px rgba(230, 126, 34, 0.2);
+}
+
+/* About - blue-tinted background */
+.city-landing .about {
+  background: linear-gradient(180deg, #e8f4fc 0%, var(--white) 100%);
+}
+
+.city-landing #seo-content.about {
+  background: var(--white);
+  border-top: 3px solid var(--orange-primary);
+}
+
+/* Specials - full-width accent bar */
+.city-landing .specials {
+  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
+}
+
+.city-landing .specials h2 {
+  color: var(--white);
+}
+
+.city-landing .special-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-left-color: var(--orange-primary);
+}
+
+.city-landing .specials-all {
+  color: var(--orange-light) !important;
+}
+
+.city-landing .specials-all:hover {
+  color: var(--white) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .city-landing .hero {
+    min-height: 50vh;
+    padding: 6rem 1rem 2.5rem;
+  }
+}

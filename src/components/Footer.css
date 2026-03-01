@@ -1,0 +1,146 @@
+.footer {
+  background: var(--blue-dark);
+  color: var(--white);
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--white);
+  opacity: 0.9;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--orange-light);
+}
+
+.footer-city-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-city-links a {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.footer-contact a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--orange-light) !important;
+}
+
+.footer-bottom {
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 2.5rem 0 1.25rem;
+  }
+
+  .footer-inner {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-city-links {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    min-height: var(--touch-min);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-contact a {
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 1.25rem;
+  }
+}
