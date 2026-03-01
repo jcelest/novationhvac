@@ -1,7 +1,7 @@
 .hero-reviews {
-  margin-top: 2rem;
   width: 100%;
   max-width: 520px;
+  min-height: 140px;
 }
 
 .hero-review-card {
@@ -14,6 +14,7 @@
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 120px;
 }
 
 .hero-review-card.visible {
@@ -92,8 +93,8 @@
 /* Mobile */
 @media (max-width: 768px) {
   .hero-reviews {
-    margin-top: 1.5rem;
     max-width: 100%;
+    min-height: 130px;
   }
 
   .hero-review-card {
@@ -112,7 +113,7 @@
 
 @media (max-width: 480px) {
   .hero-reviews {
-    margin-top: 1.25rem;
+    min-height: 120px;
   }
 
   .hero-review-card {

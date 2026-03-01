@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -11,6 +12,12 @@ app.use(express.json());
 
 // Serve static frontend in production
 app.use(express.static(path.join(__dirname, '../dist')));
+
+// Jobber appointment booking API (proxies to same logic as Vercel serverless)
+app.post('/api/jobber-book', async (req, res) => {
+  const handler = (await import('../api/jobber-book.js')).default;
+  return handler(req, res);
+});
 
 // Contact form API
 app.post('/api/contact', (req, res) => {

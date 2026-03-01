@@ -3,10 +3,10 @@
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 11rem 1.5rem 4rem;
-  overflow: hidden;
+  padding: 13rem 1.5rem 4rem;
+  overflow: visible;
 }
 
 .hero-compact {
@@ -39,6 +39,7 @@
   background: 
     linear-gradient(90deg, rgba(26, 82, 118, 0.95) 0%, rgba(41, 128, 185, 0.85) 30%, rgba(52, 152, 219, 0.5) 55%, rgba(52, 152, 219, 0.15) 75%, transparent 100%),
     url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80') center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 .hero-overlay {
@@ -52,6 +53,15 @@
   position: relative;
   z-index: 1;
   max-width: 700px;
+  width: 100%;
+}
+
+/* Fixed-height wrapper for review box to prevent layout shift when reviews rotate */
+.hero-reviews-wrapper {
+  margin-top: 2rem;
+  min-height: 160px;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .hero-title {
@@ -118,7 +128,7 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .hero {
-    padding: 9rem 1.25rem 3rem;
+    padding: 11rem 1.25rem 3rem;
   }
 
   .hero-title {
@@ -129,7 +139,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .hero {
-    padding: 8.5rem 1rem 2.5rem;
+    padding: 10rem 1rem 2.5rem;
   }
 
   .hero-content {
@@ -162,7 +172,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 7rem 0.75rem 2rem;
+    padding: 9rem 0.75rem 2rem;
   }
 
   .hero-title {

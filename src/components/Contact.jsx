@@ -7,10 +7,14 @@ export default function Contact({ initialZip = '' }) {
     email: '',
     phone: '',
     zip: initialZip,
+    address: '',
     service: '',
     message: '',
+    preferredDate: '',
+    preferredTime: '',
   });
   const [status, setStatus] = useState(null);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,21 +23,42 @@ export default function Contact({ initialZip = '' }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
+    setErrorMessage('');
     try {
-      const res = await fetch('/api/contact', {
+      let res = await fetch('/api/jobber-book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      if (res.ok) {
+
+      if (res.status === 503 && !data.success) {
+        res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+        const contactData = await res.json();
+        if (res.ok) {
+          setStatus('success');
+          setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
+        } else {
+          setStatus('error');
+          setErrorMessage(contactData?.error || '');
+        }
+        return;
+      }
+
+      if (res.ok && data.success) {
         setStatus('success');
-        setFormData({ name: '', email: '', phone: '', zip: '', service: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
       } else {
         setStatus('error');
+        setErrorMessage(data?.error || '');
       }
     } catch {
       setStatus('error');
+      setErrorMessage('');
     }
   };
 
@@ -89,6 +114,30 @@ export default function Contact({ initialZip = '' }) {
               maxLength={5}
             />
           </div>
+          <input
+            type="text"
+            name="address"
+            placeholder="Street Address"
+            value={formData.address}
+            onChange={handleChange}
+          />
+          <div className="form-row">
+            <input
+              type="date"
+              name="preferredDate"
+              placeholder="Preferred Date"
+              value={formData.preferredDate}
+              onChange={handleChange}
+              min={new Date().toISOString().split('T')[0]}
+            />
+            <input
+              type="text"
+              name="preferredTime"
+              placeholder="Preferred Time (e.g. Morning, Afternoon)"
+              value={formData.preferredTime}
+              onChange={handleChange}
+            />
+          </div>
           <select name="service" value={formData.service} onChange={handleChange}>
             <option value="">Select Service</option>
             <option value="ac">Cooling</option>
@@ -104,10 +153,10 @@ export default function Contact({ initialZip = '' }) {
             onChange={handleChange}
           />
           <button type="submit" className="btn-submit" disabled={status === 'sending'}>
-            {status === 'sending' ? 'Sending...' : 'Submit Request'}
+            {status === 'sending' ? 'Submitting...' : 'Book Appointment'}
           </button>
-          {status === 'success' && <p className="form-success">Thanks! We'll be in touch soon.</p>}
-          {status === 'error' && <p className="form-error">Something went wrong. Please call us directly.</p>}
+          {status === 'success' && <p className="form-success">Thanks! We'll be in touch soon to confirm your appointment.</p>}
+          {status === 'error' && <p className="form-error">{errorMessage || 'Something went wrong. Please call us at (407) 973-1523.'}</p>}
         </form>
       </div>
     </section>
