@@ -30,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,6 +39,12 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
+}
+
+/* Prevent horizontal overflow on all main content */
+main {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Touch-friendly tap targets and no overscroll on main axis */
@@ -74,17 +81,56 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  padding-right: max(1.5rem, env(safe-area-inset-right));
 }
 
 /* Responsive container padding */
 @media (max-width: 768px) {
   .container {
-    padding: 0 1rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 0.75rem;
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
   }
+}
+
+/* Section dividers - consistent separator between sections */
+main > section + section {
+  position: relative;
+  border-top: 1px solid var(--gray-200);
+}
+
+main > section + section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-primary), var(--orange-primary));
+  border-radius: 0 0 3px 3px;
+}
+
+/* Dark sections (contact, city specials): lighter divider */
+main > section + section.contact {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+main > section + section.contact::before {
+  background: linear-gradient(90deg, var(--blue-light), var(--orange-light));
+}
+
+.city-landing main > section + section.specials {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.city-landing main > section + section.specials::before {
+  background: linear-gradient(90deg, var(--blue-light), var(--orange-light));
 }

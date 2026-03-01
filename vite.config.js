@@ -6,21 +6,7 @@ export default defineConfig({
   appType: 'spa',
   build: {
     rollupOptions: {
-      input: [
-      'index.html',
-      'orlando.html',
-      'kissimmee.html',
-      'poinciana.html',
-      'osceola-county.html',
-      'orange-county.html',
-      'polk-county.html',
-      'winter-haven.html',
-      'auburndale.html',
-      'haines-city.html',
-      'dr-phillips.html',
-      'windermere.html',
-      'altamonte-springs.html',
-    ],
+      input: 'index.html',
     },
   },
   server: {

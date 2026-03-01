@@ -1,27 +1,20 @@
 import './Specials.css';
 
-const specials = [
-  { offer: '$49', title: 'Heating or AC Tune-Up', terms: 'Valid year-round. Schedule your maintenance today.' },
-  { offer: '$100 OFF', title: 'New AC System Installation', terms: 'Terms apply. Ask for details.' },
-  { offer: '0% APR', title: 'Flexible Financing Available', terms: 'Qualified customers. Apply today.' },
-];
-
 export default function Specials() {
   return (
-    <section id="specials" className="specials">
+    <section id="specials" className="specials specials-veterans">
       <div className="container">
-        <h2>Don't Miss Out on These Savings!</h2>
-        <div className="specials-grid">
-          {specials.map((special, i) => (
-            <article key={i} className="special-card">
-              <div className="special-offer">{special.offer}</div>
-              <h3>{special.title}</h3>
-              <p>{special.terms}</p>
-              <a href="#contact">Get This Deal</a>
-            </article>
-          ))}
-        </div>
-        <a href="#contact" className="specials-all">View All Specials</a>
+        <h2>Military & Veteran Savings</h2>
+        <article className="special-card special-card-veterans">
+          <div className="veterans-badge">
+            <span className="veterans-star">★</span>
+            <span className="veterans-offer">10% OFF</span>
+            <span className="veterans-star">★</span>
+          </div>
+          <h3>For Veterans & Active Military</h3>
+          <p>Thank you for your service. Novation Heating and Cooling proudly offers 10% off HVAC services to veterans and active military. Valid on repairs, installations, and maintenance.</p>
+          <a href="#contact">Claim Your Discount</a>
+        </article>
       </div>
     </section>
   );

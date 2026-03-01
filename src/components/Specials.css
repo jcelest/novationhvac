@@ -76,6 +76,81 @@
   color: var(--orange-primary) !important;
 }
 
+/* Veterans discount - American theme */
+.specials-veterans {
+  background: linear-gradient(180deg, #f8f9fa 0%, #e8eef5 50%, #f8f9fa 100%) !important;
+}
+
+.specials-veterans h2 {
+  color: #002868 !important;
+}
+
+.special-card-veterans {
+  max-width: 560px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%) !important;
+  border: 2px solid #002868;
+  border-left: 6px solid #bf0a30;
+  box-shadow: 0 4px 24px rgba(0, 40, 104, 0.15), 0 0 0 1px rgba(191, 10, 48, 0.1) !important;
+}
+
+.special-card-veterans:hover {
+  box-shadow: 0 8px 32px rgba(0, 40, 104, 0.2), 0 0 0 1px rgba(191, 10, 48, 0.15) !important;
+}
+
+.veterans-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #002868 0%, #003366 25%, #002868 50%, #003366 75%, #002868 100%);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.veterans-star {
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-shadow: 0 0 2px rgba(191, 10, 48, 0.5);
+}
+
+.veterans-offer {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.special-card-veterans h3 {
+  color: #002868 !important;
+  font-size: 1.2rem;
+}
+
+.special-card-veterans p {
+  color: var(--gray-700);
+}
+
+.special-card-veterans a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: #bf0a30;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.special-card-veterans a:hover {
+  background: #8b0000;
+  transform: translateY(-1px);
+  color: #ffffff !important;
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .specials {
@@ -121,5 +196,25 @@
 
   .special-card {
     padding: 1.25rem;
+  }
+
+  .special-card-veterans {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .special-card-veterans a {
+    min-height: var(--touch-min);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .veterans-badge {
+    padding: 0.6rem 1rem;
+  }
+
+  .veterans-offer {
+    font-size: 1.5rem;
   }
 }

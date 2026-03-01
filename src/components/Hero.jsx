@@ -1,3 +1,4 @@
+import HeroReviews from './HeroReviews';
 import './Hero.css';
 
 export default function Hero() {
@@ -17,6 +18,7 @@ export default function Hero() {
           <a href="#contact" className="btn-primary">Book Appointment</a>
           <a href="#contact" className="btn-secondary">Flexible Financing</a>
         </div>
+        <HeroReviews />
       </div>
     </section>
   );

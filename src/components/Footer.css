@@ -1,146 +1,178 @@
 .footer {
   background: var(--blue-dark);
   color: var(--white);
-  padding: 3rem 0 1.5rem;
+  padding: 2.5rem 0 1.25rem;
 }
 
 .footer-inner {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.footer-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+.footer-logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  opacity: 0.95;
 }
 
-.footer-tagline {
-  font-size: 0.8rem;
+.footer-phone {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--orange-light) !important;
+  transition: opacity 0.2s;
+}
+
+.footer-phone:hover {
   opacity: 0.9;
 }
 
-.footer-links {
+.footer-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.footer-links a {
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  margin-bottom: 0.25rem;
+}
+
+.footer-links-group a {
+  font-size: 0.8rem;
   color: var(--white);
-  opacity: 0.9;
+  opacity: 0.85;
   transition: opacity 0.2s, color 0.2s;
+  padding: 0.25rem 0;
 }
 
-.footer-links a:hover {
+.footer-links-group a:hover {
   opacity: 1;
   color: var(--orange-light);
 }
 
 .footer-city-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  margin-left: 0.5rem;
-  padding-left: 1rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem 2rem;
+  justify-items: center;
 }
 
-.footer-city-links a {
-  font-size: 0.85rem;
-  opacity: 0.75;
-}
-
-.footer-contact a {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--orange-light) !important;
+.footer-city-links .footer-label {
+  grid-column: 1 / -1;
+  text-align: center;
 }
 
 .footer-bottom {
   width: 100%;
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
 }
 
 .footer-bottom p {
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
   .footer {
-    padding: 2.5rem 0 1.25rem;
+    padding: 2rem 0 1rem;
   }
 
   .footer-inner {
-    gap: 1.5rem;
+    gap: 2rem;
+  }
+
+  .footer-nav {
+    gap: 2rem;
+  }
+
+  .footer-city-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem 1.5rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .footer {
-    padding: 2rem 0 1rem;
+    padding: 1.75rem 0 1rem;
   }
 
   .footer-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 1.5rem;
   }
 
-  .footer-brand {
+  .footer-nav {
+    gap: 2rem;
+  }
+
+  .footer-links-group a {
+    min-height: var(--touch-min);
+    display: inline-flex;
     align-items: center;
-  }
-
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .footer-city-links {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
-    width: 100%;
     justify-content: center;
   }
 
-  .footer-links a {
+  .footer-phone {
     min-height: var(--touch-min);
     display: inline-flex;
     align-items: center;
   }
 
-  .footer-contact a {
-    font-size: 1.1rem;
+  .footer-city-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem 1rem;
   }
 
-  .footer-bottom {
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
+  .footer-city-links a {
+    min-height: var(--touch-min);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-city-links .footer-label {
+    grid-column: 1 / -1;
   }
 
   .footer-bottom p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-logo {
-    font-size: 1.25rem;
+  .footer-logo-img {
+    height: 44px;
+    max-width: 180px;
+  }
+
+  .footer-city-links {
+    grid-template-columns: 1fr;
   }
 }

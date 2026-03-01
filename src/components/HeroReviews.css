@@ -1,0 +1,130 @@
+.hero-reviews {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.hero-review-card {
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hero-review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-review-stars {
+  display: flex;
+  gap: 0.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-review-stars .star {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+}
+
+.hero-review-stars .star.filled {
+  color: #fbbf24;
+  text-shadow: 0 0 4px rgba(251, 191, 36, 0.5);
+}
+
+.hero-review-text {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
+.hero-review-author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.hero-review-author {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--orange-light);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.hero-review-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s, opacity 0.2s;
+  padding: 0.35rem 0.5rem;
+}
+
+.hero-review-badge:hover {
+  color: var(--white);
+  opacity: 1;
+}
+
+.hero-review-badge svg {
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-reviews {
+    margin-top: 1.5rem;
+    max-width: 100%;
+  }
+
+  .hero-review-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .hero-review-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-review-badge {
+    min-height: var(--touch-min);
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-reviews {
+    margin-top: 1.25rem;
+  }
+
+  .hero-review-card {
+    padding: 0.875rem 1rem;
+  }
+
+  .hero-review-text {
+    font-size: 0.9rem;
+  }
+
+  .hero-review-avatar {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,19 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
+import Promos from '../components/Promos';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import { CoolingIcon, HeatingIcon, IAQIcon, MaintenanceIcon } from '../components/ServiceIcons';
 import '../components/Hero.css';
 import '../components/Services.css';
 import '../components/About.css';
 import '../components/Specials.css';
 import '../components/Contact.css';
 import './CityLanding.css';
-
-const specials = [
-  { offer: '$49', title: 'Heating or AC Tune-Up', terms: 'Valid year-round. Schedule your maintenance today.' },
-  { offer: '$100 OFF', title: 'New AC System Installation', terms: 'Terms apply. Ask for details.' },
-  { offer: '0% APR', title: 'Flexible Financing Available', terms: 'Qualified customers. Apply today.' },
-];
 
 export default function CityLanding({ cityData }) {
   const { name, metaTitle, metaDescription, heroTitle, heroTagline, aboutTitle, aboutSubtitle, aboutPara1, aboutPara2, serviceIntro, seoContent } = cityData;
@@ -43,6 +39,8 @@ export default function CityLanding({ cityData }) {
           </div>
         </section>
 
+        <Promos />
+
         <section id="services" className="services">
           <div className="container">
             <div className="services-header">
@@ -53,22 +51,22 @@ export default function CityLanding({ cityData }) {
             </div>
             <div className="services-grid">
               <article className="service-card">
-                <div className="service-icon">❄️</div>
+                <div className="service-icon"><CoolingIcon /></div>
                 <h3>Cooling Repair {name}</h3>
                 <p>AC repair, installation, and maintenance for all cooling systems. Stay cool year-round with expert cooling service in {name}.</p>
               </article>
               <article className="service-card">
-                <div className="service-icon">🔥</div>
+                <div className="service-icon"><HeatingIcon /></div>
                 <h3>Heating & Furnace Repair {name}</h3>
                 <p>Furnace repair, heat pump services, and heating installation. Reliable warmth when you need it most.</p>
               </article>
               <article className="service-card">
-                <div className="service-icon">💨</div>
+                <div className="service-icon"><IAQIcon /></div>
                 <h3>Indoor Air Quality</h3>
                 <p>Air purification, humidity control, and duct cleaning for healthier air in your {name} home.</p>
               </article>
               <article className="service-card">
-                <div className="service-icon">🔧</div>
+                <div className="service-icon"><MaintenanceIcon /></div>
                 <h3>HVAC Maintenance Plans</h3>
                 <p>Preventive maintenance to extend the life of your HVAC system. Schedule AC tune-ups and heating maintenance.</p>
               </article>
@@ -117,20 +115,19 @@ export default function CityLanding({ cityData }) {
           </section>
         )}
 
-        <section id="specials" className="specials">
+        <section id="specials" className="specials specials-veterans">
           <div className="container">
-            <h2>Don't Miss Out on These Savings!</h2>
-            <div className="specials-grid">
-              {specials.map((special, i) => (
-                <article key={i} className="special-card">
-                  <div className="special-offer">{special.offer}</div>
-                  <h3>{special.title}</h3>
-                  <p>{special.terms}</p>
-                  <a href="#contact">Get This Deal</a>
-                </article>
-              ))}
-            </div>
-            <a href="#contact" className="specials-all">View All Specials</a>
+            <h2>Military & Veteran Savings</h2>
+            <article className="special-card special-card-veterans">
+              <div className="veterans-badge">
+                <span className="veterans-star">★</span>
+                <span className="veterans-offer">10% OFF</span>
+                <span className="veterans-star">★</span>
+              </div>
+              <h3>For Veterans & Active Military</h3>
+              <p>Thank you for your service. Novation Heating and Cooling proudly offers 10% off HVAC services to veterans and active military in {name}. Valid on repairs, installations, and maintenance.</p>
+              <a href="#contact">Claim Your Discount</a>
+            </article>
           </div>
         </section>
 

@@ -6,6 +6,8 @@
   z-index: 1000;
   background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 .header-top {
@@ -79,21 +81,14 @@
 
 .logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--blue-dark);
-  letter-spacing: 0.05em;
-}
-
-.logo-subtitle {
-  font-size: 0.7rem;
-  color: var(--white);
-  letter-spacing: 0.1em;
+.logo-img {
+  height: 90px;
+  width: auto;
+  max-width: 380px;
+  object-fit: contain;
 }
 
 .btn-call {
@@ -192,12 +187,9 @@
     min-width: 0;
   }
 
-  .logo-text {
-    font-size: 1.25rem;
-  }
-
-  .logo-subtitle {
-    font-size: 0.65rem;
+  .logo-img {
+    height: 70px;
+    max-width: 300px;
   }
 
   .header-nav {
@@ -257,16 +249,19 @@
   }
 
   .btn-find-location {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
     white-space: nowrap;
+    min-height: var(--touch-min);
+    min-width: auto;
   }
 
-  .logo-text {
-    font-size: 1.1rem;
+  .zip-lookup input {
+    min-height: var(--touch-min);
   }
 
-  .logo-subtitle {
-    font-size: 0.6rem;
+  .logo-img {
+    height: 58px;
+    max-width: 240px;
   }
 }

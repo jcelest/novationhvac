@@ -10,7 +10,7 @@ export default function About() {
           <p>
             At Novation Heating and Cooling, we pride ourselves on our expertise 
             and customer-focused approach to home comfort. Our background-checked team is 
-            fully licensed, bonded, and insured for your peace of mind. We stay on top of 
+            fully licensed (CAC1823924), bonded, and insured for your peace of mind. We stay on top of 
             the latest industry developments to provide comprehensive services tailored 
             to your unique needs.
           </p>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
@@ -5,34 +6,40 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <span className="footer-logo">NOVATION</span>
-          <span className="footer-tagline">Heating · Cooling</span>
+          <Link to="/">
+            <img src="/images/logo.png" alt="Novation Heating and Cooling" className="footer-logo-img" />
+          </Link>
+          <a href="tel:4079731523" className="footer-phone">(407) 973-1523</a>
         </div>
-        <div className="footer-links">
-          <a href="#services">Services</a>
-          <a href="#specials">Specials</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <span className="footer-city-links">
-            <a href="/orlando.html">Orlando</a>
-            <a href="/kissimmee.html">Kissimmee</a>
-            <a href="/poinciana.html">Poinciana</a>
-            <a href="/osceola-county.html">Osceola County</a>
-            <a href="/orange-county.html">Orange County</a>
-            <a href="/polk-county.html">Polk County</a>
-            <a href="/winter-haven.html">Winter Haven</a>
-            <a href="/auburndale.html">Auburndale</a>
-            <a href="/haines-city.html">Haines City</a>
-            <a href="/dr-phillips.html">Dr. Phillips</a>
-            <a href="/windermere.html">Windermere</a>
-            <a href="/altamonte-springs.html">Altamonte Springs</a>
-          </span>
-        </div>
-        <div className="footer-contact">
-          <a href="tel:18001234567">(800) 123-4567</a>
+        <div className="footer-nav">
+          <div className="footer-links-group">
+            <span className="footer-label">Services</span>
+            <Link to="/cooling">Cooling</Link>
+            <Link to="/heating">Heating</Link>
+            <Link to="/indoor-air-quality">Indoor Air Quality</Link>
+            <Link to="/specials">Specials</Link>
+            <Link to="/service-areas">Service Areas</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
+          <div className="footer-links-group footer-city-links">
+            <span className="footer-label">Areas</span>
+            <Link to="/orlando">Orlando</Link>
+            <Link to="/kissimmee">Kissimmee</Link>
+            <Link to="/poinciana">Poinciana</Link>
+            <Link to="/osceola-county">Osceola County</Link>
+            <Link to="/orange-county">Orange County</Link>
+            <Link to="/polk-county">Polk County</Link>
+            <Link to="/winter-haven">Winter Haven</Link>
+            <Link to="/auburndale">Auburndale</Link>
+            <Link to="/haines-city">Haines City</Link>
+            <Link to="/dr-phillips">Dr. Phillips</Link>
+            <Link to="/windermere">Windermere</Link>
+            <Link to="/altamonte-springs">Altamonte Springs</Link>
+          </div>
         </div>
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Novation Heating and Cooling. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Novation Heating and Cooling. License #CAC1823924</p>
         </div>
       </div>
     </footer>

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import './Contact.css';
 
-export default function Contact() {
+export default function Contact({ initialZip = '' }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    zip: '',
+    zip: initialZip,
     service: '',
     message: '',
   });
@@ -44,9 +44,9 @@ export default function Contact() {
           <h2>Get In Touch</h2>
           <p>Ready to schedule service or have questions? We're here to help.</p>
           <div className="contact-details">
-            <a href="tel:18001234567" className="contact-link">
+            <a href="tel:4079731523" className="contact-link">
               <strong>Call Us</strong>
-              (800) 123-4567
+              (407) 973-1523
             </a>
             <p className="contact-hours">24/7 Emergency Service Available</p>
           </div>

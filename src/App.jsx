@@ -1,12 +1,20 @@
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Promos from './components/Promos';
 import Services from './components/Services';
 import About from './components/About';
 import Specials from './components/Specials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CityLanding from './pages/CityLanding';
+import ServicePage from './pages/ServicePage';
+import SpecialsPage from './pages/SpecialsPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ServiceAreasPage from './pages/ServiceAreasPage';
+import { coolingData, heatingData, indoorAirQualityData } from './data/serviceData';
 import {
   orlandoData,
   kissimmeeData,
@@ -24,7 +32,9 @@ import {
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route
         path="/"
         element={
@@ -32,6 +42,7 @@ export default function App() {
             <Header />
             <main>
               <Hero />
+              <Promos />
               <Services />
               <About />
               <Specials />
@@ -41,6 +52,13 @@ export default function App() {
           </>
         }
       />
+      <Route path="/cooling" element={<ServicePage data={coolingData} />} />
+      <Route path="/heating" element={<ServicePage data={heatingData} />} />
+      <Route path="/indoor-air-quality" element={<ServicePage data={indoorAirQualityData} />} />
+      <Route path="/specials" element={<SpecialsPage />} />
+      <Route path="/service-areas" element={<ServiceAreasPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} />
       <Route path="/orlando" element={<CityLanding cityData={orlandoData} />} />
       <Route path="/kissimmee" element={<CityLanding cityData={kissimmeeData} />} />
       <Route path="/poinciana" element={<CityLanding cityData={poincianaData} />} />
@@ -54,5 +72,6 @@ export default function App() {
       <Route path="/windermere" element={<CityLanding cityData={windermereData} />} />
       <Route path="/altamonte-springs" element={<CityLanding cityData={altamonteSpringsData} />} />
     </Routes>
+    </>
   );
 }

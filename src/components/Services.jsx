@@ -1,25 +1,26 @@
+import { CoolingIcon, HeatingIcon, IAQIcon, MaintenanceIcon } from './ServiceIcons';
 import './Services.css';
 
 const services = [
   {
     title: 'Cooling',
     description: 'Installation, repair, and maintenance for all AC systems. Stay cool year-round.',
-    icon: '❄️',
+    Icon: CoolingIcon,
   },
   {
     title: 'Heating',
     description: 'Furnace and heat pump services. Reliable warmth when you need it most.',
-    icon: '🔥',
+    Icon: HeatingIcon,
   },
   {
     title: 'Indoor Air Quality',
     description: 'Air purification, humidity control, and duct cleaning for healthier air.',
-    icon: '💨',
+    Icon: IAQIcon,
   },
   {
     title: 'Maintenance Plans',
     description: 'Preventive maintenance to extend the life of your HVAC system.',
-    icon: '🔧',
+    Icon: MaintenanceIcon,
   },
 ];
 
@@ -37,13 +38,18 @@ export default function Services() {
           <a href="#contact" className="btn-book">Book Your Appointment</a>
         </div>
         <div className="services-grid">
-          {services.map((service, i) => (
+          {services.map((service, i) => {
+            const Icon = service.Icon;
+            return (
             <article key={i} className="service-card">
-              <div className="service-icon">{service.icon}</div>
+              <div className="service-icon">
+                <Icon />
+              </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </article>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>
