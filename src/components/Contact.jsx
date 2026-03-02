@@ -15,6 +15,7 @@ export default function Contact({ initialZip = '' }) {
   });
   const [status, setStatus] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
+  const [usedJobber, setUsedJobber] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,6 +25,7 @@ export default function Contact({ initialZip = '' }) {
     e.preventDefault();
     setStatus('sending');
     setErrorMessage('');
+    setUsedJobber(false);
     try {
       let res = await fetch('/api/jobber-book', {
         method: 'POST',
@@ -41,6 +43,7 @@ export default function Contact({ initialZip = '' }) {
         const contactData = await res.json();
         if (res.ok) {
           setStatus('success');
+          setUsedJobber(false);
           setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
         } else {
           setStatus('error');
@@ -51,6 +54,7 @@ export default function Contact({ initialZip = '' }) {
 
       if (res.ok && data.success) {
         setStatus('success');
+        setUsedJobber(true);
         setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
       } else {
         setStatus('error');
@@ -155,7 +159,13 @@ export default function Contact({ initialZip = '' }) {
           <button type="submit" className="btn-submit" disabled={status === 'sending'}>
             {status === 'sending' ? 'Submitting...' : 'Book Appointment'}
           </button>
-          {status === 'success' && <p className="form-success">Thanks! We'll be in touch soon to confirm your appointment.</p>}
+          {status === 'success' && (
+            <p className="form-success">
+              {usedJobber
+                ? "Thanks! Your request has been sent to our scheduling system. We'll be in touch soon to confirm your appointment."
+                : "Thanks! We've received your request. We'll be in touch soon to confirm your appointment."}
+            </p>
+          )}
           {status === 'error' && <p className="form-error">{errorMessage || 'Something went wrong. Please call us at (407) 973-1523.'}</p>}
         </form>
       </div>
