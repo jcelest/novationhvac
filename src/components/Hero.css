@@ -141,6 +141,24 @@
   .hero {
     padding: 10rem 1rem 2.5rem;
     align-items: flex-start;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    background-size: cover, contain;
+    background-attachment: scroll;
+    background-position: center center, center center;
+  }
+
+  .hero-reviews-wrapper {
+    min-height: 120px;
+    max-height: 120px;
+    overflow: hidden;
+    margin-top: 1.25rem;
   }
 
   .hero-content {
@@ -173,10 +191,20 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 9rem 0.75rem 2rem;
+    padding: 8.5rem 0.75rem 1.5rem;
+  }
+
+  .hero-reviews-wrapper {
+    min-height: 100px;
+    max-height: 100px;
+    margin-top: 1rem;
   }
 
   .hero-title {
     font-size: 1.5rem;
+  }
+
+  .hero-tagline {
+    margin-bottom: 1rem;
   }
 }
