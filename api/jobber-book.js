@@ -88,7 +88,7 @@ export default async function handler(req, res) {
       emails: [{ description: 'MAIN', primary: true, address: email }],
     };
     if (cleanPhone) {
-      clientInput.phones = [{ phoneNumber: cleanPhone, primary: true }];
+      clientInput.phones = [{ number: cleanPhone, primary: true }];
     }
     const clientResult = await jobberGraphQL(token, clientMutation, {
       input: clientInput,
