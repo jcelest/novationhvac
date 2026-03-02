@@ -120,7 +120,6 @@ export default async function handler(req, res) {
     const requestResult = await jobberGraphQL(token, requestMutation, {
       input: {
         clientId,
-        description: description || 'HVAC service request from website',
       },
     });
 
@@ -128,6 +127,28 @@ export default async function handler(req, res) {
     if (requestErrors.length > 0) {
       const msg = requestErrors.map((e) => e.message).join('; ');
       return res.status(400).json({ error: msg, success: false });
+    }
+
+    const requestId = requestResult?.requestCreate?.request?.id;
+    if (requestId && description) {
+      try {
+        const noteMutation = `
+          mutation NoteCreate($input: NoteCreateInput!) {
+            noteCreate(input: $input) {
+              note { id }
+              userErrors { message path }
+            }
+          }
+        `;
+        await jobberGraphQL(token, noteMutation, {
+          input: {
+            noteableId: requestId,
+            body: description,
+          },
+        });
+      } catch (noteErr) {
+        console.warn('Could not add note to request:', noteErr.message);
+      }
     }
 
     return res.status(200).json({
