@@ -141,11 +141,9 @@
   .hero {
     padding: 10rem 1rem 2.5rem;
     align-items: flex-start;
-    height: 100vh;
-    height: 100dvh;
     min-height: 100vh;
     min-height: 100dvh;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .hero-bg {
@@ -155,9 +153,7 @@
   }
 
   .hero-reviews-wrapper {
-    min-height: 120px;
-    max-height: 120px;
-    overflow: hidden;
+    min-height: 0;
     margin-top: 1.25rem;
   }
 
@@ -195,8 +191,6 @@
   }
 
   .hero-reviews-wrapper {
-    min-height: 100px;
-    max-height: 100px;
     margin-top: 1rem;
   }
 
