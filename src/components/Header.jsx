@@ -47,7 +47,7 @@ export default function Header() {
               <span></span>
             </button>
             <Link to="/" className="logo">
-              <img src="/images/logo.png" alt="Novation Heating and Cooling" className="logo-img" />
+              <img src="/images/logo.png" alt="Novation Heating and Air Conditioning" className="logo-img" />
             </Link>
             <a href="tel:4079731523" className="btn-call">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

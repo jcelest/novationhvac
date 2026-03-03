@@ -13,8 +13,8 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact Novation Heating and Cooling | Request Service | (407) 973-1523</title>
-        <meta name="description" content="Contact Novation Heating and Cooling for AC repair, heating, cooling services. 24/7 emergency. Orlando, Kissimmee, Central Florida. Call (407) 973-1523 or request service online." />
+        <title>Contact Novation Heating and Air Conditioning | Request Service | (407) 973-1523</title>
+        <meta name="description" content="Contact Novation Heating and Air Conditioning for AC repair, heating, cooling services. 24/7 emergency. Orlando, Kissimmee, Central Florida. Call (407) 973-1523 or request service online." />
       </Helmet>
       <Header />
       <main>

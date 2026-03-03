@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-brand">
           <Link to="/">
-            <img src="/images/logo.png" alt="Novation Heating and Cooling" className="footer-logo-img" />
+            <img src="/images/logo.png" alt="Novation Heating and Air Conditioning" className="footer-logo-img" />
           </Link>
           <a href="tel:4079731523" className="footer-phone">(407) 973-1523</a>
         </div>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Novation Heating and Cooling. License #CAC1823924</p>
+          <p>© {new Date().getFullYear()} Novation Heating and Air Conditioning. License #CAC1823924</p>
         </div>
       </div>
     </footer>

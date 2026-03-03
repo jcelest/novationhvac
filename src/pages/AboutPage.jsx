@@ -10,8 +10,8 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Novation Heating and Cooling | Orlando HVAC Company | License CAC1823924</title>
-        <meta name="description" content="Novation Heating and Cooling - Orlando's trusted HVAC company. Licensed (CAC1823924), bonded, insured. 24/7 emergency service. AC repair, heating, cooling. Free estimates. (407) 973-1523." />
+        <title>About Novation Heating and Air Conditioning | Orlando HVAC | License CAC1823924</title>
+        <meta name="description" content="Novation Heating and Air Conditioning - Orlando's trusted HVAC company. Licensed (CAC1823924), bonded, insured. 24/7 emergency service. AC repair, heating, cooling. Free estimates. (407) 973-1523." />
       </Helmet>
       <Header />
       <main>
@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="hero-bg" style={{ background: `linear-gradient(135deg, rgba(26, 82, 118, 0.92) 0%, rgba(41, 128, 185, 0.88) 50%, rgba(52, 152, 219, 0.85) 100%), url(https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80) center/cover no-repeat` }}></div>
           <div className="hero-overlay"></div>
           <div className="hero-content container">
-            <h1 className="hero-title">About Novation Heating and Cooling</h1>
+            <h1 className="hero-title">About Novation Heating and Air Conditioning</h1>
             <p className="hero-tagline">Your Trusted HVAC Experts in Central Florida Since Day One</p>
             <div className="hero-buttons">
               <a href="#contact" className="btn-primary">Request Service</a>

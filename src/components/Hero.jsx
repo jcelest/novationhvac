@@ -8,11 +8,11 @@ export default function Hero() {
       <div className="hero-overlay"></div>
       <div className="hero-content container">
         <h1 className="hero-title">
-          Comfort You Can Count On,<br />
-          <span>Service You Can Trust</span>
+          Novation Heating and Air Conditioning<br />
+          <span>Comfort You Can Count On — Service You Can Trust</span>
         </h1>
         <p className="hero-tagline">
-          Your Trusted Experts for Heating and Cooling
+          Orlando, Kissimmee, Poinciana & Central Florida HVAC Experts
         </p>
         <div className="hero-buttons">
           <a href="#contact" className="btn-primary">Book Appointment</a>
