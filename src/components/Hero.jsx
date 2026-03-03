@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="hero-overlay"></div>
       <div className="hero-content container">
         <h1 className="hero-title">
-          Novation Heating and Air Conditioning<br />
+          Novation Heating and Air Conditioning:<br />
           <span>Service You Can Trust</span>
         </h1>
         <p className="hero-tagline">
