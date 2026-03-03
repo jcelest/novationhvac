@@ -57,7 +57,7 @@ export const coolingData = {
   metaDescription: 'Professional AC repair, cooling installation & maintenance in Central Florida. 24/7 emergency cooling service. Licensed HVAC technicians. Free estimates. Call (407) 973-1523.',
   heroTitle: 'AC Repair & Cooling Services',
   heroTagline: 'Expert Cooling Repair, Installation & Maintenance — 24/7 Emergency Service',
-  heroImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80',
+  heroImage: '/images/cooling-ac.png',
   sections: [
     {
       title: 'AC Repair & Cooling Installation',
@@ -65,7 +65,7 @@ export const coolingData = {
         'When you need AC repair or cooling services in Orlando, Kissimmee, Poinciana, or Central Florida, Novation Heating and Cooling delivers. Our certified HVAC technicians provide air conditioner repair, central air installation, and cooling system maintenance. Search "AC repair near me" or "cooling repair Orlando" — we\'re the trusted choice.',
         'From ductless mini-split repair to central air conditioning installation, we handle all cooling systems. Same-day AC repair available. 24/7 emergency cooling service when you need it most. Licensed (CAC1823924), bonded, and insured.',
       ],
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+      image: '/images/cooling-ac.png',
     },
     {
       title: 'Preventive Cooling Maintenance',
@@ -119,7 +119,7 @@ export const indoorAirQualityData = {
   metaDescription: 'Improve indoor air quality with air purification, duct cleaning, humidity control & HVAC IAQ services. Central Florida. Licensed. Free estimates. (407) 973-1523.',
   heroTitle: 'Indoor Air Quality Services',
   heroTagline: 'Air Purification, Duct Cleaning & Humidity Control for Healthier Air',
-  heroImage: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=80',
+  heroImage: '/images/air-quality-hvac.png',
   sections: [
     {
       title: 'Air Purification & Duct Cleaning',
@@ -127,7 +127,7 @@ export const indoorAirQualityData = {
         'Breathe easier with Novation\'s indoor air quality services. We offer air purification systems, HVAC duct cleaning, and humidity control for homes and businesses across Orlando, Kissimmee, Poinciana, and Central Florida. Search "duct cleaning near me" or "air purification Orlando" — we\'re here to help.',
         'Dirty ducts, poor filtration, and humidity imbalances affect comfort and health. Our IAQ solutions include UV air purifiers, whole-home filtration, duct sealing, and dehumidifiers. Licensed (CAC1823924) and trusted throughout Florida.',
       ],
-      image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
+      image: '/images/air-quality-hvac.png',
     },
     {
       title: 'Humidity Control & Ventilation',
