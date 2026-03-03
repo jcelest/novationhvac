@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hero-content container">
         <h1 className="hero-title">
           Novation Heating and Air Conditioning<br />
-          <span>Comfort You Can Count On — Service You Can Trust</span>
+          <span>Service You Can Trust</span>
         </h1>
         <p className="hero-tagline">
           Orlando, Kissimmee, Poinciana & Central Florida HVAC Experts
