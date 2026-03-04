@@ -24,7 +24,7 @@ export default function ServiceAreasPage() {
             <h1 className="hero-title">Service Areas</h1>
             <p className="hero-tagline">Proudly serving Central Florida — Orlando, Kissimmee, Poinciana & beyond</p>
             <div className="hero-buttons">
-              <a href="#contact" className="btn-primary">Book Appointment</a>
+              <Link to="/book-appointment" className="btn-primary">Book Appointment</Link>
               <a href="tel:4079731523" className="btn-secondary">(407) 973-1523</a>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function ServiceAreasPage() {
                     {area.nearby && (
                       <p className="area-nearby">Also serving: {area.nearby}</p>
                     )}
-                    <a href="#contact" className="area-book-btn">Book Appointment</a>
+                    <Link to="/book-appointment" className="area-book-btn">Book Appointment</Link>
                     <Link to={`/${area.slug}`} className="area-learn-link">Learn more about {area.name} →</Link>
                   </div>
                 </article>

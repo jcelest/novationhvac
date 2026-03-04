@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CoolingIcon, HeatingIcon, IAQIcon, MaintenanceIcon } from './ServiceIcons';
 import './Services.css';
 
@@ -35,7 +36,7 @@ export default function Services() {
             From AC repair and replacement to heating installations and tune-ups, 
             Novation keeps your home comfortable — all from one trusted team.
           </p>
-          <a href="#contact" className="btn-book">Book Your Appointment</a>
+          <Link to="/book-appointment" className="btn-book">Book Your Appointment</Link>
         </div>
         <div className="services-grid">
           {services.map((service, i) => {

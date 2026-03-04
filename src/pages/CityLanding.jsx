@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Promos from '../components/Promos';
@@ -33,7 +34,7 @@ export default function CityLanding({ cityData }) {
             <h1 className="hero-title">{heroTitle}</h1>
             <p className="hero-tagline">{heroTagline}</p>
             <div className="hero-buttons">
-              <a href="#contact" className="btn-primary">Book Appointment</a>
+              <Link to="/book-appointment" className="btn-primary">Book Appointment</Link>
               <a href="#contact" className="btn-secondary">Flexible Financing</a>
             </div>
           </div>
@@ -47,7 +48,7 @@ export default function CityLanding({ cityData }) {
               <span className="section-label">Trusted Services in {name}</span>
               <h2>HVAC & Cooling Services in {name}</h2>
               <p>{serviceIntro}</p>
-              <a href="#contact" className="btn-book">Book Your Appointment</a>
+              <Link to="/book-appointment" className="btn-book">Book Your Appointment</Link>
             </div>
             <div className="services-grid">
               <article className="service-card">

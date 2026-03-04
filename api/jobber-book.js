@@ -42,30 +42,54 @@ export default async function handler(req, res) {
 
   const {
     name,
+    firstName,
+    lastName,
+    companyName,
     email,
     phone,
     zip,
+    zipCode,
     address,
+    streetAddress,
+    unit,
+    city,
+    state,
     service,
     message,
     preferredDate,
     preferredTime,
+    alternateDate,
+    imageCount,
   } = req.body || {};
 
-  if (!name || !email || !phone) {
+  const hasName = name || (firstName && lastName) || firstName || lastName;
+  if (!hasName || !email || !phone) {
     return res.status(400).json({
       error: 'Name, email, and phone are required',
       success: false,
     });
   }
 
-  const { firstName, lastName } = splitName(name);
+  let first, last;
+  if (firstName !== undefined || lastName !== undefined) {
+    first = (firstName || '').trim() || 'Customer';
+    last = (lastName || '').trim();
+  } else {
+    const split = splitName(name);
+    first = split.firstName;
+    last = split.lastName;
+  }
+
+  const fullAddress = address || [streetAddress, unit, [city, state, zip || zipCode].filter(Boolean).join(', ')].filter(Boolean).join(', ');
   const description = [
+    companyName && `Company: ${companyName}`,
     service && `Service: ${service}`,
-    zip && `Zip: ${zip}`,
-    address && `Address: ${address}`,
+    (zip || zipCode) && `Zip: ${zip || zipCode}`,
+    fullAddress && `Address: ${fullAddress}`,
     preferredDate && `Preferred date: ${preferredDate}`,
+    alternateDate && `Alternate date: ${alternateDate}`,
     preferredTime && `Preferred time: ${preferredTime}`,
+    imageCount > 0 && `Images attached: ${imageCount}`,
     message,
   ]
     .filter(Boolean)
@@ -83,8 +107,8 @@ export default async function handler(req, res) {
     `;
     const cleanPhone = phone ? phone.replace(/\D/g, '') : '';
     const clientInput = {
-      firstName,
-      lastName,
+      firstName: first,
+      lastName: last,
       emails: [{ description: 'MAIN', primary: true, address: email }],
     };
     if (cleanPhone) {

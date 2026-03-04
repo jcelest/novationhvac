@@ -1,0 +1,342 @@
+.book-appointment-section {
+  padding: 3rem 0 5rem;
+  background: var(--gray-50);
+}
+
+.book-appointment-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.book-appointment-form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  overflow-x: hidden;
+}
+
+.book-appointment-form h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 1.5rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.book-appointment-form input[type="text"],
+.book-appointment-form input[type="email"],
+.book-appointment-form input[type="tel"],
+.book-appointment-form input[type="date"],
+.book-appointment-form select,
+.book-appointment-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px; /* 16px prevents zoom on focus in iOS */
+}
+
+.book-appointment-form input:focus,
+.book-appointment-form select:focus,
+.book-appointment-form textarea:focus {
+  outline: none;
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row input:last-child {
+  margin-bottom: 0;
+}
+
+.form-row.three-col {
+  grid-template-columns: 1fr 1fr auto;
+}
+
+.checkbox-label,
+.radio-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  cursor: pointer;
+}
+
+.checkbox-label input,
+.radio-label input {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  margin-bottom: 0.5rem;
+}
+
+.preferred-times {
+  margin-top: 1rem;
+}
+
+.time-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.form-legal {
+  font-size: 0.8rem;
+  color: var(--gray-700);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.form-legal a {
+  color: var(--blue-primary);
+  text-decoration: underline;
+}
+
+.form-legal-sms,
+.form-recaptcha {
+  margin-top: 0.5rem;
+}
+
+.upload-instruction {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  margin-bottom: 0.75rem;
+}
+
+.upload-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  border: 2px dashed var(--gray-200);
+  border-radius: 8px;
+  background: var(--gray-50);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.upload-zone:hover,
+.upload-zone.drag-over {
+  border-color: var(--blue-primary);
+  background: rgba(41, 128, 185, 0.05);
+}
+
+.upload-icon {
+  font-size: 2rem;
+}
+
+.upload-text {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.image-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.image-preview-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--gray-100);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.preview-name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.preview-remove {
+  background: none;
+  border: none;
+  color: var(--gray-700);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.35rem;
+  line-height: 1;
+  min-width: var(--touch-min);
+  min-height: var(--touch-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-remove:hover {
+  color: #e74c3c;
+}
+
+.book-appointment-form .btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--blue-primary) !important;
+  color: var(--white) !important;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.book-appointment-form .btn-submit:hover:not(:disabled) {
+  background: var(--blue-dark) !important;
+}
+
+.book-appointment-form .btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-success {
+  margin-top: 1rem;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.form-error {
+  margin-top: 1rem;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .book-appointment-section {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .book-appointment-form {
+    padding: 1.5rem;
+  }
+
+  .book-appointment-form h2 {
+    font-size: 1.35rem;
+  }
+
+  .form-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row.three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .book-appointment-form input[type="text"],
+  .book-appointment-form input[type="email"],
+  .book-appointment-form input[type="tel"],
+  .book-appointment-form input[type="date"],
+  .book-appointment-form select,
+  .book-appointment-form textarea {
+    min-height: 48px;
+  }
+
+  .book-appointment-form textarea {
+    min-height: 120px;
+  }
+
+  .checkbox-label,
+  .radio-label {
+    min-height: var(--touch-min);
+    align-items: center;
+  }
+
+  .time-options {
+    flex-direction: column;
+  }
+
+  .upload-zone {
+    min-height: 120px;
+    padding: 1.5rem;
+  }
+
+  .book-appointment-form .btn-submit {
+    min-height: var(--touch-min);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .book-appointment-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .book-appointment-form {
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+
+  .book-appointment-form h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-section h3 {
+    font-size: 1rem;
+  }
+
+  .form-section {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .form-legal {
+    font-size: 0.75rem;
+  }
+
+  .preview-name {
+    max-width: 100px;
+  }
+
+  .image-preview-item {
+    max-width: 100%;
+  }
+}

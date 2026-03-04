@@ -14,6 +14,7 @@ import ServicePage from './pages/ServicePage';
 import SpecialsPage from './pages/SpecialsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import BookAppointmentPage from './pages/BookAppointmentPage';
 import ServiceAreasPage from './pages/ServiceAreasPage';
 import { coolingData, heatingData, indoorAirQualityData } from './data/serviceData';
 import {
@@ -65,6 +66,7 @@ export default function App() {
       <Route path="/service-areas" element={<ServiceAreasPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/book-appointment" element={<BookAppointmentPage />} />
       <Route path="/orlando" element={<CityLanding cityData={orlandoData} />} />
       <Route path="/kissimmee" element={<CityLanding cityData={kissimmeeData} />} />
       <Route path="/poinciana" element={<CityLanding cityData={poincianaData} />} />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import HeroReviews from './HeroReviews';
 import './Hero.css';
 
@@ -15,7 +16,7 @@ export default function Hero() {
           Orlando, Kissimmee, Poinciana & Central Florida HVAC Experts
         </p>
         <div className="hero-buttons">
-          <a href="#contact" className="btn-primary">Book Appointment</a>
+          <Link to="/book-appointment" className="btn-primary">Book Appointment</Link>
           <a href="#contact" className="btn-secondary">Flexible Financing</a>
         </div>
         <div className="hero-reviews-wrapper">
