@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { trackFormSubmit, trackLeadCaptured } from '../utils/analytics';
 import '../components/Hero.css';
 import './BookAppointmentPage.css';
 
@@ -85,6 +86,12 @@ export default function BookAppointmentPage() {
     ].filter(Boolean);
     const fullAddress = addressParts.join(', ');
 
+    const utmParams = typeof window !== 'undefined' ? {
+      utm_source: new URLSearchParams(window.location.search).get('utm_source'),
+      utm_medium: new URLSearchParams(window.location.search).get('utm_medium'),
+      utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign'),
+    } : {};
+
     const payload = {
       firstName: formData.firstName,
       lastName: formData.lastName,
@@ -97,6 +104,7 @@ export default function BookAppointmentPage() {
       city: formData.city,
       state: formData.state,
       zip: formData.zipCode,
+      zipCode: formData.zipCode,
       message: formData.description,
       preferredDate: formData.assessmentDate,
       preferredTime: formData.preferredTime,
@@ -104,6 +112,9 @@ export default function BookAppointmentPage() {
       marketingEmails: formData.marketingEmails,
       marketingSMS: formData.marketingSMS,
       imageCount: images.length,
+      source: 'book_appointment',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+      ...utmParams,
     };
 
     try {
@@ -120,7 +131,11 @@ export default function BookAppointmentPage() {
           email: formData.email,
           phone: formData.phone,
           zip: formData.zipCode,
+          zipCode: formData.zipCode,
           address: fullAddress,
+          source: 'book_appointment',
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          ...utmParams,
           message: [
             formData.companyName && `Company: ${formData.companyName}`,
             formData.description,
@@ -141,6 +156,8 @@ export default function BookAppointmentPage() {
         if (fallbackRes.ok) {
           setStatus('success');
           setUsedJobber(false);
+          trackFormSubmit('book_appointment', { success: true, source: 'book_appointment' });
+          trackLeadCaptured('book_appointment', false);
           setFormData({
             firstName: '', lastName: '', companyName: '', email: '', marketingEmails: true,
             phone: '', marketingSMS: false, streetAddress: '', unit: '', city: '', state: 'Florida',
@@ -150,6 +167,7 @@ export default function BookAppointmentPage() {
         } else {
           setStatus('error');
           setErrorMessage(fallbackData?.error || '');
+          trackFormSubmit('book_appointment', { success: false });
         }
         return;
       }
@@ -157,6 +175,8 @@ export default function BookAppointmentPage() {
       if (res.ok && data.success) {
         setStatus('success');
         setUsedJobber(true);
+        trackFormSubmit('book_appointment', { success: true, source: 'book_appointment' });
+        trackLeadCaptured('book_appointment', true);
         setFormData({
           firstName: '', lastName: '', companyName: '', email: '', marketingEmails: true,
           phone: '', marketingSMS: false, streetAddress: '', unit: '', city: '', state: 'Florida',
@@ -166,6 +186,7 @@ export default function BookAppointmentPage() {
       } else {
         setStatus('error');
         setErrorMessage(data?.error || '');
+        trackFormSubmit('book_appointment', { success: false });
       }
     } catch {
       setStatus('error');

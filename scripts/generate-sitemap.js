@@ -5,9 +5,11 @@
  * When adding a new city: add the slug to citySlugs in scripts/routes.config.json
  * and add the route in src/App.jsx + src/data/cityData.js
  */
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const configPath = path.join(__dirname, 'routes.config.json');
 const outputPath = path.join(__dirname, '../public/sitemap.xml');
 

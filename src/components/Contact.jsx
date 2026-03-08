@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { trackFormSubmit, trackLeadCaptured } from '../utils/analytics';
 import './Contact.css';
 
 export default function Contact({ initialZip = '' }) {
@@ -26,11 +27,19 @@ export default function Contact({ initialZip = '' }) {
     setStatus('sending');
     setErrorMessage('');
     setUsedJobber(false);
+    const payload = {
+      ...formData,
+      source: 'contact_form',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+      utm_source: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') : null,
+      utm_medium: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_medium') : null,
+      utm_campaign: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_campaign') : null,
+    };
     try {
       let res = await fetch('/api/jobber-book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
 
@@ -38,12 +47,14 @@ export default function Contact({ initialZip = '' }) {
         res = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(payload),
         });
         const contactData = await res.json();
         if (res.ok) {
           setStatus('success');
           setUsedJobber(false);
+          trackFormSubmit('contact_form', { success: true, source: 'contact_form' });
+          trackLeadCaptured('contact_form', false);
           setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
         } else {
           setStatus('error');
@@ -55,10 +66,13 @@ export default function Contact({ initialZip = '' }) {
       if (res.ok && data.success) {
         setStatus('success');
         setUsedJobber(true);
+        trackFormSubmit('contact_form', { success: true, source: 'contact_form' });
+        trackLeadCaptured('contact_form', true);
         setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
       } else {
         setStatus('error');
         setErrorMessage(data?.error || '');
+        trackFormSubmit('contact_form', { success: false });
       }
     } catch {
       setStatus('error');

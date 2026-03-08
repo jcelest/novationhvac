@@ -2,17 +2,20 @@
   "name": "novation-hvac",
   "version": "1.0.0",
   "description": "Full-stack website for Novation Heating and Cooling",
+  "type": "module",
   "main": "server/index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js",
     "client": "vite",
-    "build": "node scripts/generate-sitemap.js && vite build",
+    "build": "node scripts/generate-sitemap.js && node scripts/optimize-images.js && vite build",
+    "optimize:images": "node scripts/optimize-images.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "preview": "vite preview",
     "start": "node server/index.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
@@ -26,6 +29,7 @@
     "nodemon": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sharp": "^0.33.5",
     "vite": "^5.0.10"
   }
 }

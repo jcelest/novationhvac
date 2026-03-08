@@ -7,7 +7,17 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-brand">
           <Link to="/">
-            <img src="/images/logo.png" alt="Novation Heating and Air Conditioning" className="footer-logo-img" />
+            <picture>
+              <source srcSet="/images/logo.webp" type="image/webp" />
+              <img
+                src="/images/logo.png"
+                alt="Novation Heating and Air Conditioning"
+                className="footer-logo-img"
+                width={100}
+                height={58}
+                loading="lazy"
+              />
+            </picture>
           </Link>
           <a href="tel:4079731523" className="footer-phone">(407) 973-1523</a>
         </div>

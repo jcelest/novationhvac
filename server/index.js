@@ -1,8 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
-const fs = require('fs');
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,21 +23,16 @@ app.post('/api/jobber-book', async (req, res) => {
   return handler(req, res);
 });
 
-// Contact form API
-app.post('/api/contact', (req, res) => {
-  const { name, email, phone, zip, service, message } = req.body;
-  
-  if (!name || !email || !phone) {
-    return res.status(400).json({ error: 'Name, email, and phone are required' });
-  }
+// Contact form API (fallback when Jobber not configured)
+app.post('/api/contact', async (req, res) => {
+  const handler = (await import('../api/contact.js')).default;
+  return handler(req, res);
+});
 
-  // In production, you would:
-  // - Save to database
-  // - Send email via nodemailer
-  // - Integrate with CRM
-  console.log('Contact form submission:', { name, email, phone, zip, service, message });
-
-  res.json({ success: true, message: 'Thank you! We will contact you soon.' });
+// Leads API (voice agent, etc.)
+app.post('/api/leads', async (req, res) => {
+  const handler = (await import('../api/leads.js')).default;
+  return handler(req, res);
 });
 
 // Fallback for SPA routing - serve index.html for all non-API routes so /orlando, /kissimmee, /poinciana work

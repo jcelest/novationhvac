@@ -1,5 +1,8 @@
 // Vercel serverless function - Jobber API integration for booking appointments
 // Requires: JOBBER_ACCESS_TOKEN env var (from Jobber Developer Center OAuth)
+// Stores leads in Supabase when SUPABASE_URL + SUPABASE_ANON_KEY are set
+
+import { storeLead } from '../lib/supabase.js';
 
 const JOBBER_API = 'https://api.getjobber.com/api/graphql';
 const API_VERSION = '2023-11-15';
@@ -60,6 +63,11 @@ export default async function handler(req, res) {
     preferredTime,
     alternateDate,
     imageCount,
+    source,
+    pageUrl,
+    utm_source,
+    utm_medium,
+    utm_campaign,
   } = req.body || {};
 
   const hasName = name || (firstName && lastName) || firstName || lastName;
@@ -174,6 +182,33 @@ export default async function handler(req, res) {
         console.warn('Could not add note to request:', noteErr.message);
       }
     }
+
+    // Store lead in Supabase for Intent analytics
+    const leadSource = source || (firstName || lastName ? 'book_appointment' : 'contact_form');
+    await storeLead(
+      {
+        source: leadSource,
+        name,
+        firstName,
+        lastName,
+        companyName,
+        email,
+        phone,
+        zip: zip || zipCode,
+        address: address || streetAddress,
+        city,
+        state,
+        service,
+        message,
+        preferredDate,
+        preferredTime,
+        alternateDate,
+        metadata: { imageCount: imageCount || 0 },
+        jobberClientId: clientId,
+        jobberRequestId: requestId,
+      },
+      { pageUrl, utm_source, utm_medium, utm_campaign }
+    );
 
     return res.status(200).json({
       success: true,
