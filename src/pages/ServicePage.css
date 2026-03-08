@@ -1,3 +1,26 @@
+.emergency-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  color: #c0392b;
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.btn-call-now {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
+
 .service-page .hero-bg {
   background-size: cover !important;
   background-position: center !important;

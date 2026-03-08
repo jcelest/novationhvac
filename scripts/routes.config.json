@@ -1,11 +1,12 @@
 {
-  "_comment": "When adding a new city: add slug to citySlugs, add route in App.jsx, add data in cityData.js, add to Footer + ServiceAreasPage",
+  "_comment": "Cities: add to citySlugs + App + cityData + Footer. Neighborhoods: add to neighborhoodSlugs + neighborhoodData (App auto-routes from allNeighborhoodData)",
   "baseUrl": "https://novationhvac.com",
   "static": [
     { "path": "", "priority": "1.0", "changefreq": "weekly" },
     { "path": "cooling", "priority": "0.9", "changefreq": "monthly" },
     { "path": "heating", "priority": "0.9", "changefreq": "monthly" },
     { "path": "indoor-air-quality", "priority": "0.9", "changefreq": "monthly" },
+    { "path": "emergency-ac-repair", "priority": "0.9", "changefreq": "monthly" },
     { "path": "specials", "priority": "0.8", "changefreq": "monthly" },
     { "path": "service-areas", "priority": "0.9", "changefreq": "monthly" },
     { "path": "about", "priority": "0.8", "changefreq": "monthly" },
@@ -28,5 +29,25 @@
   ],
   "cityPriority": "0.9",
   "cityPrioritySecondary": "0.8",
-  "primaryCitySlugs": ["orlando", "kissimmee", "poinciana"]
+  "primaryCitySlugs": ["orlando", "kissimmee", "poinciana"],
+  "neighborhoodSlugs": [
+    "winter-park",
+    "oviedo",
+    "lake-nona",
+    "baldwin-park",
+    "thornton-park",
+    "college-park",
+    "celebration",
+    "st-cloud",
+    "buenaventura-lakes",
+    "village-7",
+    "crescent-lakes",
+    "winter-garden",
+    "ocoee",
+    "apopka",
+    "lakeland",
+    "bay-hill",
+    "longwood",
+    "sanford"
+  ]
 }

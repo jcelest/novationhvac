@@ -10,12 +10,14 @@ import Specials from './components/Specials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CityLanding from './pages/CityLanding';
+import NeighborhoodLanding from './pages/NeighborhoodLanding';
 import ServicePage from './pages/ServicePage';
 import SpecialsPage from './pages/SpecialsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BookAppointmentPage from './pages/BookAppointmentPage';
 import ServiceAreasPage from './pages/ServiceAreasPage';
+import EmergencyACPage from './pages/EmergencyACPage';
 import { coolingData, heatingData, indoorAirQualityData } from './data/serviceData';
 import {
   orlandoData,
@@ -31,6 +33,7 @@ import {
   windermereData,
   altamonteSpringsData,
 } from './data/cityData';
+import { allNeighborhoodData } from './data/neighborhoodData';
 
 export default function App() {
   return (
@@ -62,6 +65,7 @@ export default function App() {
       <Route path="/cooling" element={<ServicePage data={coolingData} />} />
       <Route path="/heating" element={<ServicePage data={heatingData} />} />
       <Route path="/indoor-air-quality" element={<ServicePage data={indoorAirQualityData} />} />
+      <Route path="/emergency-ac-repair" element={<EmergencyACPage />} />
       <Route path="/specials" element={<SpecialsPage />} />
       <Route path="/service-areas" element={<ServiceAreasPage />} />
       <Route path="/about" element={<AboutPage />} />
@@ -79,6 +83,9 @@ export default function App() {
       <Route path="/dr-phillips" element={<CityLanding cityData={drPhillipsData} />} />
       <Route path="/windermere" element={<CityLanding cityData={windermereData} />} />
       <Route path="/altamonte-springs" element={<CityLanding cityData={altamonteSpringsData} />} />
+        {Object.entries(allNeighborhoodData).map(([slug, data]) => (
+          <Route key={slug} path={`/${slug}`} element={<NeighborhoodLanding neighborhoodData={data} />} />
+        ))}
     </Routes>
     </>
   );

@@ -12,7 +12,7 @@ const configPath = path.join(__dirname, 'routes.config.json');
 const outputPath = path.join(__dirname, '../public/sitemap.xml');
 
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-const { baseUrl, static: staticRoutes, citySlugs, cityPriority, cityPrioritySecondary, primaryCitySlugs } = config;
+const { baseUrl, static: staticRoutes, citySlugs, cityPriority, cityPrioritySecondary, primaryCitySlugs, neighborhoodSlugs = [] } = config;
 
 const today = new Date().toISOString().split('T')[0];
 
@@ -33,7 +33,11 @@ const cityUrls = citySlugs.map((slug) => {
   return buildUrl({ path: slug, priority, changefreq: 'monthly' });
 });
 
-const allUrls = [...staticUrls, ...cityUrls].join('\n');
+const neighborhoodUrls = neighborhoodSlugs.map((slug) =>
+  buildUrl({ path: slug, priority: '0.8', changefreq: 'monthly' })
+);
+
+const allUrls = [...staticUrls, ...cityUrls, ...neighborhoodUrls].join('\n');
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -42,5 +46,5 @@ ${allUrls}
 `;
 
 fs.writeFileSync(outputPath, sitemap);
-console.log(`Generated sitemap.xml with ${staticUrls.length + cityUrls.length} URLs`);
-console.log(`  Static: ${staticUrls.length}, City pages: ${cityUrls.length}`);
+console.log(`Generated sitemap.xml with ${staticUrls.length + cityUrls.length + neighborhoodUrls.length} URLs`);
+console.log(`  Static: ${staticUrls.length}, City: ${cityUrls.length}, Neighborhood: ${neighborhoodUrls.length}`);
