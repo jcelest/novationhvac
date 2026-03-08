@@ -14,6 +14,7 @@ export default function ServiceAreasPage() {
       <Helmet>
         <title>Service Areas | Novation Heating and Air Conditioning | Orlando, Kissimmee, Central FL</title>
         <meta name="description" content="Novation Heating and Air Conditioning serves Orlando, Kissimmee, Poinciana, Winter Haven, and all of Central Florida. Same-day AC repair, 24/7 emergency service. Book your appointment." />
+        <link rel="canonical" href="https://novationhvac.com/service-areas" />
       </Helmet>
       <Header />
       <main className="service-areas-page">

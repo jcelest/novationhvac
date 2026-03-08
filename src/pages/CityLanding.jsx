@@ -12,14 +12,36 @@ import '../components/Specials.css';
 import '../components/Contact.css';
 import './CityLanding.css';
 
+const BASE_URL = 'https://novationhvac.com';
+
 export default function CityLanding({ cityData }) {
-  const { name, metaTitle, metaDescription, heroTitle, heroTagline, aboutTitle, aboutSubtitle, aboutPara1, aboutPara2, serviceIntro, seoContent } = cityData;
+  const { name, slug, metaTitle, metaDescription, heroTitle, heroTagline, aboutTitle, aboutSubtitle, aboutPara1, aboutPara2, serviceIntro, seoContent } = cityData;
+  const canonicalUrl = `${BASE_URL}/${slug}`;
+
+  const faqSchema = seoContent?.faqs?.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: seoContent.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  } : null;
 
   return (
     <div className="city-landing">
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        {faqSchema && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchema)}
+          </script>
+        )}
       </Helmet>
       <Header />
       <div className="city-banner">

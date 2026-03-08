@@ -12,6 +12,7 @@ export default function AboutPage() {
       <Helmet>
         <title>About Novation Heating and Air Conditioning | Orlando HVAC | License CAC1823924</title>
         <meta name="description" content="Novation Heating and Air Conditioning - Orlando's trusted HVAC company. Licensed (CAC1823924), bonded, insured. 24/7 emergency service. AC repair, heating, cooling. Free estimates. (407) 973-1523." />
+        <link rel="canonical" href="https://novationhvac.com/about" />
       </Helmet>
       <Header />
       <main>

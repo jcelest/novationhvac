@@ -15,6 +15,7 @@ export default function ContactPage() {
       <Helmet>
         <title>Contact Novation Heating and Air Conditioning | Request Service | (407) 973-1523</title>
         <meta name="description" content="Contact Novation Heating and Air Conditioning for AC repair, heating, cooling services. 24/7 emergency. Orlando, Kissimmee, Central Florida. Call (407) 973-1523 or request service online." />
+        <link rel="canonical" href="https://novationhvac.com/contact" />
       </Helmet>
       <Header />
       <main>

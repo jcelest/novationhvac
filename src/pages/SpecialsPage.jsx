@@ -12,6 +12,7 @@ export default function SpecialsPage() {
       <Helmet>
         <title>Veteran & Military Discount | 10% Off HVAC | Novation Heating and Air Conditioning</title>
         <meta name="description" content="Novation Heating and Air Conditioning offers 10% off HVAC services for veterans and active military. AC repair, heating, cooling. Orlando, Kissimmee, Central Florida. Call (407) 973-1523." />
+        <link rel="canonical" href="https://novationhvac.com/specials" />
       </Helmet>
       <Header />
       <main>

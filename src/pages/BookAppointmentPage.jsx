@@ -178,6 +178,7 @@ export default function BookAppointmentPage() {
       <Helmet>
         <title>Book Appointment | Novation Heating and Air Conditioning | HVAC Orlando FL</title>
         <meta name="description" content="Book an HVAC appointment with Novation Heating and Air Conditioning. AC repair, heating, cooling services. Orlando, Kissimmee, Central Florida. (407) 973-1523." />
+        <link rel="canonical" href="https://novationhvac.com/book-appointment" />
       </Helmet>
       <Header />
       <main>

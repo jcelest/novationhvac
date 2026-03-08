@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
@@ -8,14 +9,37 @@ import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
 
+const BASE_URL = 'https://novationhvac.com';
+
 export default function ServicePage({ data }) {
   const { metaTitle, metaDescription, heroTitle, heroTagline, sections, faqs } = data;
+  const { pathname } = useLocation();
+  const canonicalUrl = `${BASE_URL}${pathname}`;
+
+  const faqSchema = faqs?.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  } : null;
 
   return (
     <>
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        {faqSchema && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchema)}
+          </script>
+        )}
       </Helmet>
       <Header />
       <main className="service-page">
