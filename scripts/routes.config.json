@@ -1,0 +1,32 @@
+{
+  "_comment": "When adding a new city: add slug to citySlugs, add route in App.jsx, add data in cityData.js, add to Footer + ServiceAreasPage",
+  "baseUrl": "https://novationhvac.com",
+  "static": [
+    { "path": "", "priority": "1.0", "changefreq": "weekly" },
+    { "path": "cooling", "priority": "0.9", "changefreq": "monthly" },
+    { "path": "heating", "priority": "0.9", "changefreq": "monthly" },
+    { "path": "indoor-air-quality", "priority": "0.9", "changefreq": "monthly" },
+    { "path": "specials", "priority": "0.8", "changefreq": "monthly" },
+    { "path": "service-areas", "priority": "0.9", "changefreq": "monthly" },
+    { "path": "about", "priority": "0.8", "changefreq": "monthly" },
+    { "path": "book-appointment", "priority": "0.9", "changefreq": "monthly" },
+    { "path": "contact", "priority": "0.9", "changefreq": "monthly" }
+  ],
+  "citySlugs": [
+    "orlando",
+    "kissimmee",
+    "poinciana",
+    "osceola-county",
+    "orange-county",
+    "polk-county",
+    "winter-haven",
+    "auburndale",
+    "haines-city",
+    "dr-phillips",
+    "windermere",
+    "altamonte-springs"
+  ],
+  "cityPriority": "0.9",
+  "cityPrioritySecondary": "0.8",
+  "primaryCitySlugs": ["orlando", "kissimmee", "poinciana"]
+}
