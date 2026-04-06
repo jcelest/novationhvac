@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import SeoOgTags from '../components/SeoOgTags';
+import { renderSeoOgTags } from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
@@ -20,7 +20,7 @@ export default function AboutPage() {
         <title>{ABOUT_TITLE}</title>
         <meta name="description" content={ABOUT_DESC} />
         <link rel="canonical" href={ABOUT_URL} />
-        <SeoOgTags url={ABOUT_URL} title={ABOUT_TITLE} description={ABOUT_DESC} />
+        {renderSeoOgTags({ url: ABOUT_URL, title: ABOUT_TITLE, description: ABOUT_DESC })}
       </Helmet>
       <Header />
       <main>

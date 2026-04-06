@@ -8,7 +8,7 @@ import '../components/Services.css';
 import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
-import SeoOgTags from '../components/SeoOgTags';
+import { renderSeoOgTags } from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
 
 export default function ServicePage({ data }) {
@@ -35,7 +35,7 @@ export default function ServicePage({ data }) {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <SeoOgTags url={canonicalUrl} title={metaTitle} description={metaDescription} />
+        {renderSeoOgTags({ url: canonicalUrl, title: metaTitle, description: metaDescription })}
         {faqSchema && (
           <script type="application/ld+json">
             {JSON.stringify(faqSchema)}

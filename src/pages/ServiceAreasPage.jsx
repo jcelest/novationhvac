@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import SeoOgTags from '../components/SeoOgTags';
+import { renderSeoOgTags } from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
@@ -26,7 +26,7 @@ export default function ServiceAreasPage() {
         <title>{SA_TITLE}</title>
         <meta name="description" content={SA_DESC} />
         <link rel="canonical" href={SA_URL} />
-        <SeoOgTags url={SA_URL} title={SA_TITLE} description={SA_DESC} />
+        {renderSeoOgTags({ url: SA_URL, title: SA_TITLE, description: SA_DESC })}
       </Helmet>
       <Header />
       <main className="service-areas-page">

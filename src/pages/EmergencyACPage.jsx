@@ -7,7 +7,7 @@ import '../components/Hero.css';
 import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
-import SeoOgTags from '../components/SeoOgTags';
+import { renderSeoOgTags } from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
 
 const EMERGENCY_TITLE = '24/7 Emergency AC Repair Central Florida | Same-Day Service | Novation';
@@ -42,7 +42,7 @@ export default function EmergencyACPage() {
         <title>{EMERGENCY_TITLE}</title>
         <meta name="description" content={EMERGENCY_DESC} />
         <link rel="canonical" href={EMERGENCY_CANONICAL} />
-        <SeoOgTags url={EMERGENCY_CANONICAL} title={EMERGENCY_TITLE} description={EMERGENCY_DESC} />
+        {renderSeoOgTags({ url: EMERGENCY_CANONICAL, title: EMERGENCY_TITLE, description: EMERGENCY_DESC })}
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>

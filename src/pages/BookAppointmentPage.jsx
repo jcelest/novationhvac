@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import SeoOgTags from '../components/SeoOgTags';
+import { renderSeoOgTags } from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -207,7 +207,7 @@ export default function BookAppointmentPage() {
         <title>{BOOK_TITLE}</title>
         <meta name="description" content={BOOK_DESC} />
         <link rel="canonical" href={BOOK_URL} />
-        <SeoOgTags url={BOOK_URL} title={BOOK_TITLE} description={BOOK_DESC} />
+        {renderSeoOgTags({ url: BOOK_URL, title: BOOK_TITLE, description: BOOK_DESC })}
       </Helmet>
       <Header />
       <main>

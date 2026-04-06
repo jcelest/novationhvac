@@ -2,8 +2,10 @@ import { OG_IMAGE, SITE_NAME } from '../utils/seoConstants';
 
 /**
  * Open Graph + Twitter tags aligned with canonical URL (fixes duplicate URL signals in GSC).
+ * Use inside <Helmet> as: {renderSeoOgTags({ url, title, description })}
+ * Do not use as <SeoOgTags /> — react-helmet-async rejects function-component children of Helmet.
  */
-export default function SeoOgTags({ url, title, description }) {
+export function renderSeoOgTags({ url, title, description }) {
   return (
     <>
       <meta property="og:url" content={url} />

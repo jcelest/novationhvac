@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import SeoOgTags from '../components/SeoOgTags';
+import { renderSeoOgTags } from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
@@ -23,7 +23,7 @@ export default function ContactPage() {
         <title>{CONTACT_TITLE}</title>
         <meta name="description" content={CONTACT_DESC} />
         <link rel="canonical" href={CONTACT_URL} />
-        <SeoOgTags url={CONTACT_URL} title={CONTACT_TITLE} description={CONTACT_DESC} />
+        {renderSeoOgTags({ url: CONTACT_URL, title: CONTACT_TITLE, description: CONTACT_DESC })}
       </Helmet>
       <Header />
       <main>

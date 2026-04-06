@@ -11,7 +11,7 @@ import '../components/About.css';
 import '../components/Specials.css';
 import '../components/Contact.css';
 import './CityLanding.css';
-import SeoOgTags from '../components/SeoOgTags';
+import { renderSeoOgTags } from '../components/SeoOgTags';
 import GeoInternalLinks from '../components/GeoInternalLinks';
 import CityHeroLcpImage from '../components/CityHeroLcpImage';
 import { SITE_URL } from '../utils/seoConstants';
@@ -48,7 +48,7 @@ export default function NeighborhoodLanding({ neighborhoodData }) {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <SeoOgTags url={canonicalUrl} title={metaTitle} description={metaDescription} />
+        {renderSeoOgTags({ url: canonicalUrl, title: metaTitle, description: metaDescription })}
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         {faqSchema && (
           <script type="application/ld+json">

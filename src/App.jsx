@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import SeoOgTags from './components/SeoOgTags';
+import { renderSeoOgTags } from './components/SeoOgTags';
 import { SITE_URL, HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION } from './utils/seoConstants';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
@@ -54,7 +54,7 @@ export default function App() {
               <title>{HOME_PAGE_TITLE}</title>
               <meta name="description" content={HOME_PAGE_DESCRIPTION} />
               <link rel="canonical" href={`${SITE_URL}/`} />
-              <SeoOgTags url={`${SITE_URL}/`} title={HOME_PAGE_TITLE} description={HOME_PAGE_DESCRIPTION} />
+              {renderSeoOgTags({ url: `${SITE_URL}/`, title: HOME_PAGE_TITLE, description: HOME_PAGE_DESCRIPTION })}
             </Helmet>
             <Header />
             <main>
