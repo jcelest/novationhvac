@@ -8,13 +8,13 @@ import '../components/Services.css';
 import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
-
-const BASE_URL = 'https://novationhvac.com';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 
 export default function ServicePage({ data }) {
   const { metaTitle, metaDescription, heroTitle, heroTagline, sections, faqs } = data;
   const { pathname } = useLocation();
-  const canonicalUrl = `${BASE_URL}${pathname}`;
+  const canonicalUrl = `${SITE_URL}${pathname}`;
 
   const faqSchema = faqs?.length > 0 ? {
     '@context': 'https://schema.org',
@@ -35,6 +35,7 @@ export default function ServicePage({ data }) {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        <SeoOgTags url={canonicalUrl} title={metaTitle} description={metaDescription} />
         {faqSchema && (
           <script type="application/ld+json">
             {JSON.stringify(faqSchema)}

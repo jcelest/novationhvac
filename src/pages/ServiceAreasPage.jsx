@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -8,13 +10,19 @@ import '../components/Hero.css';
 import '../components/Contact.css';
 import './ServiceAreasPage.css';
 
+const SA_TITLE = 'Service Areas | Novation Heating and Air Conditioning | Orlando, Kissimmee, Central FL';
+const SA_DESC =
+  'Novation Heating and Air Conditioning serves Orlando, Kissimmee, Poinciana, Winter Haven, and all of Central Florida. Same-day AC repair, 24/7 emergency service. Book your appointment.';
+const SA_URL = `${SITE_URL}/service-areas`;
+
 export default function ServiceAreasPage() {
   return (
     <>
       <Helmet>
-        <title>Service Areas | Novation Heating and Air Conditioning | Orlando, Kissimmee, Central FL</title>
-        <meta name="description" content="Novation Heating and Air Conditioning serves Orlando, Kissimmee, Poinciana, Winter Haven, and all of Central Florida. Same-day AC repair, 24/7 emergency service. Book your appointment." />
-        <link rel="canonical" href="https://novationhvac.com/service-areas" />
+        <title>{SA_TITLE}</title>
+        <meta name="description" content={SA_DESC} />
+        <link rel="canonical" href={SA_URL} />
+        <SeoOgTags url={SA_URL} title={SA_TITLE} description={SA_DESC} />
       </Helmet>
       <Header />
       <main className="service-areas-page">

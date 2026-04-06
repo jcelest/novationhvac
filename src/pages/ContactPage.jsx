@@ -1,10 +1,17 @@
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import '../components/Hero.css';
 import '../components/Contact.css';
+
+const CONTACT_TITLE = 'Contact Novation Heating and Air Conditioning | Request Service | (407) 973-1523';
+const CONTACT_DESC =
+  'Contact Novation Heating and Air Conditioning for AC repair, heating, cooling services. 24/7 emergency. Orlando, Kissimmee, Central Florida. Call (407) 973-1523 or request service online.';
+const CONTACT_URL = `${SITE_URL}/contact`;
 
 export default function ContactPage() {
   const location = useLocation();
@@ -13,9 +20,10 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact Novation Heating and Air Conditioning | Request Service | (407) 973-1523</title>
-        <meta name="description" content="Contact Novation Heating and Air Conditioning for AC repair, heating, cooling services. 24/7 emergency. Orlando, Kissimmee, Central Florida. Call (407) 973-1523 or request service online." />
-        <link rel="canonical" href="https://novationhvac.com/contact" />
+        <title>{CONTACT_TITLE}</title>
+        <meta name="description" content={CONTACT_DESC} />
+        <link rel="canonical" href={CONTACT_URL} />
+        <SeoOgTags url={CONTACT_URL} title={CONTACT_TITLE} description={CONTACT_DESC} />
       </Helmet>
       <Header />
       <main>

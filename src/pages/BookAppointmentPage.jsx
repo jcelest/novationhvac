@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { trackFormSubmit, trackLeadCaptured } from '../utils/analytics';
@@ -25,6 +27,11 @@ const PREFERRED_TIMES = [
 ];
 
 const MAX_IMAGES = 10;
+
+const BOOK_TITLE = 'Book Appointment | Novation Heating and Air Conditioning | HVAC Orlando FL';
+const BOOK_DESC =
+  'Book an HVAC appointment with Novation Heating and Air Conditioning. AC repair, heating, cooling services. Orlando, Kissimmee, Central Florida. (407) 973-1523.';
+const BOOK_URL = `${SITE_URL}/book-appointment`;
 
 export default function BookAppointmentPage() {
   const [formData, setFormData] = useState({
@@ -197,9 +204,10 @@ export default function BookAppointmentPage() {
   return (
     <>
       <Helmet>
-        <title>Book Appointment | Novation Heating and Air Conditioning | HVAC Orlando FL</title>
-        <meta name="description" content="Book an HVAC appointment with Novation Heating and Air Conditioning. AC repair, heating, cooling services. Orlando, Kissimmee, Central Florida. (407) 973-1523." />
-        <link rel="canonical" href="https://novationhvac.com/book-appointment" />
+        <title>{BOOK_TITLE}</title>
+        <meta name="description" content={BOOK_DESC} />
+        <link rel="canonical" href={BOOK_URL} />
+        <SeoOgTags url={BOOK_URL} title={BOOK_TITLE} description={BOOK_DESC} />
       </Helmet>
       <Header />
       <main>

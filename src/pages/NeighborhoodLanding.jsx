@@ -11,12 +11,12 @@ import '../components/About.css';
 import '../components/Specials.css';
 import '../components/Contact.css';
 import './CityLanding.css';
-
-const BASE_URL = 'https://novationhvac.com';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 
 export default function NeighborhoodLanding({ neighborhoodData }) {
   const { name, slug, parentCity, parentCitySlug, metaTitle, metaDescription, heroTitle, heroTagline, aboutTitle, aboutSubtitle, aboutPara1, aboutPara2, serviceIntro, seoContent } = neighborhoodData;
-  const canonicalUrl = `${BASE_URL}/${slug}`;
+  const canonicalUrl = `${SITE_URL}/${slug}`;
 
   const faqSchema = seoContent?.faqs?.length > 0 ? {
     '@context': 'https://schema.org',
@@ -37,6 +37,7 @@ export default function NeighborhoodLanding({ neighborhoodData }) {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        <SeoOgTags url={canonicalUrl} title={metaTitle} description={metaDescription} />
         {faqSchema && (
           <script type="application/ld+json">
             {JSON.stringify(faqSchema)}

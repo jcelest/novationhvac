@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -6,13 +8,19 @@ import '../components/Hero.css';
 import '../components/Specials.css';
 import '../components/Contact.css';
 
+const SPECIALS_TITLE = 'Veteran & Military Discount | 10% Off HVAC | Novation Heating and Air Conditioning';
+const SPECIALS_DESC =
+  'Novation Heating and Air Conditioning offers 10% off HVAC services for veterans and active military. AC repair, heating, cooling. Orlando, Kissimmee, Central Florida. Call (407) 973-1523.';
+const SPECIALS_URL = `${SITE_URL}/specials`;
+
 export default function SpecialsPage() {
   return (
     <>
       <Helmet>
-        <title>Veteran & Military Discount | 10% Off HVAC | Novation Heating and Air Conditioning</title>
-        <meta name="description" content="Novation Heating and Air Conditioning offers 10% off HVAC services for veterans and active military. AC repair, heating, cooling. Orlando, Kissimmee, Central Florida. Call (407) 973-1523." />
-        <link rel="canonical" href="https://novationhvac.com/specials" />
+        <title>{SPECIALS_TITLE}</title>
+        <meta name="description" content={SPECIALS_DESC} />
+        <link rel="canonical" href={SPECIALS_URL} />
+        <SeoOgTags url={SPECIALS_URL} title={SPECIALS_TITLE} description={SPECIALS_DESC} />
       </Helmet>
       <Header />
       <main>

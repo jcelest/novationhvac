@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import SeoOgTags from './components/SeoOgTags';
+import { SITE_URL } from './utils/seoConstants';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -47,7 +49,12 @@ export default function App() {
             <Helmet>
               <title>Novation Heating and Air Conditioning | HVAC Orlando, Kissimmee, Central FL</title>
               <meta name="description" content="Novation Heating and Air Conditioning - Orlando's trusted HVAC company. AC repair, heating, cooling, 24/7 emergency service. Licensed (CAC1823924). Orlando, Kissimmee, Poinciana, Central Florida. (407) 973-1523." />
-              <link rel="canonical" href="https://novationhvac.com/" />
+              <link rel="canonical" href={`${SITE_URL}/`} />
+              <SeoOgTags
+                url={`${SITE_URL}/`}
+                title="Novation Heating and Air Conditioning | HVAC Orlando, Kissimmee, Central FL"
+                description="Novation Heating and Air Conditioning - Orlando's trusted HVAC company. AC repair, heating, cooling, 24/7 emergency service. Licensed (CAC1823924). Orlando, Kissimmee, Poinciana, Central Florida. (407) 973-1523."
+              />
             </Helmet>
             <Header />
             <main>

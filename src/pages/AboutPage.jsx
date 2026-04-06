@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -6,13 +8,19 @@ import '../components/Hero.css';
 import '../components/About.css';
 import '../components/Contact.css';
 
+const ABOUT_TITLE = 'About Novation Heating and Air Conditioning | Orlando HVAC | License CAC1823924';
+const ABOUT_DESC =
+  "Novation Heating and Air Conditioning - Orlando's trusted HVAC company. Licensed (CAC1823924), bonded, insured. 24/7 emergency service. AC repair, heating, cooling. Free estimates. (407) 973-1523.";
+const ABOUT_URL = `${SITE_URL}/about`;
+
 export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Novation Heating and Air Conditioning | Orlando HVAC | License CAC1823924</title>
-        <meta name="description" content="Novation Heating and Air Conditioning - Orlando's trusted HVAC company. Licensed (CAC1823924), bonded, insured. 24/7 emergency service. AC repair, heating, cooling. Free estimates. (407) 973-1523." />
-        <link rel="canonical" href="https://novationhvac.com/about" />
+        <title>{ABOUT_TITLE}</title>
+        <meta name="description" content={ABOUT_DESC} />
+        <link rel="canonical" href={ABOUT_URL} />
+        <SeoOgTags url={ABOUT_URL} title={ABOUT_TITLE} description={ABOUT_DESC} />
       </Helmet>
       <Header />
       <main>

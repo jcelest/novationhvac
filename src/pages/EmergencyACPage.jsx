@@ -7,8 +7,13 @@ import '../components/Hero.css';
 import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
+import SeoOgTags from '../components/SeoOgTags';
+import { SITE_URL } from '../utils/seoConstants';
 
-const BASE_URL = 'https://novationhvac.com';
+const EMERGENCY_TITLE = '24/7 Emergency AC Repair Orlando FL | Same-Day Service | Novation HVAC';
+const EMERGENCY_DESC =
+  '24/7 emergency AC repair in Orlando, Kissimmee & Central Florida. Same-day service. 24 hour HVAC repair when you need it most. Call (407) 973-1523 now.';
+const EMERGENCY_CANONICAL = `${SITE_URL}/emergency-ac-repair`;
 
 const faqs = [
   { q: 'How fast can you get to my home for emergency AC repair?', a: 'We prioritize emergency calls and typically respond same-day, often within hours. Call (407) 973-1523 for immediate assistance.' },
@@ -34,9 +39,10 @@ export default function EmergencyACPage() {
   return (
     <>
       <Helmet>
-        <title>24/7 Emergency AC Repair Orlando FL | Same-Day Service | Novation HVAC</title>
-        <meta name="description" content="24/7 emergency AC repair in Orlando, Kissimmee & Central Florida. Same-day service. 24 hour HVAC repair when you need it most. Call (407) 973-1523 now." />
-        <link rel="canonical" href={`${BASE_URL}/emergency-ac-repair`} />
+        <title>{EMERGENCY_TITLE}</title>
+        <meta name="description" content={EMERGENCY_DESC} />
+        <link rel="canonical" href={EMERGENCY_CANONICAL} />
+        <SeoOgTags url={EMERGENCY_CANONICAL} title={EMERGENCY_TITLE} description={EMERGENCY_DESC} />
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
