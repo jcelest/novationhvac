@@ -10,6 +10,7 @@ import '../components/Contact.css';
 import './ServicePage.css';
 import { renderSeoOgTags } from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
+import { jsonLdStringify } from '../utils/jsonLdScript';
 
 export default function ServicePage({ data }) {
   const { metaTitle, metaDescription, heroTitle, heroTagline, sections, faqs } = data;
@@ -36,11 +37,7 @@ export default function ServicePage({ data }) {
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
         {renderSeoOgTags({ url: canonicalUrl, title: metaTitle, description: metaDescription })}
-        {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
-        )}
+        {faqSchema && <script type="application/ld+json">{jsonLdStringify(faqSchema)}</script>}
       </Helmet>
       <Header />
       <main className="service-page">

@@ -37,12 +37,13 @@ import {
 } from './data/cityData';
 import { allNeighborhoodData } from './data/neighborhoodData';
 import { organizationJsonLd } from './data/organizationJsonLd';
+import { jsonLdStringify } from './utils/jsonLdScript';
 
 export default function App() {
   return (
     <>
       <Helmet>
-        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
+        <script type="application/ld+json">{jsonLdStringify(organizationJsonLd)}</script>
       </Helmet>
       <ScrollToTop />
       <Routes>

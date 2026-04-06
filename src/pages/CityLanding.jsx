@@ -16,6 +16,7 @@ import GeoInternalLinks from '../components/GeoInternalLinks';
 import CityHeroLcpImage from '../components/CityHeroLcpImage';
 import { SITE_URL } from '../utils/seoConstants';
 import { breadcrumbJsonLd } from '../utils/schemaBreadcrumb';
+import { jsonLdStringify } from '../utils/jsonLdScript';
 import { GEO_UP_LINKS } from '../data/geoUpLinks';
 
 export default function CityLanding({ cityData }) {
@@ -48,11 +49,9 @@ export default function CityLanding({ cityData }) {
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
         {renderSeoOgTags({ url: canonicalUrl, title: metaTitle, description: metaDescription })}
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{jsonLdStringify(breadcrumbSchema)}</script>
         {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
+          <script type="application/ld+json">{jsonLdStringify(faqSchema)}</script>
         )}
       </Helmet>
       <Header />

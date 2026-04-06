@@ -8,6 +8,7 @@ import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
 import { renderSeoOgTags } from '../components/SeoOgTags';
+import { jsonLdStringify } from '../utils/jsonLdScript';
 import { SITE_URL } from '../utils/seoConstants';
 
 const EMERGENCY_TITLE = '24/7 Emergency AC Repair Central Florida | Same-Day Service | Novation';
@@ -43,9 +44,7 @@ export default function EmergencyACPage() {
         <meta name="description" content={EMERGENCY_DESC} />
         <link rel="canonical" href={EMERGENCY_CANONICAL} />
         {renderSeoOgTags({ url: EMERGENCY_CANONICAL, title: EMERGENCY_TITLE, description: EMERGENCY_DESC })}
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
+        <script type="application/ld+json">{jsonLdStringify(faqSchema)}</script>
       </Helmet>
       <Header />
       <main className="service-page">
