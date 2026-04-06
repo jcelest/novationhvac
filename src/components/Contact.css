@@ -35,7 +35,7 @@
   font-weight: 600;
 }
 
-.contact-link strong {
+.contact-call-label {
   display: block;
   font-size: 0.9rem;
   color: var(--white);
@@ -146,14 +146,43 @@
 
   .contact-info h2 {
     font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
   }
 
+  .contact-info > p {
+    margin-bottom: 1.25rem;
+    line-height: 1.55;
+  }
+
+  .contact-details {
+    gap: 0.75rem;
+  }
+
+  /* Stack label + number so “Call Us” and the phone never crowd on one line */
   .contact-link {
     font-size: 1.25rem;
-    min-height: var(--touch-min);
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 0;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.35rem 0 0.5rem;
+  }
+
+  .contact-call-label {
+    display: block;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+
+  .contact-phone {
+    display: inline-block;
+    margin-top: 0.1rem;
+    white-space: nowrap;
+    padding-left: 0.05rem;
   }
 
   .contact-form {
@@ -178,6 +207,29 @@
 @media (max-width: 480px) {
   .contact {
     padding: 2.5rem 0;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 0.65rem;
+  }
+
+  .contact-info > p {
+    margin-bottom: 1.1rem;
+    font-size: 0.98rem;
+  }
+
+  .contact-details {
+    gap: 0.85rem;
+  }
+
+  .contact-link {
+    gap: 0.55rem;
+    padding-top: 0.25rem;
+  }
+
+  .contact-hours {
+    margin-top: 0.15rem;
+    line-height: 1.45;
   }
 
   .contact-form {

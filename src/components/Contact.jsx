@@ -88,8 +88,8 @@ export default function Contact({ initialZip = '' }) {
           <p>Ready to schedule service or have questions? We're here to help.</p>
           <div className="contact-details">
             <a href="tel:4079731523" className="contact-link">
-              <strong>Call Us</strong>
-              (407) 973-1523
+              <strong className="contact-call-label">Call Us</strong>
+              <span className="contact-phone">(407) 973-1523</span>
             </a>
             <p className="contact-hours">24/7 Emergency Service Available</p>
           </div>

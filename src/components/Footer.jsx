@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { EMPHASIS_SERVICE_AREAS, SERVICE_AREAS_HUB } from '../data/emphasisServiceAreas';
+import { SERVICE_AREAS_HUB } from '../data/emphasisServiceAreas';
 import './Footer.css';
 
 export default function Footer() {
@@ -38,12 +38,6 @@ export default function Footer() {
             <Link to={SERVICE_AREAS_HUB.path} className="footer-areas-hub">
               {SERVICE_AREAS_HUB.labelLong}
             </Link>
-            <span className="footer-label">Top markets</span>
-            {EMPHASIS_SERVICE_AREAS.map(({ to, label }) => (
-              <Link key={to} to={to}>
-                {label}
-              </Link>
-            ))}
             <span className="footer-label">More cities</span>
             <Link to="/kissimmee">Kissimmee</Link>
             <Link to="/osceola-county">Osceola County</Link>

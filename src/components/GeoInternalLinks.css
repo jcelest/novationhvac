@@ -33,3 +33,21 @@
 .geo-internal-links a:hover {
   color: var(--orange-primary, #e67e22);
 }
+
+/* Inside blue-gradient hero: avoid dark gray / default link colors */
+.hero .geo-internal-links {
+  background: rgba(0, 0, 0, 0.18);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.hero .geo-internal-links-title {
+  color: var(--orange-light);
+}
+
+.hero .geo-internal-links a {
+  color: var(--orange-light);
+}
+
+.hero .geo-internal-links a:hover {
+  color: var(--white);
+}
