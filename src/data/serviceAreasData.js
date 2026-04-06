@@ -1,13 +1,39 @@
 /**
- * Service areas with images and descriptions for the Service Areas page
+ * Service areas with images and descriptions for the Service Areas page.
+ * Order: home market (Poinciana), then organic growth priorities (Orlando, Winter Haven, Lakeland).
  */
 export const serviceAreas = [
+  {
+    name: 'Poinciana',
+    slug: 'poinciana',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    description:
+      'Our home market—expert AC repair and HVAC throughout Poinciana (34759), including Village 7, Crescent Lakes, and surrounding Osceola & Polk communities.',
+    nearby: 'Kissimmee, Orlando, Winter Haven',
+  },
   {
     name: 'Orlando',
     slug: 'orlando',
     image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80',
-    description: 'Serving Orlando and surrounding communities with AC repair, heating, and HVAC installation. Same-day service and 24/7 emergency support.',
+    description:
+      'Serving Orlando and surrounding communities with AC repair, heating, and HVAC installation. Same-day service and 24/7 emergency support.',
     nearby: 'Winter Park, Oviedo, Dr. Phillips',
+  },
+  {
+    name: 'Winter Haven',
+    slug: 'winter-haven',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    description:
+      'Reliable AC and heating in Winter Haven and Polk County. Same-day repair and 24/7 emergency HVAC when you need it.',
+    nearby: 'Auburndale, Haines City, Lakeland',
+  },
+  {
+    name: 'Lakeland',
+    slug: 'lakeland',
+    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
+    description:
+      'HVAC services serving Lakeland and the Polk County area—cooling repair, furnace service, maintenance, and installations.',
+    nearby: 'Winter Haven, Auburndale, Polk County',
   },
   {
     name: 'Kissimmee',
@@ -15,13 +41,6 @@ export const serviceAreas = [
     image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
     description: 'Trusted HVAC services throughout Kissimmee and Osceola County. Cooling repair, furnace service, and maintenance plans.',
     nearby: 'St. Cloud, Celebration, Poinciana',
-  },
-  {
-    name: 'Poinciana',
-    slug: 'poinciana',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
-    description: 'Expert AC repair and HVAC services in Poinciana (34759). Serving all communities including Village 7 and Crescent Lakes.',
-    nearby: 'Kissimmee, Osceola County, Polk County',
   },
   {
     name: 'Osceola County',
@@ -41,15 +60,8 @@ export const serviceAreas = [
     name: 'Polk County',
     slug: 'polk-county',
     image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
-    description: 'HVAC repair and installation across Polk County. Winter Haven, Auburndale, Haines City, and Lakeland area.',
+    description: 'HVAC repair and installation across Polk County. Winter Haven, Auburndale, Haines City, Lakeland, and surrounding areas.',
     nearby: 'Winter Haven, Auburndale, Haines City, Lakeland',
-  },
-  {
-    name: 'Winter Haven',
-    slug: 'winter-haven',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
-    description: 'Reliable AC and heating services in Winter Haven. Same-day repair and 24/7 emergency HVAC when you need it.',
-    nearby: 'Auburndale, Haines City, Lakeland',
   },
   {
     name: 'Auburndale',

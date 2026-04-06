@@ -12,11 +12,21 @@ import '../components/Specials.css';
 import '../components/Contact.css';
 import './CityLanding.css';
 import SeoOgTags from '../components/SeoOgTags';
+import GeoInternalLinks from '../components/GeoInternalLinks';
+import CityHeroLcpImage from '../components/CityHeroLcpImage';
 import { SITE_URL } from '../utils/seoConstants';
+import { breadcrumbJsonLd } from '../utils/schemaBreadcrumb';
+import { GEO_UP_LINKS } from '../data/geoUpLinks';
 
 export default function CityLanding({ cityData }) {
   const { name, slug, metaTitle, metaDescription, heroTitle, heroTagline, aboutTitle, aboutSubtitle, aboutPara1, aboutPara2, serviceIntro, seoContent } = cityData;
   const canonicalUrl = `${SITE_URL}/${slug}`;
+  const geoUpLink = GEO_UP_LINKS[slug];
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: 'Home', path: '/' },
+    { name, path: `/${slug}` },
+  ]);
 
   const faqSchema = seoContent?.faqs?.length > 0 ? {
     '@context': 'https://schema.org',
@@ -38,6 +48,7 @@ export default function CityLanding({ cityData }) {
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
         <SeoOgTags url={canonicalUrl} title={metaTitle} description={metaDescription} />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         {faqSchema && (
           <script type="application/ld+json">
             {JSON.stringify(faqSchema)}
@@ -50,7 +61,9 @@ export default function CityLanding({ cityData }) {
       </div>
       <main>
         <section className="hero">
-          <div className="hero-bg"></div>
+          <div className="hero-bg" aria-hidden="true">
+            <CityHeroLcpImage />
+          </div>
           <div className="hero-overlay"></div>
           <div className="hero-content container">
             <span className="city-badge">Serving {name}</span>
@@ -60,6 +73,7 @@ export default function CityLanding({ cityData }) {
               <Link to="/book-appointment" className="btn-primary">Book Appointment</Link>
               <a href="#contact" className="btn-secondary">Flexible Financing</a>
             </div>
+            <GeoInternalLinks slug={slug} />
           </div>
         </section>
 
@@ -105,6 +119,11 @@ export default function CityLanding({ cityData }) {
               <h3>{aboutSubtitle}</h3>
               <p>{aboutPara1}</p>
               <p>{aboutPara2}</p>
+              {geoUpLink && (
+                <p className="geo-up-link">
+                  <Link to={geoUpLink.to}>{geoUpLink.label}</Link>
+                </p>
+              )}
               <a href="#contact" className="about-cta">
                 <strong>We're Here When You Need Us</strong>
                 <em>Same-Day Service & 24/7 Emergency Support in {name}</em>

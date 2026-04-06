@@ -33,10 +33,29 @@
   align-items: flex-start;
 }
 
-.city-landing .hero-bg {
-  background: 
-    linear-gradient(160deg, rgba(26, 82, 118, 0.95) 0%, rgba(41, 128, 185, 0.9) 40%, rgba(52, 152, 219, 0.85) 100%),
-    url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80') center/cover no-repeat;
+/* Hero photo: <img class="city-hero-lcp-img"> in JSX (LCP + srcset); gradient overlay below */
+.city-landing .hero-bg .city-hero-lcp-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.city-landing .hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    160deg,
+    rgba(26, 82, 118, 0.95) 0%,
+    rgba(41, 128, 185, 0.9) 40%,
+    rgba(52, 152, 219, 0.85) 100%
+  );
+  pointer-events: none;
 }
 
 .city-landing .hero-overlay {
@@ -80,6 +99,23 @@
 
 .parent-link a:hover {
   text-decoration: underline;
+}
+
+/* Optional single “up” link to emphasis market or service-areas hub */
+.geo-up-link {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.geo-up-link a {
+  color: var(--blue-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.geo-up-link a:hover {
+  color: var(--orange-primary);
 }
 
 .city-landing .hero-title {

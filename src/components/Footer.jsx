@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { EMPHASIS_SERVICE_AREAS, SERVICE_AREAS_HUB } from '../data/emphasisServiceAreas';
 import './Footer.css';
 
 export default function Footer() {
@@ -28,19 +29,26 @@ export default function Footer() {
             <Link to="/heating">Heating</Link>
             <Link to="/indoor-air-quality">Indoor Air Quality</Link>
             <Link to="/specials">Specials</Link>
-            <Link to="/service-areas">Service Areas</Link>
+            <Link to="/service-areas">Areas we serve</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
           </div>
           <div className="footer-links-group footer-city-links">
-            <span className="footer-label">Areas</span>
-            <Link to="/orlando">Orlando</Link>
+            <span className="footer-label">Areas we serve</span>
+            <Link to={SERVICE_AREAS_HUB.path} className="footer-areas-hub">
+              {SERVICE_AREAS_HUB.labelLong}
+            </Link>
+            <span className="footer-label">Top markets</span>
+            {EMPHASIS_SERVICE_AREAS.map(({ to, label }) => (
+              <Link key={to} to={to}>
+                {label}
+              </Link>
+            ))}
+            <span className="footer-label">More cities</span>
             <Link to="/kissimmee">Kissimmee</Link>
-            <Link to="/poinciana">Poinciana</Link>
             <Link to="/osceola-county">Osceola County</Link>
             <Link to="/orange-county">Orange County</Link>
             <Link to="/polk-county">Polk County</Link>
-            <Link to="/winter-haven">Winter Haven</Link>
             <Link to="/auburndale">Auburndale</Link>
             <Link to="/haines-city">Haines City</Link>
             <Link to="/dr-phillips">Dr. Phillips</Link>

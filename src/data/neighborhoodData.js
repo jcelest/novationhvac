@@ -35,106 +35,156 @@ const createNeighborhoodData = (name, slug, parentCity, parentCitySlug, options 
 
 // Orlando area neighborhoods
 export const winterParkData = createNeighborhoodData('Winter Park', 'winter-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Winter Park FL | HVAC Services | Novation Heating & Cooling',
-  metaDescription: 'AC repair and HVAC services in Winter Park, FL. 24/7 emergency cooling repair. Serving Orlando metro. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Winter Park FL | Historic Homes & Park Avenue HVAC | Novation',
+  metaDescription:
+    'Winter Park AC repair & heating: historic homes, Park Avenue corridor & lakeside properties. 24/7 emergency HVAC. Orlando metro. Licensed CAC1823924. (407) 973-1523.',
   aboutPara1: 'Novation Heating and Cooling serves Winter Park with expert AC repair and HVAC services. Winter Park\'s historic homes and Florida heat demand reliable cooling. We provide cooling repair, furnace service, heat pump installation, and 24/7 emergency HVAC throughout Winter Park and the Orlando metro area.',
 });
 
 export const oviedoData = createNeighborhoodData('Oviedo', 'oviedo', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Oviedo FL | HVAC Services Near Orlando',
-  metaDescription: 'Professional AC repair and HVAC in Oviedo, FL. 24/7 emergency cooling. Serving Orlando metro. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Oviedo FL | Seminole County Line HVAC | Novation',
+  metaDescription:
+    'Oviedo AC repair & heating: Chuluota, Geneva & SR-417 corridor. 24/7 emergency cooling. Licensed. (407) 973-1523.',
   aboutPara1: 'Novation Heating and Cooling provides AC repair and HVAC services in Oviedo. Serving Oviedo, Chuluota, and the greater Orlando area, our certified technicians handle cooling repair, furnace service, and emergency HVAC. Same-day service available.',
 });
 
 export const lakeNonaData = createNeighborhoodData('Lake Nona', 'lake-nona', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Lake Nona FL | HVAC Services | Novation Heating & Cooling',
-  metaDescription: 'AC repair and HVAC services in Lake Nona, Orlando. 24/7 emergency cooling repair. Medical City area. Licensed. Free estimates. (407) 973-1523.',
-  aboutPara1: 'Novation Heating and Cooling serves Lake Nona with professional AC repair and HVAC services. Lake Nona\'s growth and Florida climate mean reliable cooling is essential. We provide cooling repair, furnace service, and 24/7 emergency HVAC for Lake Nona residents.',
+  metaTitle: 'Lake Nona HVAC for Newer Homes | AC Service & High-Efficiency Installs | Novation',
+  metaDescription:
+    'Lake Nona & Medical City: high-efficiency equipment, new-home HVAC, and AC service—long-tail vs broad Orlando page. Licensed. (407) 973-1523.',
+  heroTitle: 'Lake Nona HVAC — New Construction & Medical City Area',
+  heroTagline: 'Install & upgrade expertise—not the same headline as Orlando metro',
+  aboutPara1:
+    'Lake Nona’s newer housing stock often means variable-speed systems and tight efficiency specs—we service and install equipment suited to Medical City and southeast Orlando growth, separate from a generic Orlando metro headline.',
 });
 
 export const baldwinParkData = createNeighborhoodData('Baldwin Park', 'baldwin-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Baldwin Park Orlando FL | HVAC Services',
-  metaDescription: 'AC repair and HVAC in Baldwin Park, Orlando. 24/7 emergency cooling. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Baldwin Park FL | Lake Baldwin & East Orlando HVAC | Novation',
+  metaDescription:
+    'Baldwin Park AC repair & heating near Lake Baldwin. Townhomes, single-family & 24/7 emergency HVAC. Licensed. (407) 973-1523.',
 });
 
 export const thorntonParkData = createNeighborhoodData('Thornton Park', 'thornton-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Thornton Park Orlando FL | HVAC Downtown',
-  metaDescription: 'AC repair and HVAC services in Thornton Park, downtown Orlando. 24/7 emergency cooling. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Thornton Park FL | Downtown Orlando HVAC | Novation',
+  metaDescription:
+    'Thornton Park & Lake Eola–adjacent AC repair & heating. Downtown Orlando 24/7 emergency HVAC. Licensed. (407) 973-1523.',
 });
 
 export const collegeParkData = createNeighborhoodData('College Park', 'college-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair College Park Orlando FL | HVAC Services',
-  metaDescription: 'AC repair and HVAC in College Park, Orlando. 24/7 emergency cooling. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair College Park FL | Edgewater Drive & Ivanhoe Village HVAC | Novation',
+  metaDescription:
+    'College Park AC repair & heating along Edgewater Drive & Ivanhoe. Bungalows, cottages & 24/7 emergency HVAC. (407) 973-1523.',
 });
 
 // Kissimmee / Osceola area
 export const celebrationData = createNeighborhoodData('Celebration', 'celebration', 'Kissimmee', 'kissimmee', {
-  metaTitle: 'AC Repair Celebration FL | HVAC Near Kissimmee',
-  metaDescription: 'AC repair and HVAC services in Celebration, FL. 24/7 emergency cooling. Near Kissimmee & Disney. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Celebration FL | Planned Community HVAC | Novation',
+  metaDescription:
+    'Celebration, FL AC repair & heating: town centers, condos & single-family. 24/7 emergency HVAC near Disney/Kissimmee. Licensed. (407) 973-1523.',
   aboutPara1: 'Novation Heating and Cooling serves Celebration with expert AC repair and HVAC services. Celebration\'s unique community and Florida heat require dependable cooling. We provide cooling repair, furnace service, and 24/7 emergency HVAC for Celebration residents.',
 });
 
 export const stCloudData = createNeighborhoodData('St. Cloud', 'st-cloud', 'Kissimmee', 'kissimmee', {
-  metaTitle: 'AC Repair St. Cloud FL | HVAC Services | Osceola County',
-  metaDescription: 'AC repair and HVAC in St. Cloud, FL. 24/7 emergency cooling. Osceola County. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair St. Cloud FL | East Lake Toho & Narcoossee HVAC | Novation',
+  metaDescription:
+    'St. Cloud AC repair & heating: East Lake Toho, Narcoossee Road & historic downtown. 24/7 emergency Osceola County HVAC. (407) 973-1523.',
   aboutPara1: 'Novation Heating and Cooling provides AC repair and HVAC services in St. Cloud. Serving St. Cloud, Kissimmee, and Osceola County, our technicians handle cooling repair, furnace service, and emergency HVAC. Same-day service available.',
 });
 
 export const buenaventuraLakesData = createNeighborhoodData('Buenaventura Lakes', 'buenaventura-lakes', 'Kissimmee', 'kissimmee', {
-  metaTitle: 'AC Repair Buenaventura Lakes FL | HVAC BVL | Kissimmee',
-  metaDescription: 'AC repair and HVAC in Buenaventura Lakes (BVL), Kissimmee. 24/7 emergency cooling. Osceola County. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Buenaventura Lakes FL | BVL & Osceola Corridor HVAC | Novation',
+  metaDescription:
+    'Buenaventura Lakes (BVL) AC repair & heating off Thacker Road & Boggy Creek. 24/7 emergency HVAC. Licensed. (407) 973-1523.',
 });
 
 // Poinciana communities
 export const village7Data = createNeighborhoodData('Village 7', 'village-7', 'Poinciana', 'poinciana', {
-  metaTitle: 'AC Repair Village 7 Poinciana FL | HVAC 34759',
-  metaDescription: 'AC repair and HVAC in Village 7, Poinciana FL 34759. 24/7 emergency cooling. Osceola & Polk. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'Village 7 Poinciana AC Service | West 34759 Neighborhood | Novation',
+  metaDescription:
+    'Village 7 long-tail: AC repair & heating in west Poinciana—not a clone of the main Poinciana city title. 34759. CAC1823924. (407) 973-1523.',
   aboutPara1: 'Novation Heating and Cooling serves Village 7 and all Poinciana communities with AC repair and HVAC services. Village 7 residents count on us for cooling repair, furnace service, and 24/7 emergency HVAC in the 34759 area.',
 });
 
 export const crescentLakesData = createNeighborhoodData('Crescent Lakes', 'crescent-lakes', 'Poinciana', 'poinciana', {
-  metaTitle: 'AC Repair Crescent Lakes Poinciana FL | HVAC 34759',
-  metaDescription: 'AC repair and HVAC in Crescent Lakes, Poinciana FL. 24/7 emergency cooling. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'Crescent Lakes Poinciana AC Repair | East 34759 Lakeside | Novation',
+  metaDescription:
+    'Crescent Lakes hyperlocal: east-side 34759 lakes & pool homes—distinct from Village 7 and from the Poinciana hub page. Licensed. (407) 973-1523.',
 });
 
 // Orange County areas
 export const winterGardenData = createNeighborhoodData('Winter Garden', 'winter-garden', 'Orange County', 'orange-county', {
-  metaTitle: 'AC Repair Winter Garden FL | HVAC Services | Orange County',
-  metaDescription: 'AC repair and HVAC in Winter Garden, FL. 24/7 emergency cooling. West Orange County. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Winter Garden FL | Plant Street & West Orange HVAC | Novation',
+  metaDescription:
+    'Winter Garden AC repair & heating: Plant Street, downtown WG & SR-429 corridor. 24/7 emergency West Orange HVAC. (407) 973-1523.',
 });
 
 export const ocoeeData = createNeighborhoodData('Ocoee', 'ocoee', 'Orange County', 'orange-county', {
-  metaTitle: 'AC Repair Ocoee FL | HVAC Services | West Orange County',
-  metaDescription: 'AC repair and HVAC in Ocoee, FL. 24/7 emergency cooling. West Orange County. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Ocoee FL | West Colonial & Clarke Road HVAC | Novation',
+  metaDescription:
+    'Ocoee AC repair & heating: West Colonial Drive, Clarke Road & Forest Lake. 24/7 emergency West Orange HVAC. (407) 973-1523.',
 });
 
 export const apopkaData = createNeighborhoodData('Apopka', 'apopka', 'Orange County', 'orange-county', {
-  metaTitle: 'AC Repair Apopka FL | HVAC Services | North Orange County',
-  metaDescription: 'AC repair and HVAC in Apopka, FL. 24/7 emergency cooling. North Orange County. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Apopka FL | North Orange & Maitland Border HVAC | Novation',
+  metaDescription:
+    'Apopka AC repair & heating: Rock Springs, Kelly Park area & SR-436 corridor. 24/7 emergency North Orange HVAC. (407) 973-1523.',
 });
 
 // Polk County
 export const lakelandData = createNeighborhoodData('Lakeland', 'lakeland', 'Polk County', 'polk-county', {
-  metaTitle: 'AC Repair Lakeland FL | HVAC Services | Polk County',
-  metaDescription: 'AC repair and HVAC in Lakeland, FL. 24/7 emergency cooling. Polk County. Licensed. Free estimates. (407) 973-1523.',
-  aboutPara1: 'Novation Heating and Cooling provides AC repair and HVAC services in Lakeland. Serving Lakeland, Winter Haven, and Polk County, our technicians handle cooling repair, furnace service, and emergency HVAC. Same-day service available.',
+  metaTitle: 'Lakeland HVAC Installation & AC Replacement | Repair | Novation',
+  metaDescription:
+    'Lakeland emphasis: new AC installation & full replacements—plus repair and tune-ups. Different primary intent than Winter Haven’s repair-led page. Poinciana dispatch. CAC1823924. (407) 973-1523.',
+  heroTitle: 'Lakeland New AC Installation & Replacement + Repair',
+  heroTagline: 'Swan City & Polk corridors—right-sizing and upgrades, not just quick fixes',
+  aboutTitle: 'Lakeland HVAC Installation & Replacement',
+  aboutSubtitle: 'Residential & light commercial across Lakeland',
+  aboutPara1:
+    'Novation Heating and Air Conditioning operates from Poinciana and schedules Lakeland jobs alongside other Polk County routes—so you are not an afterthought on a map pin. We work near downtown, South Lakeland, Gibsonia, and along major arteries where attic units and package systems both show up; services include AC repair, furnace and heat pump service, indoor air quality improvements, and full replacements when efficiency or reliability no longer pencil out.',
+  aboutPara2:
+    'Many Lakeland customers also ask us about Winter Haven or Auburndale referrals—we share one dispatch philosophy county-wide. To lock in a preseason tune-up, troubleshoot uneven rooms, or get a tech out for a no-cool house, call (407) 973-1523 or use our online booking form.',
+  serviceIntro:
+    'From capacitor replacements on older split systems to inverter-driven upgrades and duct assessments, we tailor recommendations to Lakeland homes—not a one-size quote sheet.',
+  seoH2: 'Lakeland HVAC topics we hear every week',
+  seoParagraphs: [
+    'Historic bungalows near Lake Morton can have tight mechanical closets; newer builds off the Polk Parkway may run variable-speed air handlers—either way, we verify airflow and charge before we green-light major component swaps.',
+    'Commercial strip plazas along US-98 sometimes need after-hours rooftop attention—we take limited small-business work when our commercial-capable techs are available; describe access and tonnage when you call.',
+    'Indoor humidity swings when afternoon storms roll in—if your thermostat says 74 but it feels clammy, we can evaluate dehumidification strategies that work with your existing ducted setup.',
+  ],
+  faqs: [
+    {
+      q: 'Do you provide HVAC service in Lakeland?',
+      a: 'Yes. We serve Lakeland and all of Polk County with AC repair, heating, maintenance, and installation.',
+    },
+    {
+      q: 'Do you offer emergency AC repair in Lakeland?',
+      a: 'Yes. Call (407) 973-1523 for 24/7 emergency cooling and heating support when available.',
+    },
+    {
+      q: 'How does Novation relate to Winter Haven and Poinciana?',
+      a: 'We dispatch across Central Florida from our Poinciana home base. Winter Haven, Lakeland, and Orlando are all part of our regular service area.',
+    },
+  ],
 });
 
 // Dr. Phillips area
 export const bayHillData = createNeighborhoodData('Bay Hill', 'bay-hill', 'Dr. Phillips', 'dr-phillips', {
-  metaTitle: 'AC Repair Bay Hill Orlando FL | HVAC Dr. Phillips Area',
-  metaDescription: 'AC repair and HVAC in Bay Hill, Dr. Phillips area. 24/7 emergency cooling. Southwest Orlando. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Bay Hill FL | Arnold Palmer Area HVAC | Novation',
+  metaDescription:
+    'Bay Hill & Dr. Phillips AC repair & heating near championship golf. Southwest Orlando 24/7 emergency HVAC. Licensed. (407) 973-1523.',
 });
 
 // Altamonte Springs area
 export const longwoodData = createNeighborhoodData('Longwood', 'longwood', 'Altamonte Springs', 'altamonte-springs', {
-  metaTitle: 'AC Repair Longwood FL | HVAC Near Altamonte Springs',
-  metaDescription: 'AC repair and HVAC in Longwood, FL. 24/7 emergency cooling. Near Altamonte Springs. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Longwood FL | Wekiva Springs & I-4 Corridor HVAC | Novation',
+  metaDescription:
+    'Longwood AC repair & heating: Wekiva Springs, SR-434 & I-4 access. 24/7 emergency Seminole/north Orange HVAC. (407) 973-1523.',
 });
 
 export const sanfordData = createNeighborhoodData('Sanford', 'sanford', 'Altamonte Springs', 'altamonte-springs', {
-  metaTitle: 'AC Repair Sanford FL | HVAC Seminole County',
-  metaDescription: 'AC repair and HVAC in Sanford, FL. 24/7 emergency cooling. Seminole County. Licensed. Free estimates. (407) 973-1523.',
+  metaTitle: 'AC Repair Sanford FL | Lake Monroe & Historic Downtown HVAC | Novation',
+  metaDescription:
+    'Sanford AC repair & heating: lakefront, historic downtown & Seminole Towne Center. 24/7 emergency HVAC. (407) 973-1523.',
 });
 
 // Export all for routing

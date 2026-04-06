@@ -6,13 +6,15 @@ export default function About() {
       <div className="container about-inner">
         <div className="about-content">
           <h2>A Leading HVAC Company You Can Trust</h2>
-          <h3>Providing Reliable Home Comfort Solutions</h3>
+          <h3>AC Repair & New System Installation — One Team</h3>
+          <ul className="about-pillars">
+            <li><strong>AC repair & maintenance:</strong> Diagnostics, refrigerant and electrical issues, tune-ups, and honest repair-versus-replace guidance.</li>
+            <li><strong>Installation & replacement:</strong> Right-sized equipment, high-efficiency options, and financing on qualifying systems—plus heating and indoor air quality.</li>
+          </ul>
           <p>
-            At Novation Heating and Cooling, we pride ourselves on our expertise 
-            and customer-focused approach to home comfort. Our background-checked team is 
-            fully licensed (CAC1823924), bonded, and insured for your peace of mind. We stay on top of 
-            the latest industry developments to provide comprehensive services tailored 
-            to your unique needs.
+            Based in Poinciana, we serve homeowners and businesses across Central Florida—including Orlando,
+            Winter Haven, Lakeland, and nearby communities—with same-day and 24/7 emergency support when
+            available. Our background-checked team is licensed (CAC1823924), bonded, and insured.
           </p>
           <p>
             We work hard to ensure your home stays comfortable, safe, and efficient. 

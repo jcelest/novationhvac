@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import SeoOgTags from './components/SeoOgTags';
-import { SITE_URL } from './utils/seoConstants';
+import { SITE_URL, HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION } from './utils/seoConstants';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -36,10 +36,14 @@ import {
   altamonteSpringsData,
 } from './data/cityData';
 import { allNeighborhoodData } from './data/neighborhoodData';
+import { organizationJsonLd } from './data/organizationJsonLd';
 
 export default function App() {
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
+      </Helmet>
       <ScrollToTop />
       <Routes>
       <Route
@@ -47,14 +51,10 @@ export default function App() {
         element={
           <>
             <Helmet>
-              <title>Novation Heating and Air Conditioning | HVAC Orlando, Kissimmee, Central FL</title>
-              <meta name="description" content="Novation Heating and Air Conditioning - Orlando's trusted HVAC company. AC repair, heating, cooling, 24/7 emergency service. Licensed (CAC1823924). Orlando, Kissimmee, Poinciana, Central Florida. (407) 973-1523." />
+              <title>{HOME_PAGE_TITLE}</title>
+              <meta name="description" content={HOME_PAGE_DESCRIPTION} />
               <link rel="canonical" href={`${SITE_URL}/`} />
-              <SeoOgTags
-                url={`${SITE_URL}/`}
-                title="Novation Heating and Air Conditioning | HVAC Orlando, Kissimmee, Central FL"
-                description="Novation Heating and Air Conditioning - Orlando's trusted HVAC company. AC repair, heating, cooling, 24/7 emergency service. Licensed (CAC1823924). Orlando, Kissimmee, Poinciana, Central Florida. (407) 973-1523."
-              />
+              <SeoOgTags url={`${SITE_URL}/`} title={HOME_PAGE_TITLE} description={HOME_PAGE_DESCRIPTION} />
             </Helmet>
             <Header />
             <main>

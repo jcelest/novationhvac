@@ -85,6 +85,16 @@
   text-align: center;
 }
 
+.footer-areas-hub {
+  grid-column: 1 / -1;
+  font-weight: 600;
+  opacity: 0.95 !important;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  max-width: 22rem;
+  line-height: 1.35;
+}
+
 .footer-bottom {
   width: 100%;
   margin-top: 0.5rem;

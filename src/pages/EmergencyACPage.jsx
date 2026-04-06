@@ -10,9 +10,9 @@ import './ServicePage.css';
 import SeoOgTags from '../components/SeoOgTags';
 import { SITE_URL } from '../utils/seoConstants';
 
-const EMERGENCY_TITLE = '24/7 Emergency AC Repair Orlando FL | Same-Day Service | Novation HVAC';
+const EMERGENCY_TITLE = '24/7 Emergency AC Repair Central Florida | Same-Day Service | Novation';
 const EMERGENCY_DESC =
-  '24/7 emergency AC repair in Orlando, Kissimmee & Central Florida. Same-day service. 24 hour HVAC repair when you need it most. Call (407) 973-1523 now.';
+  'Emergency-first intent: no-cool AC repair after hours and nights—same-day when available across Central Florida. Not your primary install or Orlando metro page. Call (407) 973-1523.';
 const EMERGENCY_CANONICAL = `${SITE_URL}/emergency-ac-repair`;
 
 const faqs = [
@@ -54,8 +54,8 @@ export default function EmergencyACPage() {
           <div className="hero-overlay"></div>
           <div className="hero-content container">
             <span className="emergency-badge">24/7 EMERGENCY</span>
-            <h1 className="hero-title">Emergency AC Repair — 24/7</h1>
-            <p className="hero-tagline">Same-day service. Orlando, Kissimmee, Poinciana & Central Florida. When your AC fails, we respond.</p>
+            <h1 className="hero-title">24/7 Emergency AC Repair — No-Cool Response</h1>
+            <p className="hero-tagline">After-hours breakdowns first—not scheduled installs. Same-day when available across Central Florida.</p>
             <div className="hero-buttons">
               <a href="tel:4079731523" className="btn-primary btn-call-now">Call Now: (407) 973-1523</a>
               <a href="#contact" className="btn-secondary">Request Service</a>

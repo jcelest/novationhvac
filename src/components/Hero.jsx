@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import HeroReviews from './HeroReviews';
 import { trackCTAClick, trackScheduleServiceClick } from '../utils/analytics';
+import { EMPHASIS_SERVICE_AREAS, SERVICE_AREAS_HUB } from '../data/emphasisServiceAreas';
 import './Hero.css';
 
 const HERO_IMAGE_BASE = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c';
@@ -11,7 +12,7 @@ export default function Hero() {
       <div className="hero-bg" aria-hidden="true">
         <img
           src={`${HERO_IMAGE_BASE}?w=800&q=75`}
-          srcSet={`${HERO_IMAGE_BASE}?w=800&q=75 800w, ${HERO_IMAGE_BASE}?w=1920&q=80 1920w`}
+          srcSet={`${HERO_IMAGE_BASE}?w=800&q=75 800w, ${HERO_IMAGE_BASE}?w=1280&q=78 1280w, ${HERO_IMAGE_BASE}?w=1920&q=80 1920w`}
           sizes="100vw"
           alt=""
           fetchPriority="high"
@@ -26,8 +27,24 @@ export default function Hero() {
           <span>Service You Can Trust</span>
         </h1>
         <p className="hero-tagline">
-          Orlando, Kissimmee, Poinciana & Central Florida HVAC Experts
+          Rooted in Poinciana — strategic service to Orlando, Winter Haven, Lakeland & the wider region
         </p>
+        <p className="hero-pillars">
+          <strong>AC repair</strong> for breakdowns & tune-ups · <strong>New installs & replacements</strong> when it is time to upgrade — one licensed team.
+        </p>
+        <nav className="hero-emphasis-areas" aria-label="Primary service areas">
+          <p className="hero-emphasis-label">{SERVICE_AREAS_HUB.label}</p>
+          <ul className="hero-emphasis-list">
+            {EMPHASIS_SERVICE_AREAS.map(({ to, label }) => (
+              <li key={to}>
+                <Link to={to}>{label}</Link>
+              </li>
+            ))}
+            <li className="hero-emphasis-hub">
+              <Link to={SERVICE_AREAS_HUB.path}>{SERVICE_AREAS_HUB.labelLong}</Link>
+            </li>
+          </ul>
+        </nav>
         <div className="hero-buttons">
           <Link to="/book-appointment" className="btn-primary" onClick={() => trackCTAClick('book_appointment', 'hero')}>
             Book Appointment

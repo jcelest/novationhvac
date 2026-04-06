@@ -1,0 +1,35 @@
+.geo-internal-links {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  background: rgba(41, 128, 185, 0.08);
+  border: 1px solid rgba(41, 128, 185, 0.2);
+}
+
+.geo-internal-links-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-800, #1a1a1a);
+}
+
+.geo-internal-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.geo-internal-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--blue-light, #2980b9);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.geo-internal-links a:hover {
+  color: var(--orange-primary, #e67e22);
+}

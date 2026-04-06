@@ -96,8 +96,76 @@
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--orange-light);
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hero-pillars {
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.45;
+  margin: 0 0 1rem;
+  max-width: 36rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.hero-pillars strong {
+  color: var(--orange-light);
+  font-weight: 700;
+}
+
+.hero-emphasis-areas {
+  margin-bottom: 1.75rem;
+}
+
+.hero-emphasis-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.hero-emphasis-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hero-emphasis-list a {
+  color: var(--white);
+  font-size: clamp(0.88rem, 1.75vw, 0.98rem);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  line-height: 1.35;
+}
+
+.hero-emphasis-list a:hover {
+  color: var(--orange-light);
+}
+
+.hero-emphasis-hub a {
+  font-weight: 700;
+  color: var(--orange-light) !important;
+}
+
+@media (min-width: 560px) {
+  .hero-emphasis-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem 1.25rem;
+  }
+
+  .hero-emphasis-hub {
+    grid-column: 1 / -1;
+  }
 }
 
 .hero-buttons {

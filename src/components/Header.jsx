@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getRouteForZip } from '../utils/zipToCity';
+import { EMPHASIS_SERVICE_AREAS, SERVICE_AREAS_HUB } from '../data/emphasisServiceAreas';
 import './Header.css';
 
 export default function Header() {
@@ -74,11 +75,21 @@ export default function Header() {
             <li><Link to="/heating" onClick={() => setMenuOpen(false)}>Heating</Link></li>
             <li><Link to="/indoor-air-quality" onClick={() => setMenuOpen(false)}>Indoor Air Quality</Link></li>
             <li><Link to="/specials" onClick={() => setMenuOpen(false)}>Specials</Link></li>
-            <li><Link to="/service-areas" onClick={() => setMenuOpen(false)}>Service Areas</Link></li>
+            <li><Link to="/service-areas" onClick={() => setMenuOpen(false)}>Areas we serve</Link></li>
             <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
             <li className="nav-cta"><Link to="/contact" onClick={() => setMenuOpen(false)}>Call Us Today!</Link></li>
           </ul>
+          <div className="nav-emphasis" aria-label="Primary service areas">
+            {EMPHASIS_SERVICE_AREAS.map(({ to, label }) => (
+              <Link key={to} to={to} onClick={() => setMenuOpen(false)}>
+                {label}
+              </Link>
+            ))}
+            <Link to={SERVICE_AREAS_HUB.path} className="nav-emphasis-hub" onClick={() => setMenuOpen(false)}>
+              {SERVICE_AREAS_HUB.label}
+            </Link>
+          </div>
         </div>
       </nav>
     </header>

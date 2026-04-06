@@ -53,16 +53,17 @@ const iaqSvg = `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
 </svg>`;
 
 export const coolingData = {
-  metaTitle: 'AC Repair & Cooling Services Orlando FL | HVAC Cooling Experts',
-  metaDescription: 'Professional AC repair, cooling installation & maintenance in Central Florida. 24/7 emergency cooling service. Licensed HVAC technicians. Free estimates. Call (407) 973-1523.',
-  heroTitle: 'AC Repair & Cooling Services',
-  heroTagline: 'Expert Cooling Repair, Installation & Maintenance — 24/7 Emergency Service',
+  metaTitle: 'Central Florida AC Repair & Cooling | Maintenance & Install | Novation',
+  metaDescription:
+    'Service-first cooling page: AC repair, tune-ups, and new cooling installation across Central Florida (Orlando, Kissimmee, Polk & Osceola routes). 24/7 emergency. Licensed CAC1823924. (407) 973-1523.',
+  heroTitle: 'Central Florida AC Repair & Cooling Services',
+  heroTagline: 'Primary focus: fix failing systems fast — installs & replacements when you are ready',
   heroImage: '/images/cooling-ac.png',
   sections: [
     {
       title: 'AC Repair & Cooling Installation',
       paragraphs: [
-        'When you need AC repair or cooling services in Orlando, Kissimmee, Poinciana, or Central Florida, Novation Heating and Cooling delivers. Our certified HVAC technicians provide air conditioner repair, central air installation, and cooling system maintenance. Search "AC repair near me" or "cooling repair Orlando" — we\'re the trusted choice.',
+        'When you need AC repair or cooling work anywhere we dispatch—from Orlando and Kissimmee to Poinciana, Winter Haven, and Lakeland—Novation delivers. Our technicians prioritize accurate diagnosis and repair; we also size and install new cooling systems when replacement makes sense. This page is about cooling services regionally, not a single-city landing.',
         'From ductless mini-split repair to central air conditioning installation, we handle all cooling systems. Same-day AC repair available. 24/7 emergency cooling service when you need it most. Licensed (CAC1823924), bonded, and insured.',
       ],
       image: '/images/cooling-ac.png',
@@ -84,16 +85,17 @@ export const coolingData = {
 };
 
 export const heatingData = {
-  metaTitle: 'Heating Repair & Furnace Services Orlando FL | HVAC Heating Experts',
-  metaDescription: 'Professional furnace repair, heat pump installation & heating services in Central Florida. 24/7 emergency heating. Licensed HVAC. Free estimates. (407) 973-1523.',
-  heroTitle: 'Heating & Furnace Repair Services',
-  heroTagline: 'Expert Furnace Repair, Heat Pump Installation & Heating Maintenance',
+  metaTitle: 'Central Florida Heating Repair & Furnace Service | Heat Pumps | Novation',
+  metaDescription:
+    'Heating-first: furnace and heat pump repair, safety checks, and new heating equipment across Central Florida. 24/7 emergency when available. Licensed CAC1823924. (407) 973-1523.',
+  heroTitle: 'Heating Repair & Furnace Services — Central Florida',
+  heroTagline: 'Repairs and tune-ups first — new heat pumps & furnaces when replacement is the right call',
   heroImage: 'https://images.unsplash.com/photo-1631545914468-f0f4ac229661?w=1920&q=80',
   sections: [
     {
       title: 'Furnace Repair & Heat Pump Installation',
       paragraphs: [
-        'Novation Heating and Cooling provides furnace repair, heat pump installation, and heating services throughout Central Florida. When temperatures drop, our HVAC technicians keep your home warm and efficient. Search "furnace repair near me" or "heating repair Orlando" — we deliver.',
+        'Novation provides furnace repair, heat pump service, and heating installations throughout Central Florida. When temperatures drop, we focus on safe, efficient operation—regional heating expertise, not one metro page.',
         'From gas furnace repair to electric heat pump installation, we service all heating systems. Same-day heating repair available. 24/7 emergency furnace service. Licensed (CAC1823924), bonded, and insured for your peace of mind.',
       ],
       svg: furnaceVectorSvg,
@@ -115,16 +117,17 @@ export const heatingData = {
 };
 
 export const indoorAirQualityData = {
-  metaTitle: 'Indoor Air Quality Services Orlando FL | Air Purification & Duct Cleaning',
-  metaDescription: 'Improve indoor air quality with air purification, duct cleaning, humidity control & HVAC IAQ services. Central Florida. Licensed. Free estimates. (407) 973-1523.',
-  heroTitle: 'Indoor Air Quality Services',
-  heroTagline: 'Air Purification, Duct Cleaning & Humidity Control for Healthier Air',
+  metaTitle: 'Indoor Air Quality & Duct Cleaning | Central Florida IAQ | Novation',
+  metaDescription:
+    'IAQ-focused services: duct cleaning, filtration, humidity control, and air purification—separate from generic AC repair pages. Central Florida. Licensed CAC1823924. (407) 973-1523.',
+  heroTitle: 'Indoor Air Quality & Duct Services',
+  heroTagline: 'Filtration, duct cleaning & humidity — not a substitute for your city AC repair page',
   heroImage: '/images/air-quality-hvac.png',
   sections: [
     {
       title: 'Air Purification & Duct Cleaning',
       paragraphs: [
-        'Breathe easier with Novation\'s indoor air quality services. We offer air purification systems, HVAC duct cleaning, and humidity control for homes and businesses across Orlando, Kissimmee, Poinciana, and Central Florida. Search "duct cleaning near me" or "air purification Orlando" — we\'re here to help.',
+        'Breathe easier with dedicated IAQ work: duct cleaning, whole-home filtration, UV options, and humidity control for homes and businesses across Central Florida. Pair these with your existing HVAC system—see city pages for AC repair and install priorities.',
         'Dirty ducts, poor filtration, and humidity imbalances affect comfort and health. Our IAQ solutions include UV air purifiers, whole-home filtration, duct sealing, and dehumidifiers. Licensed (CAC1823924) and trusted throughout Florida.',
       ],
       image: '/images/air-quality-hvac.png',

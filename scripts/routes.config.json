@@ -29,7 +29,8 @@
   ],
   "cityPriority": "0.9",
   "cityPrioritySecondary": "0.8",
-  "primaryCitySlugs": ["orlando", "kissimmee", "poinciana"],
+  "_primaryCitySlugsNote": "Emphasis markets: winter-haven added (existing slug). Lakeland uses neighborhood route /lakeland (0.8)—not a citySlugs entry; do not add duplicate /lakeland city URL.",
+  "primaryCitySlugs": ["orlando", "kissimmee", "poinciana", "winter-haven"],
   "neighborhoodSlugs": [
     "winter-park",
     "oviedo",
