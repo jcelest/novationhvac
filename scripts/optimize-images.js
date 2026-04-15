@@ -14,6 +14,8 @@ const IMAGES_TO_OPTIMIZE = [
   'maintenance-tuneup.png',
   'emergency-hvac.png',
   'logo.png',
+  'ac-heating-maintenance-plan.png',
+  'novation-team-event.png',
 ];
 
 async function optimizeImages() {

@@ -40,6 +40,12 @@
   background: var(--white);
 }
 
+/* Portrait / team photo — fill card without large letterboxing */
+.promo-card--img-cover img {
+  object-fit: cover;
+  object-position: center top;
+}
+
 @media (max-width: 900px) {
   .promo-grid {
     grid-template-columns: repeat(2, 1fr);

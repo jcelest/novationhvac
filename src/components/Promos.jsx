@@ -1,18 +1,30 @@
 import './Promos.css';
 
 function PromoImg({ webp, png, alt, width = 348, height = 260 }) {
+  if (webp) {
+    return (
+      <picture>
+        <source srcSet={webp} type="image/webp" />
+        <img
+          src={png}
+          alt={alt}
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+    );
+  }
   return (
-    <picture>
-      <source srcSet={webp} type="image/webp" />
-      <img
-        src={png}
-        alt={alt}
-        width={width}
-        height={height}
-        loading="lazy"
-        decoding="async"
-      />
-    </picture>
+    <img
+      src={png}
+      alt={alt}
+      width={width}
+      height={height}
+      loading="lazy"
+      decoding="async"
+    />
   );
 }
 
@@ -27,18 +39,18 @@ export default function Promos() {
             alt="24/7 Emergency HVAC Services - AC trouble at midnight? We're on call around the clock to restore your comfort."
           />
         </a>
-        <a href="#contact" className="promo-card">
+        <a href="#contact" className="promo-card promo-card--img-cover">
           <PromoImg
-            webp="/images/maintenance-tuneup.webp"
-            png="/images/maintenance-tuneup.png"
-            alt="Regular maintenance prevents costly repairs. Schedule your tune-up now."
+            webp="/images/novation-team-event.webp"
+            png="/images/novation-team-event.png"
+            alt="Novation Heating & Air Conditioning team at a community event — your comfort is our mission."
           />
         </a>
-        <a href="#contact" className="promo-card">
+        <a href="#contact" className="promo-card promo-card--img-cover">
           <PromoImg
-            webp="/images/maintenance-plan.webp"
-            png="/images/maintenance-plan.png"
-            alt="A/C & Heating System Maintenance Plan - $79 per visit, $159 annual plan. Call 407-973-1523 to sign up."
+            webp="/images/ac-heating-maintenance-plan.webp"
+            png="/images/ac-heating-maintenance-plan.png"
+            alt="Professional HVAC technician performing maintenance on an outdoor AC unit — A/C & heating system maintenance plan."
           />
         </a>
       </div>
