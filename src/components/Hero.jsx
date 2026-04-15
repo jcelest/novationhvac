@@ -3,16 +3,14 @@ import HeroReviews from './HeroReviews';
 import { trackCTAClick, trackScheduleServiceClick } from '../utils/analytics';
 import './Hero.css';
 
-const HERO_IMAGE_BASE = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c';
+const HERO_IMAGE = '/images/hero-novation.png';
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-bg" aria-hidden="true">
         <img
-          src={`${HERO_IMAGE_BASE}?w=800&q=75`}
-          srcSet={`${HERO_IMAGE_BASE}?w=800&q=75 800w, ${HERO_IMAGE_BASE}?w=1280&q=78 1280w, ${HERO_IMAGE_BASE}?w=1920&q=80 1920w`}
-          sizes="100vw"
+          src={HERO_IMAGE}
           alt=""
           fetchPriority="high"
           decoding="async"
