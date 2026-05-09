@@ -1,4 +1,9 @@
+# https://novationhvac.com — Novation Heating and Air Conditioning (production)
+
 User-agent: *
 Allow: /
+
+# Non-content paths crawlers sometimes probe
+Disallow: /__manifest
 
 Sitemap: https://novationhvac.com/sitemap.xml

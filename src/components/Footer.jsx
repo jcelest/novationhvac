@@ -38,6 +38,11 @@ export default function Footer() {
             <Link to={SERVICE_AREAS_HUB.path} className="footer-areas-hub">
               {SERVICE_AREAS_HUB.labelLong}
             </Link>
+            <span className="footer-label">Primary markets</span>
+            <Link to="/orlando">Orlando</Link>
+            <Link to="/poinciana">Poinciana</Link>
+            <Link to="/winter-haven">Winter Haven</Link>
+            <Link to="/lakeland">Lakeland</Link>
             <span className="footer-label">More cities</span>
             <Link to="/kissimmee">Kissimmee</Link>
             <Link to="/osceola-county">Osceola County</Link>

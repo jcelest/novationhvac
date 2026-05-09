@@ -120,62 +120,110 @@ const createCityData = (name, slug, options = {}) => ({
 });
 
 export const osceolaCountyData = createCityData('Osceola County', 'osceola-county', {
-  metaTitle: 'Osceola County HVAC | Multi-City AC & Heating | Novation',
+  metaTitle: 'Osceola County AC Repair & HVAC | Kissimmee, St. Cloud & Poinciana Area | Novation',
   metaDescription:
-    'County-wide Osceola HVAC—not the Kissimmee corridor page or Poinciana home base. Multi-city repair, installs, and emergencies across St. Cloud, Celebration, and more. CAC1823924. (407) 973-1523.',
-  heroTitle: 'Osceola County HVAC — Multi-City Service',
-  heroTagline: 'County jurisdiction story: several cities, one dispatch network',
-  aboutTitle: 'Osceola County HVAC Services',
-  aboutSubtitle: 'Multi-city coverage across the county',
+    'Osceola County AC repair & heating county-wide: Kissimmee–St. Cloud–Poinciana routes, US-192 corridor, Celebration & east Polk edges. Multi-city dispatch. CAC1823924. (407) 973-1523.',
+  heroTitle: 'Osceola County AC Repair & County-Wide HVAC',
+  heroTagline: 'Kissimmee, St. Cloud, Poinciana & US-192—one Osceola dispatch map',
+  aboutTitle: 'Osceola County HVAC & Emergency AC Repair',
+  aboutSubtitle: 'County-wide cooling, heating & routing across east Central Florida',
   aboutPara1:
-    'Use this page for Osceola County as a whole—schools, HOAs, and homes from St. Cloud to Celebration—without duplicating the Kissimmee corridor focus or Poinciana’s operational base story. We provide AC repair, heating, replacements, and emergency response county-wide.',
+    'Searching “Osceola County AC repair” or “HVAC Osceola County FL” usually means you want confirmation we cover the whole jurisdiction—not just one city. Novation dispatches from Poinciana across Osceola: Kissimmee and the US-192 corridor, St. Cloud and Narcoossee growth, Celebration and BVL, Poinciana and Villages loops, and unincorporated pockets where school zones and HOAs span multiple mailing cities.',
   aboutPara2:
-    'Need Kissimmee- or Poinciana-specific positioning? Use those city pages instead—this URL is for county-wide intent and routing questions. Call (407) 973-1523 for service.',
-  seoH2: 'Why a county-wide Osceola page exists',
+    'Use our Kissimmee page for 192-corridor emphasis, Poinciana for 34759 home-base positioning, and St. Cloud or Celebration neighborhood pages for hyperlocal intent. This county URL is the umbrella when your query names Osceola first. Licensed CAC1823924—call (407) 973-1523 or book online.',
+  serviceIntro:
+    'County land means mix-and-match housing eras—from lake humidity loads to dense rental inventory—we plan parts for your parcel, not a metro-average truck.',
+  seoH2: 'Osceola County AC repair & HVAC — cities and keywords we cover',
   seoParagraphs: [
-    'Searchers looking for “Osceola County HVAC” need a multi-jurisdiction answer: which cities we cover, how dispatch works, and how we differ from a single-city landing.',
-    'For Kissimmee-specific or 192-corridor emphasis, see our Kissimmee page; for Poinciana 34759, see Poinciana or community subpages.',
-    'Repairs stay primary; new equipment quotes follow load calculations and financing options when replacement is appropriate.',
+    'Primary modifiers people combine with this page: “Osceola County AC repair,” “HVAC contractor Osceola County FL,” “emergency AC repair Osceola,” and “heating repair Kissimmee area.” We name the county and its anchor cities so the content cannot be mistaken for a single-city landing.',
+    'Osceola’s geography ties to Disney-area tourism pressure, commuter growth along US-192, and lake-country humidity east of metro Orlando—seasonal no-cool volume spikes are normal; we prioritize true emergencies when capacity is tight.',
+    'Property managers with portfolios across St. Cloud and Kissimmee can request COIs listing CAC1823924; homeowners can bundle preseason tune-ups before July thunderstorm weeks clog dispatch.',
+  ],
+  faqs: [
+    {
+      q: 'Do you provide AC repair throughout Osceola County?',
+      a: 'Yes. We serve Kissimmee, St. Cloud, Poinciana, Celebration, Buenaventura Lakes, and other Osceola County communities with repair, maintenance, replacement, and emergency HVAC when available.',
+    },
+    {
+      q: 'Is Osceola County emergency HVAC available?',
+      a: 'Call (407) 973-1523 for 24/7 emergency cooling and heating dispatch when technicians are on shift.',
+    },
+    {
+      q: 'Should I use this page or the Kissimmee / Poinciana pages?',
+      a: 'Use this county page for Osceola-wide searches. Use Kissimmee for the 192 corridor, Poinciana for 34759 home-base messaging, and neighborhood URLs for hyperlocal areas like Celebration or St. Cloud.',
+    },
   ],
 });
 
 export const orangeCountyData = createCityData('Orange County', 'orange-county', {
-  metaTitle: 'Orange County FL HVAC | Apopka, Winter Garden & Metro Cities | Novation',
+  metaTitle: 'Orange County FL AC Repair & HVAC | Orlando Metro, West Orange & Apopka | Novation',
   metaDescription:
-    'Orange County multi-city HVAC—not the Orlando metro hub page. AC service across Apopka, Winter Garden, Ocoee, and the greater county with repair-first messaging. CAC1823924. (407) 973-1523.',
-  heroTitle: 'Orange County HVAC — County-Wide Coverage',
-  heroTagline: 'West Orange, Apopka, and county cities beyond a single “Orlando” headline',
-  aboutTitle: 'Orange County HVAC Service',
-  aboutSubtitle: 'West Orange, Apopka, Ocoee & beyond',
+    'Orange County AC repair county-wide: Orlando metro plus Apopka, Winter Garden, Ocoee & west Orange—without duplicating the city-only Orlando page. Licensed CAC1823924. (407) 973-1523.',
+  heroTitle: 'Orange County FL AC Repair & County HVAC',
+  heroTagline: 'Orlando + West Orange + Apopka—county jurisdiction, clear dispatch story',
+  aboutTitle: 'Orange County HVAC Services & AC Repair',
+  aboutSubtitle: 'West Orange, Apopka, Ocoee, downtown corridors & suburb rings',
   aboutPara1:
-    'Orange County includes Orlando but also large populations in Apopka, Winter Garden, Ocoee, and other municipalities. This page explains county-wide dispatch—not the same primary keyword set as our Orlando metro page, which targets citywide repair and install demand.',
+    'Orange County FL HVAC searches cover more land than a single Orlando headline: Apopka and north Orange, Winter Garden and SR-429 sprawl, Ocoee off West Colonial, Maitland-adjacent pockets, and the dense Orlando core. This page targets “Orange County AC repair” and “HVAC Orange County Florida” intent—county-wide assurance—while our Orlando page stays the dedicated metro hub for city-named queries.',
   aboutPara2:
-    'For Orlando-specific searches, use /orlando; for Winter Park, Lake Nona, or other neighborhoods, use those long-tail pages. Book or call (407) 973-1523.',
-  seoH2: 'County coverage vs Orlando metro page',
+    'Neighborhood pages (Winter Park, Lake Nona, Dr. Phillips, etc.) carry long-tail locality; use them when the neighborhood name is in the search. For county rollups, school districts, or “do you service all of Orange County,” start here. (407) 973-1523.',
+  serviceIntro:
+    'One county, many microclimates of dust and pollen—we adjust filter and coil expectations for oak canopy streets vs new-construction sand lots.',
+  seoH2: 'Orange County AC repair — high-intent county + regional keywords',
   seoParagraphs: [
-    'If you need Orlando-specific metro messaging, use /orlando; if you need West Orange or Apopka angles, those neighborhoods have their own long-tail pages too.',
-    'We still perform AC repair as the default call type, with full system replacement when equipment fails economically.',
-    'Emergency and same-day availability follow technician routing—call (407) 973-1523 with your city and cross streets.',
+    'Strong keyword stacks for this URL include “Orange County AC repair,” “Orange County HVAC contractor,” “emergency AC Orange County FL,” and pairings like “Apopka Winter Garden HVAC.” Copy stays distinct from /orlando, which owns “Orlando AC repair” head terms.',
+    'West Orange growth corridors often run variable-speed equipment and tight duct designs—we commission airflow and charge before authorizing major component replacements.',
+    'Commercial-adjacent strip plazas on 436, OBT segments, or I-4 exits: mention access, tonnage, and after-hours needs—we accept limited small-business work when commercial-capable techs are routed.',
+  ],
+  faqs: [
+    {
+      q: 'Do you repair AC anywhere in Orange County Florida?',
+      a: 'Yes. We provide residential HVAC repair, maintenance, and replacement across Orange County including Orlando, Apopka, Winter Garden, Ocoee, and surrounding areas we list in service areas.',
+    },
+    {
+      q: 'Is emergency HVAC available county-wide in Orange County?',
+      a: 'Call (407) 973-1523 for emergency dispatch when technicians are available; response times depend on proximity and traffic.',
+    },
+    {
+      q: 'When should I use this page vs the Orlando page?',
+      a: 'Use Orange County for county-wide or multi-city intent. Use Orlando when the search names Orlando specifically or focuses on downtown–metro repair and install demand.',
+    },
   ],
 });
 
 export const polkCountyData = createCityData('Polk County', 'polk-county', {
-  metaTitle: 'Polk County HVAC | County-Wide Service | Novation',
+  metaTitle: 'Polk County AC Repair & HVAC | Lakeland, Winter Haven & Auburndale | Novation',
   metaDescription:
-    'Polk County multi-city HVAC hub—not a substitute for Winter Haven or Lakeland emphasis pages. County-wide repairs, installs, and routing from our Poinciana base. CAC1823924. (407) 973-1523.',
-  heroTitle: 'Polk County HVAC — County-Wide',
-  heroTagline: 'Auburndale to Lakeland to Winter Haven—one county, many landings',
-  aboutTitle: 'Polk County HVAC Services',
-  aboutSubtitle: 'County-wide routing and dispatch',
+    'Polk County AC repair & heating county-wide: Lakeland, Winter Haven, Auburndale, Haines City & US-27/92 corridors—from Poinciana dispatch. Not a clone of single-city pages. CAC1823924. (407) 973-1523.',
+  heroTitle: 'Polk County AC Repair & County-Wide HVAC',
+  heroTagline: 'Lakeland to Winter Haven—Polk County AC service on real Polk routes',
+  aboutTitle: 'Polk County HVAC & AC Repair',
+  aboutSubtitle: 'Chain-of-Lakes humidity to Polk Parkway growth—county-level coverage',
   aboutPara1:
-    'Polk County spans Lakeland, Winter Haven, Auburndale, Haines City, and more. This page is the county rollup: how dispatch works and how it differs from city-specific landings that target “Lakeland” or “Winter Haven” searches directly.',
+    '“Polk County AC repair” and “HVAC Polk County FL” deserve a map-based answer: Novation runs Polk from a Poinciana home base into Lakeland and the Polk Parkway corridor, Winter Haven and the Chain of Lakes, Auburndale between Lake Arietta and US-92, Haines City along US-27, Davenport/Four Corners edges we routinely cross for referrals, and rural-lot splits where dust and oak pollen load coils differently than downtown Lakeland.',
   aboutPara2:
-    'City emphasis pages carry the detailed repair vs install angles; this page stays the county umbrella. (407) 973-1523 for dispatch.',
-  seoH2: 'When to use Polk County vs city pages',
+    'City pages own depth—Winter Haven’s lake humidity story, Lakeland’s install emphasis, Auburndale’s central Polk positioning. This Polk County page is the umbrella for county-wide intent, multi-property owners, and “anywhere in Polk” reassurance. (407) 973-1523.',
+  serviceIntro:
+    'Lake-effect breeze lies to thermostats in July—we verify latent load and duct reality before oversized equipment quotes.',
+  seoH2: 'Polk County AC repair & HVAC — county keywords and coverage',
   seoParagraphs: [
-    'Winter Haven and Lakeland have their own emphasis angles; smaller cities have theirs. Use this page when the query is county-wide or you need a mental map of coverage.',
-    'Repair calls remain the majority; new construction and replacement projects are scoped separately.',
-    'For emergencies, (407) 973-1523—response times depend on technician proximity.',
+    'Target phrases: “Polk County AC repair,” “Polk County HVAC contractor,” “emergency AC Polk County,” plus city pairings like “Lakeland Winter Haven HVAC.” Text is intentionally different from each Polk city landing so search engines see unique service-area depth.',
+    'US-27 and US-92 tie east–west and north–south Polk travel—we stock common heat-pump and straight-cool parts because defrost and capacitor failures spike every shoulder season.',
+    'Commercial strip and agricultural-adjacent dust loads shorten filter life—maintenance plans are sized honestly to parcel conditions, not a generic 195-day postcard.',
+  ],
+  faqs: [
+    {
+      q: 'Do you offer AC repair throughout Polk County?',
+      a: 'Yes. We serve Lakeland, Winter Haven, Auburndale, Haines City, and other Polk County areas with repair, maintenance, replacement, and emergency HVAC when available.',
+    },
+    {
+      q: 'Is Polk County emergency AC service available?',
+      a: 'Call (407) 973-1523 for emergency cooling and heating when technicians are on shift.',
+    },
+    {
+      q: 'Polk County page vs Lakeland or Winter Haven pages?',
+      a: 'Use this county page for Polk-wide searches. Use Lakeland for install-forward Swan City emphasis, Winter Haven for Chain-of-Lakes repair-led copy, and other city URLs for localized intent.',
+    },
   ],
 });
 
@@ -219,35 +267,180 @@ export const auburndaleData = createCityData('Auburndale', 'auburndale', {
   metaTitle: 'Auburndale AC Repair | Between Lakeland & Winter Haven | Novation',
   metaDescription:
     'Auburndale-focused AC repair & heating—not the Winter Haven or Lakeland emphasis pages. Central Polk routes from Poinciana. CAC1823924. (407) 973-1523.',
-  aboutPara1: 'Novation Heating and Cooling proudly serves Auburndale and Polk County. Our certified technicians provide cooling repair, furnace repair, HVAC installation, and 24/7 emergency AC repair. We are licensed, bonded, and insured for your peace of mind.',
+  heroTitle: 'Auburndale AC Repair & Heating',
+  heroTagline: 'Central Polk between Lakeland and Winter Haven—same trucks, local routing',
+  aboutTitle: 'Auburndale HVAC You Can Call Directly',
+  aboutSubtitle: 'Lake Arietta area, US-92 corridor, and older Polk subdivisions',
+  aboutPara1:
+    'Auburndale sits right where Polk County traffic patterns cross—close enough to Lakeland for parts runs and Winter Haven for lake-adjacent humidity issues, but with its own mix of ranch homes, 1980s splits, and newer infill. Novation dispatches from Poinciana with stocked vans for capacitor, contactor, and low-charge calls so you are not first in line behind a generic Orlando queue.',
+  aboutPara2:
+    'Tell us if you are off Berkley Road, near the stadium corridor, or tucked closer to Lake Arietta—drive times and attic access matter when Florida heat turns a slow drip into an emergency. Maintenance before June beats a weekend no-cool scramble; call (407) 973-1523 or book online for tune-ups, repairs, or replacement estimates.',
+  serviceIntro:
+    'Auburndale jobs often pair with Lakeland or Winter Haven same-week routes—mention your nearest main road so we bundle parts and tech specialty correctly.',
+  seoH2: 'Auburndale cooling issues we diagnose on-site',
+  seoParagraphs: [
+    'Split systems that “run all day” on US-92-side lots are sometimes a duct leak or an undersized return—not an automatic compressor death sentence. We measure temperatures at the supply plenum and listen for blower strain before quoting four-figure repairs.',
+    'Older neighborhoods with original R-22 equipment are common; when replacement is smarter than another bandage, we explain SEER2 options and how new line sets or indoor coils affect comfort in humid Polk summers.',
+    'Light residential near the industrial pockets off SR-559? We still focus on residential safety—CO checks on furnaces, float switches on drains, and straight talk about filter habits that protect coils.',
+  ],
+  faqs: [
+    {
+      q: 'Do you offer AC repair in Auburndale?',
+      a: 'Yes. We serve Auburndale and all of Polk County with cooling repair, heating, maintenance, and installation.',
+    },
+    {
+      q: 'Is emergency HVAC available in Auburndale?',
+      a: 'Yes. Call (407) 973-1523 for after-hours and emergency service when technicians are available.',
+    },
+    {
+      q: 'How is Auburndale different from your Winter Haven page?',
+      a: 'Winter Haven targets Chain of Lakes lake-adjacent humidity angles. Auburndale copy here focuses on central Polk neighborhoods between Lakeland and Winter Haven.',
+    },
+  ],
 });
 
 export const hainesCityData = createCityData('Haines City', 'haines-city', {
   metaTitle: 'Haines City AC Repair & HVAC | US-27 & Hwy 17 Corridor | Novation',
   metaDescription:
     'Haines City local intent: AC repair along US-27 and east Polk—not duplicate titles with Auburndale or county hub. Licensed CAC1823924. (407) 973-1523.',
-  aboutPara1: 'Novation Heating and Cooling proudly serves Haines City and the greater Polk County area. Our certified technicians provide cooling repair, furnace repair, HVAC installation, and 24/7 emergency AC repair. We are licensed, bonded, and insured for your peace of mind.',
+  heroTitle: 'Haines City AC Repair & Heating',
+  heroTagline: 'US-27 & SR-17 corridors—east Polk County HVAC dispatch',
+  aboutTitle: 'Haines City HVAC & Emergency AC Repair',
+  aboutSubtitle: 'Ridge communities, lake country humidity, and commuter routes',
+  aboutPara1:
+    'Haines City AC repair searches almost always mention US-27 or State Road 17—the same spines that feed Davenport, Four Corners, and deeper Polk growth. Novation dispatches licensed crews from Poinciana for no-cool triage, heat pump defrost problems, blower failures, and full replacements when SEER2 upgrades beat another round of leak searches.',
+  aboutPara2:
+    'Mention Ridge-related neighborhoods, Lake Marion shores, or older ranch inventory when you call; equipment eras change the parts we pre-stage. Same-day visits when crews allow; true no-cool emergencies: (407) 973-1523.',
+  serviceIntro:
+    'East Polk humidity plus hard cooling seasons wear on contactors and capacitors—we test electrical health, not just refrigerant gauges.',
+  seoH2: 'Haines City FL keywords: AC repair, US-27 HVAC, Polk County',
+  seoParagraphs: [
+    'We wrote this page for “AC repair Haines City FL,” “HVAC near US-27,” and “heat pump service Polk County” instead of recycling Lakeland install copy or Winter Haven lake angles.',
+    'Shoulder-season heating calls happen when defrost boards stick or auxiliary strips never stage; we document amp draws and outdoor coil condition before quoting invasive repairs.',
+    'Managing rentals along the growth corridors? Ask about maintenance plans that keep drain lines and float switches vacation-rental ready.',
+  ],
+  faqs: [
+    {
+      q: 'Who does emergency AC repair in Haines City?',
+      a: 'Novation offers 24/7 emergency cooling and heating dispatch when technicians are available. Call (407) 973-1523 with landmarks near US-27 or SR-17.',
+    },
+    {
+      q: 'Do you replace AC systems in Haines City?',
+      a: 'Yes. We provide load-aware replacements and financing options on qualifying equipment.',
+    },
+    {
+      q: 'Is this different from your Polk County page?',
+      a: 'The county page explains umbrella coverage. This URL targets Haines City and corridor searches with localized copy.',
+    },
+  ],
 });
 
 export const drPhillipsData = createCityData('Dr. Phillips', 'dr-phillips', {
   metaTitle: 'Dr. Phillips AC Repair | Southwest Orlando Submarket | Novation',
   metaDescription:
     'Dr. Phillips & Bay Hill submarket—not the broad Orlando metro page. AC repair & heating with southwest corridor routing. CAC1823924. (407) 973-1523.',
-  aboutPara1: 'Novation Heating and Cooling proudly serves Dr. Phillips and the greater Orlando area. Our certified technicians provide cooling repair, furnace repair, HVAC installation, and 24/7 emergency AC repair. We are licensed, bonded, and insured for your peace of mind.',
+  heroTitle: 'Dr. Phillips AC Repair & Premium HVAC Service',
+  heroTagline: 'Sand Lake Road, Restaurant Row, and southwest Orlando lake properties',
+  aboutTitle: 'Dr. Phillips HVAC — Southwest Orlando Submarket',
+  aboutSubtitle: 'High-end equipment, tight access, honest diagnostics',
+  aboutPara1:
+    'Dr. Phillips AC repair should sound like Dr. Phillips—not a recycled downtown Orlando blurb. Novation serves Sand Lake Road corridors, Dr. Phillips Boulevard communities, and Restaurant Row density with licensed residential HVAC repair, heat pump service, zoning support, and replacements sized to real load calculations.',
+  aboutPara2:
+    'Expect variable-speed air handlers, communicating thermostats, and humidity complaints tied to entertainment-heavy homes—we validate airflow, charge, and controls before recommending compressors. Call (407) 973-1523 or book online.',
+  serviceIntro:
+    'Southwest Orlando pollen and afternoon storms punish coils and filters; we include drain line and float checks on summer tune-ups.',
+  seoH2: 'Dr. Phillips FL: AC repair, Sand Lake HVAC, southwest Orlando',
+  seoParagraphs: [
+    'Strongest intent keywords here combine “Dr. Phillips AC repair,” “Sand Lake Road HVAC,” and “southwest Orlando heat pump service”—so the prose names those anchors instead of vague metro language.',
+    'If you need Bay Hill–specific phrasing, use our Bay Hill neighborhood page; this slug keeps Dr. Phillips as the head term.',
+    'Luxury homes with multiple zones need staged testing—we verify damper calls and sensor placement instead of blaming refrigerant by default.',
+  ],
+  faqs: [
+    {
+      q: 'Do you repair AC in Dr. Phillips FL?',
+      a: 'Yes. Cooling, heating, maintenance, and premium replacements throughout Dr. Phillips and adjacent southwest Orlando.',
+    },
+    {
+      q: 'Can I get same-day AC repair on Sand Lake Road?',
+      a: 'Same-day service depends on technician availability—call early on peak heat days. Emergencies: (407) 973-1523.',
+    },
+    {
+      q: 'What license does Novation carry?',
+      a: 'Florida HVAC contractor license CAC1823924; bonded and insured.',
+    },
+  ],
 });
 
 export const windermereData = createCityData('Windermere', 'windermere', {
   metaTitle: 'Windermere AC Repair | Butler Chain Lake Homes | Novation',
   metaDescription:
     'Windermere-specific: lake lots, estate homes, and heat pumps—not generic Orlando metro copy. West Orange HVAC. CAC1823924. (407) 973-1523.',
-  aboutPara1: 'Novation Heating and Cooling proudly serves Windermere and West Orange County. Our certified technicians provide cooling repair, furnace repair, HVAC installation, and 24/7 emergency AC repair. We are licensed, bonded, and insured for your peace of mind.',
+  heroTitle: 'Windermere AC Repair & Butler Chain HVAC',
+  heroTagline: 'Lake estates, longer duct runs, careful heat pump diagnostics',
+  aboutTitle: 'Windermere HVAC for West Orange Lake Homes',
+  aboutSubtitle: 'Butler Chain loads, estate square footage, humidity control',
+  aboutPara1:
+    'Windermere AC repair calls revolve around Butler Chain humidity, bonus-room hotspots, and heat pumps that need defrost nuance—not quick “add gas and go” visits. Novation dispatches West Orange routes for high static-pressure installs, two-stage comfort systems, and emergency no-cool support for lakefront estates and town pockets alike.',
+  aboutPara2:
+    'We discuss IAQ upgrades when indoor air feels sticky at thermostat setpoints—filtration, fresh-air balance, and dehumidification strategies vary by crawl vs slab homes. Financing may be available on qualifying replacements: (407) 973-1523.',
+  serviceIntro:
+    'Expect longer walks from driveways—tell us about gate codes, boat lifts, or side-yard AC pad access when booking so we bring the right cart.',
+  seoH2: 'Windermere FL: AC repair, Butler Chain HVAC, heat pumps',
+  seoParagraphs: [
+    'This page targets “Windermere AC repair,” “Butler Chain HVAC,” and “West Orange heat pump service” uniquely versus our Orlando metro hub.',
+    'Oversized single-speed systems short-cycle; we evaluate runtime, indoor dew point, and blower profiles before prescribing part swaps.',
+    'Seasonal residents should book preseason maintenance before holidays—July emergency queues fill fastest on the chain.',
+  ],
+  faqs: [
+    {
+      q: 'Do you service Windermere FL estates?',
+      a: 'Yes. Residential HVAC repair, maintenance, and replacement across Windermere and nearby West Orange communities.',
+    },
+    {
+      q: 'Can you fix variable-speed AC systems in Windermere?',
+      a: 'Yes. We troubleshoot communicating controls, blower modules, and charge issues on advanced equipment.',
+    },
+    {
+      q: 'Do you handle lakefront HOA gate access?',
+      a: 'Yes. Provide gate codes or guardhouse instructions when scheduling to prevent rolling delays.',
+    },
+  ],
 });
 
 export const altamonteSpringsData = createCityData('Altamonte Springs', 'altamonte-springs', {
   metaTitle: 'Altamonte Springs AC Repair | I-4 & Uptown Altamonte | Novation',
   metaDescription:
     'Altamonte Springs submarket page—not the Orlando city hub. North Seminole–border service area. AC repair & heating. (407) 973-1523.',
-  aboutPara1: 'Novation Heating and Cooling proudly serves Altamonte Springs and North Seminole County. Our certified technicians provide cooling repair, furnace repair, HVAC installation, and 24/7 emergency AC repair. We are licensed, bonded, and insured for your peace of mind.',
+  heroTitle: 'Altamonte Springs AC Repair & Heating',
+  heroTagline: 'Cranes Roost, I-4 commuters, Seminole–Orange border service',
+  aboutTitle: 'Altamonte Springs HVAC Near I-4',
+  aboutSubtitle: 'Condo stacks, townhomes, and single-family off 436',
+  aboutPara1:
+    'Altamonte Springs AC repair blends Cranes Roost high-rise-adjacent properties, townhomes off I-4, and established single-family streets where attic units fight August humidity. Novation routes Seminole-border work from Poinciana with technicians who know SR-436 timing, not telemarketing scripts.',
+  aboutPara2:
+    'Property managers near Uptown Altamonte can request COIs referencing CAC1823924; homeowners can book tune-ups before peak demand. Emergency hotline: (407) 973-1523.',
+  serviceIntro:
+    'Stacked communities mean drain and safety switch discipline—we treat water damage risk seriously on every cooling visit.',
+  seoH2: 'Altamonte Springs FL: AC repair, I-4 HVAC, Seminole County',
+  seoParagraphs: [
+    'Keyword focus: “Altamonte Springs AC repair,” “Cranes Roost HVAC,” “I-4 north emergency cooling”—each phrase gets a distinct sentence cluster so we are not mirroring Orlando or Sanford copy.',
+    'Light retail near 436 sometimes needs after-hours rooftop attention; mention ladder access and tonnage if you manage a small commercial suite.',
+    'Compare this page with Longwood or Maitland-area searches: separate landings reduce duplicate-content risk while keeping internal links honest.',
+  ],
+  faqs: [
+    {
+      q: 'Do you offer AC repair in Altamonte Springs?',
+      a: 'Yes. Full cooling, heating, maintenance, and replacement services throughout Altamonte Springs and nearby Seminole County cities.',
+    },
+    {
+      q: 'Is 24/7 emergency HVAC available near Uptown Altamonte?',
+      a: 'Call (407) 973-1523 for emergency dispatch when technicians are on shift.',
+    },
+    {
+      q: 'Should I use this page or the Orlando page?',
+      a: 'Use Orlando for broad metro searches; use this landing when the query names Altamonte Springs, I-4 north, or Cranes Roost specifically.',
+    },
+  ],
 });
 
 export const allCityData = {
