@@ -8,7 +8,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js",
     "client": "vite",
-    "build": "node scripts/generate-sitemap.js && node scripts/optimize-images.js && vite build",
+    "build": "node scripts/generate-sitemap.js && node scripts/optimize-images.js && vite build && node scripts/inject-html-seo.mjs",
     "optimize:images": "node scripts/optimize-images.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "preview": "vite preview",

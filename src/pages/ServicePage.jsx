@@ -9,13 +9,13 @@ import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
 import { renderSeoOgTags } from '../components/SeoOgTags';
-import { SITE_URL } from '../utils/seoConstants';
+import { canonicalUrlFromPathname } from '../utils/seoPath';
 import { jsonLdStringify } from '../utils/jsonLdScript';
 
 export default function ServicePage({ data }) {
   const { metaTitle, metaDescription, heroTitle, heroTagline, sections, faqs } = data;
   const { pathname } = useLocation();
-  const canonicalUrl = `${SITE_URL}${pathname}`;
+  const canonicalUrl = canonicalUrlFromPathname(pathname);
 
   const faqSchema = faqs?.length > 0 ? {
     '@context': 'https://schema.org',

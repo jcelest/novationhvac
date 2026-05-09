@@ -1,11 +1,13 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "trailingSlash": false,
+  "cleanUrls": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.novationhvac.com" }],
-      "destination": "https://novationhvac.com/:path*",
+      "destination": "https://novationhvac.com/$1",
       "permanent": true
     }
   ],

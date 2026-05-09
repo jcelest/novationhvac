@@ -18,6 +18,7 @@ export function renderSeoOgTags({ url, title, description }) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={OG_IMAGE} />
     </>
   );
 }
