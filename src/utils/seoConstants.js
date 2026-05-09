@@ -4,8 +4,8 @@ export const SITE_URL = 'https://novationhvac.com';
 export const OG_IMAGE = `${SITE_URL}/images/logo.png`;
 export const SITE_NAME = 'Novation Heating and Air Conditioning';
 
-/** Homepage — brand + both commercial pillars (repair vs install); emphasis cities in copy, not as a city landing */
-export const HOME_PAGE_TITLE =
-  'Novation HVAC | Poinciana-Based AC Repair & New System Installation | Central Florida';
+/** Homepage — CTR-focused for “AC repair near me” / root URL; short title to limit SERP truncation */
+export const HOME_PAGE_TITLE = 'Novation HVAC | AC Repair Near You | Same-Day | Central FL';
+/** Front-load phone + license + geography; Google may still rewrite using visible copy — keep Services intro aligned */
 export const HOME_PAGE_DESCRIPTION =
-  'Poinciana, FL–based HVAC: fast AC repair when systems fail, plus new AC installation and full replacements. Serving Orlando, Winter Haven, Lakeland, and Central Florida. Licensed CAC1823924. (407) 973-1523.';
+  'Same-day AC repair when available · 24/7 emergencies · Licensed CAC1823924. Orlando, Kissimmee, Poinciana & Central FL from our Poinciana base. (407) 973-1523 · Book online.';

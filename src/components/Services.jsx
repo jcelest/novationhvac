@@ -33,8 +33,9 @@ export default function Services() {
           <span className="section-label">Trusted Services</span>
           <h2>How Can We Help You Today?</h2>
           <p>
-            From AC repair and replacement to heating installations and tune-ups, 
-            Novation keeps your home comfortable — all from one trusted team.
+            AC repair near you across Central Florida — same-day when our schedule allows — plus
+            cooling installs, heating, and tune-ups. Novation keeps your home comfortable with one
+            licensed team.
           </p>
           <Link to="/book-appointment" className="btn-book">Book Your Appointment</Link>
         </div>
