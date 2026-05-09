@@ -9,7 +9,7 @@ const createNeighborhoodData = (name, slug, parentCity, parentCitySlug, options 
   slug,
   parentCity,
   parentCitySlug,
-  metaTitle: options.metaTitle || `AC Repair ${name} FL | HVAC Services Near ${parentCity}`,
+  metaTitle: options.metaTitle || `${name} AC Repair Near You | Same-Day AC Repair | Novation`,
   metaDescription: options.metaDescription || `Professional AC repair and HVAC services in ${name}, FL. Serving ${parentCity} area. 24/7 emergency cooling repair. Licensed. Free estimates. (407) 973-1523.`,
   heroTitle: options.heroTitle || `AC Repair & HVAC Services in ${name}`,
   heroTagline: options.heroTagline || `Trusted Cooling & Heating for ${name} — Part of ${parentCity}`,
@@ -35,7 +35,7 @@ const createNeighborhoodData = (name, slug, parentCity, parentCitySlug, options 
 
 // Orlando area neighborhoods
 export const winterParkData = createNeighborhoodData('Winter Park', 'winter-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Winter Park FL | Historic Homes & Park Avenue HVAC | Novation',
+  metaTitle: 'Winter Park AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Winter Park AC repair & heating: historic homes, Park Avenue corridor & lakeside properties. 24/7 emergency HVAC. Orlando metro. Licensed CAC1823924. (407) 973-1523.',
   heroTagline: 'Park Avenue · Rollins · chain-of-lakes Winter Park AC service',
@@ -68,7 +68,7 @@ export const winterParkData = createNeighborhoodData('Winter Park', 'winter-park
 });
 
 export const oviedoData = createNeighborhoodData('Oviedo', 'oviedo', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Oviedo FL | Seminole County Line HVAC | Novation',
+  metaTitle: 'Oviedo AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Oviedo AC repair & heating: Chuluota, Geneva & SR-417 corridor. 24/7 emergency cooling. Licensed. (407) 973-1523.',
   heroTagline: 'SR-417, Seminole County line & east Orange growth corridors',
@@ -92,7 +92,7 @@ export const oviedoData = createNeighborhoodData('Oviedo', 'oviedo', 'Orlando', 
 });
 
 export const lakeNonaData = createNeighborhoodData('Lake Nona', 'lake-nona', 'Orlando', 'orlando', {
-  metaTitle: 'Lake Nona HVAC for Newer Homes | AC Service & High-Efficiency Installs | Novation',
+  metaTitle: 'Lake Nona AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Lake Nona & Medical City: high-efficiency equipment, new-home HVAC, and AC service—long-tail vs broad Orlando page. Licensed. (407) 973-1523.',
   heroTitle: 'Lake Nona HVAC — New Construction & Medical City Area',
@@ -117,7 +117,7 @@ export const lakeNonaData = createNeighborhoodData('Lake Nona', 'lake-nona', 'Or
 });
 
 export const baldwinParkData = createNeighborhoodData('Baldwin Park', 'baldwin-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Baldwin Park FL | Lake Baldwin & East Orlando HVAC | Novation',
+  metaTitle: 'Baldwin Park AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Baldwin Park AC repair & heating near Lake Baldwin. Townhomes, single-family & 24/7 emergency HVAC. Licensed. (407) 973-1523.',
   heroTagline: 'Lake Baldwin loop · New Urbanism townhomes · east Orlando comfort',
@@ -141,7 +141,7 @@ export const baldwinParkData = createNeighborhoodData('Baldwin Park', 'baldwin-p
 });
 
 export const thorntonParkData = createNeighborhoodData('Thornton Park', 'thornton-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair Thornton Park FL | Downtown Orlando HVAC | Novation',
+  metaTitle: 'Thornton Park AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Thornton Park & Lake Eola–adjacent AC repair & heating. Downtown Orlando 24/7 emergency HVAC. Licensed. (407) 973-1523.',
   heroTagline: 'Lake Eola–adjacent · downtown Orlando walkable neighborhoods',
@@ -165,7 +165,7 @@ export const thorntonParkData = createNeighborhoodData('Thornton Park', 'thornto
 });
 
 export const collegeParkData = createNeighborhoodData('College Park', 'college-park', 'Orlando', 'orlando', {
-  metaTitle: 'AC Repair College Park FL | Edgewater Drive & Ivanhoe Village HVAC | Novation',
+  metaTitle: 'College Park AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'College Park AC repair & heating along Edgewater Drive & Ivanhoe. Bungalows, cottages & 24/7 emergency HVAC. (407) 973-1523.',
   heroTagline: 'Edgewater Drive cottages · Ivanhoe Village · northwest Orlando HVAC',
@@ -190,7 +190,7 @@ export const collegeParkData = createNeighborhoodData('College Park', 'college-p
 
 // Kissimmee / Osceola area
 export const celebrationData = createNeighborhoodData('Celebration', 'celebration', 'Kissimmee', 'kissimmee', {
-  metaTitle: 'AC Repair Celebration FL | Planned Community HVAC | Novation',
+  metaTitle: 'Celebration AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Celebration, FL AC repair & heating: town centers, condos & single-family. 24/7 emergency HVAC near Disney/Kissimmee. Licensed. (407) 973-1523.',
   heroTagline: 'Disney-area planned community · town centers · investor-ready HVAC',
@@ -214,7 +214,7 @@ export const celebrationData = createNeighborhoodData('Celebration', 'celebratio
 });
 
 export const stCloudData = createNeighborhoodData('St. Cloud', 'st-cloud', 'Kissimmee', 'kissimmee', {
-  metaTitle: 'AC Repair St. Cloud FL | East Lake Toho & Narcoossee HVAC | Novation',
+  metaTitle: 'St. Cloud AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'St. Cloud AC repair & heating: East Lake Toho, Narcoossee Road & historic downtown. 24/7 emergency Osceola County HVAC. (407) 973-1523.',
   heroTagline: 'East Lake Toho · Narcoossee Road · Osceola’s lake city HVAC',
@@ -238,7 +238,7 @@ export const stCloudData = createNeighborhoodData('St. Cloud', 'st-cloud', 'Kiss
 });
 
 export const buenaventuraLakesData = createNeighborhoodData('Buenaventura Lakes', 'buenaventura-lakes', 'Kissimmee', 'kissimmee', {
-  metaTitle: 'AC Repair Buenaventura Lakes FL | BVL & Osceola Corridor HVAC | Novation',
+  metaTitle: 'Buenaventura Lakes AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Buenaventura Lakes (BVL) AC repair & heating off Thacker Road & Boggy Creek. 24/7 emergency HVAC. Licensed. (407) 973-1523.',
   heroTagline: 'BVL · Boggy Creek corridor · Kissimmee south Osceola HVAC',
@@ -263,7 +263,7 @@ export const buenaventuraLakesData = createNeighborhoodData('Buenaventura Lakes'
 
 // Poinciana communities
 export const village7Data = createNeighborhoodData('Village 7', 'village-7', 'Poinciana', 'poinciana', {
-  metaTitle: 'Village 7 Poinciana AC Service | West 34759 Neighborhood | Novation',
+  metaTitle: 'Village 7 AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Village 7 long-tail: AC repair & heating in west Poinciana—not a clone of the main Poinciana city title. 34759. CAC1823924. (407) 973-1523.',
   heroTagline: 'West 34759 · Poinciana village loops · shortest dispatch from Novation base',
@@ -287,7 +287,7 @@ export const village7Data = createNeighborhoodData('Village 7', 'village-7', 'Po
 });
 
 export const crescentLakesData = createNeighborhoodData('Crescent Lakes', 'crescent-lakes', 'Poinciana', 'poinciana', {
-  metaTitle: 'Crescent Lakes Poinciana AC Repair | East 34759 Lakeside | Novation',
+  metaTitle: 'Crescent Lakes AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Crescent Lakes hyperlocal: east-side 34759 lakes & pool homes—distinct from Village 7 and from the Poinciana hub page. Licensed. (407) 973-1523.',
   heroTagline: 'East Poinciana · lake & pool parcels · humidity-heavy HVAC needs',
@@ -312,7 +312,7 @@ export const crescentLakesData = createNeighborhoodData('Crescent Lakes', 'cresc
 
 // Orange County areas
 export const winterGardenData = createNeighborhoodData('Winter Garden', 'winter-garden', 'Orange County', 'orange-county', {
-  metaTitle: 'AC Repair Winter Garden FL | Plant Street & West Orange HVAC | Novation',
+  metaTitle: 'Winter Garden AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Winter Garden AC repair & heating: Plant Street, downtown WG & SR-429 corridor. 24/7 emergency West Orange HVAC. (407) 973-1523.',
   heroTagline: 'Plant Street downtown · West Orange growth · SR-429 commuter HVAC',
@@ -336,7 +336,7 @@ export const winterGardenData = createNeighborhoodData('Winter Garden', 'winter-
 });
 
 export const ocoeeData = createNeighborhoodData('Ocoee', 'ocoee', 'Orange County', 'orange-county', {
-  metaTitle: 'AC Repair Ocoee FL | West Colonial & Clarke Road HVAC | Novation',
+  metaTitle: 'Ocoee AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Ocoee AC repair & heating: West Colonial Drive, Clarke Road & Forest Lake. 24/7 emergency West Orange HVAC. (407) 973-1523.',
   heroTagline: 'West Colonial corridor · Clarke Road neighborhoods · Forest Lake area comfort',
@@ -360,7 +360,7 @@ export const ocoeeData = createNeighborhoodData('Ocoee', 'ocoee', 'Orange County
 });
 
 export const apopkaData = createNeighborhoodData('Apopka', 'apopka', 'Orange County', 'orange-county', {
-  metaTitle: 'AC Repair Apopka FL | North Orange & Maitland Border HVAC | Novation',
+  metaTitle: 'Apopka AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Apopka AC repair & heating: Rock Springs, Kelly Park area & SR-436 corridor. 24/7 emergency North Orange HVAC. (407) 973-1523.',
   heroTagline: 'North Orange · Kelly Park / Rock Springs nature belt · SR-436 HVAC',
@@ -385,7 +385,7 @@ export const apopkaData = createNeighborhoodData('Apopka', 'apopka', 'Orange Cou
 
 // Polk County
 export const lakelandData = createNeighborhoodData('Lakeland', 'lakeland', 'Polk County', 'polk-county', {
-  metaTitle: 'Lakeland HVAC Installation & AC Replacement | Repair | Novation',
+  metaTitle: 'Lakeland AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Lakeland emphasis: new AC installation & full replacements—plus repair and tune-ups. Different primary intent than Winter Haven’s repair-led page. Poinciana dispatch. CAC1823924. (407) 973-1523.',
   heroTitle: 'Lakeland New AC Installation & Replacement + Repair',
@@ -422,7 +422,7 @@ export const lakelandData = createNeighborhoodData('Lakeland', 'lakeland', 'Polk
 
 // Dr. Phillips area
 export const bayHillData = createNeighborhoodData('Bay Hill', 'bay-hill', 'Dr. Phillips', 'dr-phillips', {
-  metaTitle: 'AC Repair Bay Hill FL | Arnold Palmer Area HVAC | Novation',
+  metaTitle: 'Bay Hill AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Bay Hill & Dr. Phillips AC repair & heating near championship golf. Southwest Orlando 24/7 emergency HVAC. Licensed. (407) 973-1523.',
   heroTagline: 'Arnold Palmer legacy area · golf-adjacent estates · Dr. Phillips pocket HVAC',
@@ -447,7 +447,7 @@ export const bayHillData = createNeighborhoodData('Bay Hill', 'bay-hill', 'Dr. P
 
 // Altamonte Springs area
 export const longwoodData = createNeighborhoodData('Longwood', 'longwood', 'Altamonte Springs', 'altamonte-springs', {
-  metaTitle: 'AC Repair Longwood FL | Wekiva Springs & I-4 Corridor HVAC | Novation',
+  metaTitle: 'Longwood AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Longwood AC repair & heating: Wekiva Springs, SR-434 & I-4 access. 24/7 emergency Seminole/north Orange HVAC. (407) 973-1523.',
   heroTagline: 'Wekiva Springs recreation belt · SR-434 · Seminole County HVAC',
@@ -471,7 +471,7 @@ export const longwoodData = createNeighborhoodData('Longwood', 'longwood', 'Alta
 });
 
 export const sanfordData = createNeighborhoodData('Sanford', 'sanford', 'Altamonte Springs', 'altamonte-springs', {
-  metaTitle: 'AC Repair Sanford FL | Lake Monroe & Historic Downtown HVAC | Novation',
+  metaTitle: 'Sanford AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Sanford AC repair & heating: lakefront, historic downtown & Seminole Towne Center. 24/7 emergency HVAC. (407) 973-1523.',
   heroTagline: 'Lake Monroe · historic riverwalk · Seminole Towne Center corridors',

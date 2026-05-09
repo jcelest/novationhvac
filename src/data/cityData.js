@@ -1,7 +1,7 @@
 export const orlandoData = {
   name: 'Orlando',
   slug: 'orlando',
-  metaTitle: 'Orlando Metro AC Repair & HVAC Service | Dispatch & Emergencies | Novation',
+  metaTitle: 'Orlando AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Orlando metro primary intent: AC repair and service calls across the city—plus replacements and new installs when equipment is done. Poinciana-based dispatch. CAC1823924. (407) 973-1523.',
   heroTitle: 'Orlando Metro AC Repair & HVAC Service',
@@ -32,7 +32,7 @@ export const orlandoData = {
 export const kissimmeeData = {
   name: 'Kissimmee',
   slug: 'kissimmee',
-  metaTitle: 'Kissimmee AC Repair & HVAC | 192/US-192 & Disney Corridor | Novation',
+  metaTitle: 'Kissimmee AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Kissimmee-focused: AC repair and service along US-192, the parks corridor, and nearby neighborhoods—plus heat pumps and new systems. Not the county-wide page. CAC1823924. (407) 973-1523.',
   heroTitle: 'Kissimmee AC Repair & HVAC | Local Corridor Service',
@@ -63,7 +63,7 @@ export const kissimmeeData = {
 export const poincianaData = {
   name: 'Poinciana',
   slug: 'poinciana',
-  metaTitle: 'Poinciana AC Repair & Heating | 34759 Home Base | Novation',
+  metaTitle: 'Poinciana AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Poinciana (34759) home market: AC repair & heating first—plus new system installation when you upgrade. Shortest staging from our base. CAC1823924. (407) 973-1523.',
   heroTitle: 'Poinciana AC Repair & Heating — Novation’s Home Base',
@@ -95,7 +95,7 @@ export const poincianaData = {
 const createCityData = (name, slug, options = {}) => ({
   name,
   slug,
-  metaTitle: options.metaTitle || `HVAC & AC Repair ${name} FL | Heating & Cooling Services`,
+  metaTitle: options.metaTitle || `${name} AC Repair Near You | Same-Day AC Repair | Novation`,
   metaDescription: options.metaDescription || `Expert HVAC and AC repair in ${name}, FL. Cooling repair, furnace repair, and heating services. 24/7 emergency service. Free estimates.`,
   heroTitle: options.heroTitle || `HVAC & AC Repair ${name} FL — Trusted Heating & Cooling Experts`,
   heroTagline: options.heroTagline || `${name}'s Trusted Cooling Repair & HVAC Services`,
@@ -120,7 +120,7 @@ const createCityData = (name, slug, options = {}) => ({
 });
 
 export const osceolaCountyData = createCityData('Osceola County', 'osceola-county', {
-  metaTitle: 'Osceola County AC Repair & HVAC | Kissimmee, St. Cloud & Poinciana Area | Novation',
+  metaTitle: 'Osceola County AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Osceola County AC repair & heating county-wide: Kissimmee–St. Cloud–Poinciana routes, US-192 corridor, Celebration & east Polk edges. Multi-city dispatch. CAC1823924. (407) 973-1523.',
   heroTitle: 'Osceola County AC Repair & County-Wide HVAC',
@@ -156,7 +156,7 @@ export const osceolaCountyData = createCityData('Osceola County', 'osceola-count
 });
 
 export const orangeCountyData = createCityData('Orange County', 'orange-county', {
-  metaTitle: 'Orange County FL AC Repair & HVAC | Orlando Metro, West Orange & Apopka | Novation',
+  metaTitle: 'Orange County FL AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Orange County AC repair county-wide: Orlando metro plus Apopka, Winter Garden, Ocoee & west Orange—without duplicating the city-only Orlando page. Licensed CAC1823924. (407) 973-1523.',
   heroTitle: 'Orange County FL AC Repair & County HVAC',
@@ -192,7 +192,7 @@ export const orangeCountyData = createCityData('Orange County', 'orange-county',
 });
 
 export const polkCountyData = createCityData('Polk County', 'polk-county', {
-  metaTitle: 'Polk County AC Repair & HVAC | Lakeland, Winter Haven & Auburndale | Novation',
+  metaTitle: 'Polk County AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Polk County AC repair & heating county-wide: Lakeland, Winter Haven, Auburndale, Haines City & US-27/92 corridors—from Poinciana dispatch. Not a clone of single-city pages. CAC1823924. (407) 973-1523.',
   heroTitle: 'Polk County AC Repair & County-Wide HVAC',
@@ -228,7 +228,7 @@ export const polkCountyData = createCityData('Polk County', 'polk-county', {
 });
 
 export const winterHavenData = createCityData('Winter Haven', 'winter-haven', {
-  metaTitle: 'Winter Haven AC Repair & Heating | Chain of Lakes Area | Novation',
+  metaTitle: 'Winter Haven AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Winter Haven primary intent: AC repair & heating around the Chain of Lakes—emergencies and tune-ups. Installations secondary. Poinciana-based dispatch. CAC1823924. (407) 973-1523.',
   heroTitle: 'Winter Haven AC Repair & Heating',
@@ -264,7 +264,7 @@ export const winterHavenData = createCityData('Winter Haven', 'winter-haven', {
 });
 
 export const auburndaleData = createCityData('Auburndale', 'auburndale', {
-  metaTitle: 'Auburndale AC Repair | Between Lakeland & Winter Haven | Novation',
+  metaTitle: 'Auburndale AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Auburndale-focused AC repair & heating—not the Winter Haven or Lakeland emphasis pages. Central Polk routes from Poinciana. CAC1823924. (407) 973-1523.',
   heroTitle: 'Auburndale AC Repair & Heating',
@@ -300,7 +300,7 @@ export const auburndaleData = createCityData('Auburndale', 'auburndale', {
 });
 
 export const hainesCityData = createCityData('Haines City', 'haines-city', {
-  metaTitle: 'Haines City AC Repair & HVAC | US-27 & Hwy 17 Corridor | Novation',
+  metaTitle: 'Haines City AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Haines City local intent: AC repair along US-27 and east Polk—not duplicate titles with Auburndale or county hub. Licensed CAC1823924. (407) 973-1523.',
   heroTitle: 'Haines City AC Repair & Heating',
@@ -336,7 +336,7 @@ export const hainesCityData = createCityData('Haines City', 'haines-city', {
 });
 
 export const drPhillipsData = createCityData('Dr. Phillips', 'dr-phillips', {
-  metaTitle: 'Dr. Phillips AC Repair | Southwest Orlando Submarket | Novation',
+  metaTitle: 'Dr. Phillips AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Dr. Phillips & Bay Hill submarket—not the broad Orlando metro page. AC repair & heating with southwest corridor routing. CAC1823924. (407) 973-1523.',
   heroTitle: 'Dr. Phillips AC Repair & Premium HVAC Service',
@@ -372,7 +372,7 @@ export const drPhillipsData = createCityData('Dr. Phillips', 'dr-phillips', {
 });
 
 export const windermereData = createCityData('Windermere', 'windermere', {
-  metaTitle: 'Windermere AC Repair | Butler Chain Lake Homes | Novation',
+  metaTitle: 'Windermere AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Windermere-specific: lake lots, estate homes, and heat pumps—not generic Orlando metro copy. West Orange HVAC. CAC1823924. (407) 973-1523.',
   heroTitle: 'Windermere AC Repair & Butler Chain HVAC',
@@ -408,7 +408,7 @@ export const windermereData = createCityData('Windermere', 'windermere', {
 });
 
 export const altamonteSpringsData = createCityData('Altamonte Springs', 'altamonte-springs', {
-  metaTitle: 'Altamonte Springs AC Repair | I-4 & Uptown Altamonte | Novation',
+  metaTitle: 'Altamonte Springs AC Repair Near You | Same-Day AC Repair | Novation',
   metaDescription:
     'Altamonte Springs submarket page—not the Orlando city hub. North Seminole–border service area. AC repair & heating. (407) 973-1523.',
   heroTitle: 'Altamonte Springs AC Repair & Heating',
