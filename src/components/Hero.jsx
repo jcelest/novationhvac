@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import HeroReviews from './HeroReviews';
-import { trackCTAClick, trackScheduleServiceClick } from '../utils/analytics';
+import { trackCTAClick } from '../utils/analytics';
 import './Hero.css';
 
 const HERO_IMAGE = '/images/hero-novation.png';
@@ -24,20 +24,17 @@ export default function Hero() {
           <span>Service You Can Trust</span>
         </h1>
         <div className="hero-buttons">
-          <Link to="/book-appointment" className="btn-primary" onClick={() => trackCTAClick('book_appointment', 'hero')}>
+          <a
+            href="tel:4079731523"
+            className="btn-primary"
+            data-track-location="hero"
+            onClick={() => trackCTAClick('call_now', 'hero')}
+          >
+            Call Now
+          </a>
+          <Link to="/book-appointment" className="btn-secondary" onClick={() => trackCTAClick('book_appointment', 'hero')}>
             Book Appointment
           </Link>
-          <a
-            href="#contact"
-            className="btn-secondary schedule-service-btn"
-            onClick={() => {
-              trackScheduleServiceClick();
-              // Phase 2: Replace with Vapi web call - see docs/IMPLEMENTATION_PLAN.md
-            }}
-            aria-label="Schedule service"
-          >
-            Schedule Service
-          </a>
           <a href="#contact" className="btn-secondary" onClick={() => trackCTAClick('flexible_financing', 'hero')}>
             Flexible Financing
           </a>
