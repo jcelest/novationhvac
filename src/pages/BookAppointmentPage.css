@@ -7,6 +7,7 @@
   max-width: 640px;
   margin: 0 auto;
   width: 100%;
+  min-width: 0;
 }
 
 .book-appointment-form {
@@ -15,6 +16,8 @@
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .book-appointment-form h2 {
@@ -41,19 +44,40 @@
   margin-bottom: 1rem;
 }
 
+.book-appointment-form label {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 1rem;
+}
+
+.book-appointment-form label input {
+  margin-bottom: 0;
+}
+
 .book-appointment-form input[type="text"],
 .book-appointment-form input[type="email"],
 .book-appointment-form input[type="tel"],
 .book-appointment-form input[type="date"],
 .book-appointment-form select,
 .book-appointment-form textarea {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   border: 1px solid var(--gray-200);
   border-radius: 8px;
   font-family: inherit;
   font-size: 16px; /* 16px prevents zoom on focus in iOS */
+}
+
+/* Date pickers have a large intrinsic width on mobile WebKit */
+.book-appointment-form input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .book-appointment-form input:focus,
@@ -68,6 +92,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  min-width: 0;
+}
+
+.form-row > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .form-row input:last-child {
