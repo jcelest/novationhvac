@@ -2,9 +2,10 @@
   --badge-gold: #d4af37;
   --badge-gold-light: #fde68a;
   --badge-gold-dark: #92670a;
-  --badge-purple: #4c1d95;
-  --badge-purple-deep: #2e1065;
-  --badge-purple-light: #a78bfa;
+  --badge-bronze: #b45309;
+  --badge-navy: #1e3a5f;
+  --badge-navy-deep: #0f172a;
+  --badge-cream: #fff7cc;
 
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -30,24 +31,23 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.hero-trust-badge--royal,
-.hero-trust-badge--purple {
-  background:
-    linear-gradient(155deg, rgba(76, 29, 149, 0.92) 0%, rgba(46, 16, 101, 0.96) 52%, rgba(30, 16, 51, 0.98) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  box-shadow:
-    0 4px 14px rgba(15, 6, 32, 0.35),
-    inset 0 1px 0 rgba(253, 230, 138, 0.18);
-}
-
 .hero-trust-badge--gold {
   background:
-    linear-gradient(155deg, rgba(146, 103, 10, 0.88) 0%, rgba(76, 29, 149, 0.9) 48%, rgba(46, 16, 101, 0.95) 100%);
+    linear-gradient(155deg, rgba(212, 175, 55, 0.94) 0%, rgba(146, 103, 10, 0.96) 55%, rgba(92, 62, 8, 0.98) 100%);
+  border: 1px solid rgba(255, 247, 204, 0.65);
+  box-shadow:
+    0 4px 14px rgba(15, 10, 2, 0.35),
+    0 0 12px rgba(212, 175, 55, 0.15),
+    inset 0 1px 0 rgba(255, 247, 204, 0.35);
+}
+
+.hero-trust-badge--bronze {
+  background:
+    linear-gradient(155deg, rgba(180, 134, 11, 0.92) 0%, rgba(120, 72, 8, 0.95) 50%, rgba(60, 35, 8, 0.98) 100%);
   border: 1px solid rgba(253, 230, 138, 0.55);
   box-shadow:
-    0 4px 14px rgba(15, 6, 32, 0.32),
-    0 0 10px rgba(212, 175, 55, 0.12),
-    inset 0 1px 0 rgba(255, 247, 204, 0.22);
+    0 4px 14px rgba(15, 10, 2, 0.32),
+    inset 0 1px 0 rgba(255, 247, 204, 0.25);
 }
 
 .hero-trust-badge::before {
@@ -55,7 +55,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(253, 230, 138, 0.1) 0%, transparent 38%, rgba(167, 139, 250, 0.08) 100%);
+    linear-gradient(135deg, rgba(255, 247, 204, 0.18) 0%, transparent 42%, rgba(30, 58, 95, 0.12) 100%);
   pointer-events: none;
 }
 
@@ -66,17 +66,17 @@
   left: 12%;
   right: 12%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(253, 230, 138, 0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 247, 204, 0.85), transparent);
   pointer-events: none;
 }
 
 .hero-trust-badge:hover {
   transform: translateY(-2px);
-  border-color: rgba(253, 230, 138, 0.75);
+  border-color: rgba(255, 247, 204, 0.9);
   box-shadow:
-    0 6px 16px rgba(15, 6, 32, 0.4),
-    0 0 14px rgba(212, 175, 55, 0.16),
-    inset 0 1px 0 rgba(255, 247, 204, 0.28);
+    0 6px 16px rgba(15, 10, 2, 0.4),
+    0 0 16px rgba(212, 175, 55, 0.22),
+    inset 0 1px 0 rgba(255, 247, 204, 0.4);
 }
 
 .hero-trust-badge-ring {
@@ -85,13 +85,13 @@
   background: conic-gradient(
     from 210deg,
     transparent 0deg,
-    rgba(253, 230, 138, 0.4) 70deg,
-    rgba(167, 139, 250, 0.3) 140deg,
-    rgba(212, 175, 55, 0.45) 210deg,
-    rgba(124, 58, 237, 0.3) 280deg,
+    rgba(255, 247, 204, 0.5) 70deg,
+    rgba(212, 175, 55, 0.45) 140deg,
+    rgba(30, 58, 95, 0.35) 210deg,
+    rgba(251, 191, 36, 0.45) 280deg,
     transparent 360deg
   );
-  opacity: 0.22;
+  opacity: 0.24;
   animation: heroBadgeSpin 12s linear infinite;
   pointer-events: none;
 }
@@ -102,7 +102,7 @@
   width: 30px;
   height: 30px;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
 
 .hero-trust-badge-icon svg {
@@ -117,11 +117,8 @@
   font-size: clamp(0.58rem, 1.1vw, 0.68rem);
   font-weight: 700;
   line-height: 1.15;
-  background: linear-gradient(180deg, #fff7cc 0%, #fde68a 45%, #d4af37 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+  color: #fff7cc;
+  text-shadow: 0 1px 2px rgba(15, 10, 2, 0.55);
 }
 
 .hero-trust-badge-sub {
@@ -130,12 +127,12 @@
   font-size: clamp(0.5rem, 0.95vw, 0.58rem);
   font-weight: 600;
   line-height: 1.1;
-  color: #ddd6fe;
+  color: rgba(255, 247, 204, 0.88);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-.hero-trust-badge--gold .hero-trust-badge-sub {
+.hero-trust-badge--bronze .hero-trust-badge-sub {
   color: #fef3c7;
 }
 
