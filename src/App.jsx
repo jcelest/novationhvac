@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { renderSeoOgTags } from './components/SeoOgTags';
 import { SITE_URL, HOME_PAGE_TITLE, HOME_PAGE_DESCRIPTION } from './utils/seoConstants';
 import ScrollToTop from './components/ScrollToTop';
+import usePhoneClickTracking from './hooks/usePhoneClickTracking';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Promos from './components/Promos';
@@ -40,6 +41,8 @@ import { organizationJsonLd } from './data/organizationJsonLd';
 import { jsonLdStringify } from './utils/jsonLdScript';
 
 export default function App() {
+  usePhoneClickTracking();
+
   return (
     <>
       <Helmet>

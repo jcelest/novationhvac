@@ -82,3 +82,44 @@ export function trackScheduleServiceClick() {
     cta_location: 'hero',
   });
 }
+
+/**
+ * Click-to-call on tel: links (website phone intent — not the same as a completed call).
+ * @param {() => void} [onComplete] - run after GA4 accepts the hit (use before opening dialer)
+ */
+export function trackPhoneClick(location = '', phoneNumber = '', onComplete) {
+  if (typeof window === 'undefined') return;
+
+  const params = {
+    link_location: location,
+    phone_number: phoneNumber,
+    page_path: window.location.pathname,
+  };
+
+  if (typeof onComplete === 'function') {
+    params.event_callback = onComplete;
+    params.event_timeout = 2000;
+  }
+
+  if (window.gtag) {
+    window.gtag('event', 'phone_click', params);
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'phone_click', ...params });
+  onComplete?.();
+}
+
+/** Map tel: link DOM to a readable placement label for GA4. */
+export function getPhoneLinkLocation(link) {
+  if (link?.dataset?.trackLocation) return link.dataset.trackLocation;
+  if (link?.classList?.contains('btn-call')) return 'header';
+  if (link?.classList?.contains('footer-phone')) return 'footer';
+  if (link?.classList?.contains('contact-link')) return 'contact';
+  if (link?.classList?.contains('btn-call-now')) return 'emergency_hero';
+  if (link?.classList?.contains('btn-secondary') || link?.classList?.contains('btn-primary')) {
+    return 'page_cta';
+  }
+  return typeof window !== 'undefined' ? window.location.pathname : 'unknown';
+}
