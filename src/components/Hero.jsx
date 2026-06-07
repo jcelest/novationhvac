@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import HeroReviews from './HeroReviews';
+import HeroTrustBadges from './HeroTrustBadges';
 import { trackCTAClick } from '../utils/analytics';
 import './Hero.css';
 
@@ -23,6 +24,7 @@ export default function Hero() {
           Novation Heating and Air Conditioning:<br />
           <span>Service You Can Trust</span>
         </h1>
+        <HeroTrustBadges />
         <div className="hero-buttons">
           <a
             href="tel:4079731523"

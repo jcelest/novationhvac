@@ -1,0 +1,216 @@
+.hero-trust-badges {
+  --badge-gold: #d4af37;
+  --badge-gold-light: #fde68a;
+  --badge-gold-dark: #92670a;
+  --badge-purple: #4c1d95;
+  --badge-purple-deep: #2e1065;
+  --badge-purple-light: #a78bfa;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  list-style: none;
+  max-width: 560px;
+}
+
+.hero-trust-badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.15rem;
+  padding: 0.4rem 0.3rem 0.35rem;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: heroBadgeEnter 0.55s ease backwards;
+  animation-delay: var(--badge-delay, 0s);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-trust-badge--royal,
+.hero-trust-badge--purple {
+  background:
+    linear-gradient(155deg, rgba(76, 29, 149, 0.92) 0%, rgba(46, 16, 101, 0.96) 52%, rgba(30, 16, 51, 0.98) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow:
+    0 4px 14px rgba(15, 6, 32, 0.35),
+    inset 0 1px 0 rgba(253, 230, 138, 0.18);
+}
+
+.hero-trust-badge--gold {
+  background:
+    linear-gradient(155deg, rgba(146, 103, 10, 0.88) 0%, rgba(76, 29, 149, 0.9) 48%, rgba(46, 16, 101, 0.95) 100%);
+  border: 1px solid rgba(253, 230, 138, 0.55);
+  box-shadow:
+    0 4px 14px rgba(15, 6, 32, 0.32),
+    0 0 10px rgba(212, 175, 55, 0.12),
+    inset 0 1px 0 rgba(255, 247, 204, 0.22);
+}
+
+.hero-trust-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(253, 230, 138, 0.1) 0%, transparent 38%, rgba(167, 139, 250, 0.08) 100%);
+  pointer-events: none;
+}
+
+.hero-trust-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(253, 230, 138, 0.6), transparent);
+  pointer-events: none;
+}
+
+.hero-trust-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(253, 230, 138, 0.75);
+  box-shadow:
+    0 6px 16px rgba(15, 6, 32, 0.4),
+    0 0 14px rgba(212, 175, 55, 0.16),
+    inset 0 1px 0 rgba(255, 247, 204, 0.28);
+}
+
+.hero-trust-badge-ring {
+  position: absolute;
+  inset: -45%;
+  background: conic-gradient(
+    from 210deg,
+    transparent 0deg,
+    rgba(253, 230, 138, 0.4) 70deg,
+    rgba(167, 139, 250, 0.3) 140deg,
+    rgba(212, 175, 55, 0.45) 210deg,
+    rgba(124, 58, 237, 0.3) 280deg,
+    transparent 360deg
+  );
+  opacity: 0.22;
+  animation: heroBadgeSpin 12s linear infinite;
+  pointer-events: none;
+}
+
+.hero-trust-badge-icon {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.hero-trust-badge-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-trust-badge-label {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(0.58rem, 1.1vw, 0.68rem);
+  font-weight: 700;
+  line-height: 1.15;
+  background: linear-gradient(180deg, #fff7cc 0%, #fde68a 45%, #d4af37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+}
+
+.hero-trust-badge-sub {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(0.5rem, 0.95vw, 0.58rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #ddd6fe;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hero-trust-badge--gold .hero-trust-badge-sub {
+  color: #fef3c7;
+}
+
+@keyframes heroBadgeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroBadgeSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-trust-badge {
+    animation: none;
+  }
+
+  .hero-trust-badge-ring {
+    animation: none;
+  }
+
+  .hero-trust-badge:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-trust-badges {
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-trust-badge {
+    padding: 0.35rem 0.2rem 0.3rem;
+    border-radius: 9px;
+  }
+
+  .hero-trust-badge-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .hero-trust-badge-sub {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-trust-badges {
+    gap: 0.28rem;
+  }
+
+  .hero-trust-badge {
+    padding: 0.3rem 0.15rem 0.28rem;
+    border-radius: 8px;
+  }
+
+  .hero-trust-badge-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-trust-badge-label {
+    font-size: 0.54rem;
+  }
+}
