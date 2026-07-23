@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="88" viewBox="0 0 640 88">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="55%" stop-color="#92670a"/>
+      <stop offset="100%" stop-color="#5c3e08"/>
+    </linearGradient>
+    <linearGradient id="cardShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7cc" stop-opacity="0.22"/>
+      <stop offset="42%" stop-color="#fff7cc" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1e3a5f" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="topLine" x1="12%" y1="0%" x2="88%" y2="0%">
+      <stop offset="0%" stop-color="#fff7cc" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff7cc" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#fff7cc" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="iconShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    
+    <linearGradient id="goldDisc" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff7cc"/><stop offset="0.5" stop-color="#d4af37"/><stop offset="1" stop-color="#92670a"/>
+    </linearGradient>
+    <linearGradient id="goldDiscRing" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset="1" stop-color="#b8860b"/>
+    </linearGradient>
+    <radialGradient id="goldDiscInner" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24 22) rotate(90) scale(18)">
+      <stop stop-color="#1e3a5f"/><stop offset="1" stop-color="#0f172a"/>
+    </radialGradient>
+    <linearGradient id="boltGold" x1="18" y1="14" x2="30" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff7cc"/><stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+  
+  </defs>
+  <rect x="6" y="6" width="628" height="76" rx="18" ry="18" fill="url(#cardBg)" stroke="#fff7cc" stroke-width="1.5" stroke-opacity="0.65"/>
+  <rect x="6" y="6" width="628" height="76" rx="18" ry="18" fill="url(#cardShine)"/>
+  <rect x="54" y="6" width="532" height="1.5" fill="url(#topLine)"/>
+  <line x1="78.80000000000001" y1="20" x2="78.80000000000001" y2="68" stroke="#fff7cc" stroke-opacity="0.25" stroke-width="1"/>
+  <g transform="translate(16 11.599999999999994)" filter="url(#iconShadow)">
+    <g transform="scale(1.35)">
+      <circle cx="24" cy="24" r="22" fill="url(#goldDisc)" stroke="url(#goldDiscRing)" stroke-width="2"/>
+      <circle cx="24" cy="24" r="17.5" fill="url(#goldDiscInner)" stroke="rgba(253,230,138,0.35)" stroke-width="1"/>
+      <path d="M27 14 18 26h7.5l-1.5 9 11.5-14H27l1-7Z" fill="url(#boltGold)" stroke="#fff7cc" stroke-width="1.1" stroke-linejoin="round"/>
+  </g>
+  </g>
+  <text x="88.80000000000001" y="42" fill="#fff7cc" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="0.3" dominant-baseline="middle">
+    Same-Day Service
+  </text>
+  <text x="88.80000000000001" y="64" fill="#fef3c7" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" letter-spacing="2.2" opacity="0.92">
+    WHEN AVAILABLE
+  </text>
+  <text x="622" y="44" text-anchor="end" fill="#fde68a" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="600" letter-spacing="1.2" opacity="0.7" dominant-baseline="middle">
+    NOVATION HVAC
+  </text>
+</svg>
