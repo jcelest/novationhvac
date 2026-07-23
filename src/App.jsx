@@ -21,6 +21,7 @@ import ContactPage from './pages/ContactPage';
 import BookAppointmentPage from './pages/BookAppointmentPage';
 import ServiceAreasPage from './pages/ServiceAreasPage';
 import EmergencyACPage from './pages/EmergencyACPage';
+import FlyerViewPage from './pages/FlyerViewPage';
 import { coolingData, heatingData, indoorAirQualityData } from './data/serviceData';
 import {
   orlandoData,
@@ -82,6 +83,26 @@ export default function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/book-appointment" element={<BookAppointmentPage />} />
+      <Route
+        path="/p/2008-2014-homes-front"
+        element={
+          <FlyerViewPage
+            title="Novation Flyer — 2008–2014 Homes (Front)"
+            imageSrc="/flyer-assets/novation-flyer-2008-2014-homes-front-6x9.png"
+            imageAlt="Novation Heating and Air Conditioning 6x9 postcard front for 2008–2014 homes"
+          />
+        }
+      />
+      <Route
+        path="/p/2008-2014-homes-back"
+        element={
+          <FlyerViewPage
+            title="Novation Flyer — 2008–2014 Homes (Back)"
+            imageSrc="/flyer-assets/novation-flyer-2008-2014-homes-back-6x9.png"
+            imageAlt="Novation Heating and Air Conditioning 6x9 postcard back for 2008–2014 homes"
+          />
+        }
+      />
       <Route path="/orlando" element={<CityLanding cityData={orlandoData} />} />
       <Route path="/kissimmee" element={<CityLanding cityData={kissimmeeData} />} />
       <Route path="/poinciana" element={<CityLanding cityData={poincianaData} />} />

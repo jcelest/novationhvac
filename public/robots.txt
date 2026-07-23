@@ -5,5 +5,6 @@ Allow: /
 
 # Non-content paths crawlers sometimes probe
 Disallow: /__manifest
+Disallow: /p/
 
 Sitemap: https://novationhvac.com/sitemap.xml
