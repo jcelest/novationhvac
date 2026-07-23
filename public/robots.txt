@@ -5,6 +5,7 @@ Allow: /
 
 # Non-content paths crawlers sometimes probe
 Disallow: /__manifest
-Disallow: /p/
+Disallow: /flyer-2008-2014-homes-front
+Disallow: /flyer-2008-2014-homes-back
 
 Sitemap: https://novationhvac.com/sitemap.xml

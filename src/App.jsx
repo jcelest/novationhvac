@@ -84,7 +84,7 @@ export default function App() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/book-appointment" element={<BookAppointmentPage />} />
       <Route
-        path="/p/2008-2014-homes-front"
+        path="/flyer-2008-2014-homes-front"
         element={
           <FlyerViewPage
             title="Novation Flyer — 2008–2014 Homes (Front)"
@@ -94,7 +94,7 @@ export default function App() {
         }
       />
       <Route
-        path="/p/2008-2014-homes-back"
+        path="/flyer-2008-2014-homes-back"
         element={
           <FlyerViewPage
             title="Novation Flyer — 2008–2014 Homes (Back)"

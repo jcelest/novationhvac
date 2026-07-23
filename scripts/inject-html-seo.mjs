@@ -53,6 +53,16 @@ const STATIC_PAGE_META = {
     description:
       'Contact Novation Heating and Air Conditioning for AC repair, heating, cooling services. 24/7 emergency. Orlando, Kissimmee, Central Florida. Call (407) 973-1523 or request service online.',
   },
+  'flyer-2008-2014-homes-front': {
+    title: 'Novation Flyer — 2008–2014 Homes (Front)',
+    description: 'Novation Heating and Air Conditioning 6x9 postcard front.',
+    robots: 'noindex, nofollow',
+  },
+  'flyer-2008-2014-homes-back': {
+    title: 'Novation Flyer — 2008–2014 Homes (Back)',
+    description: 'Novation Heating and Air Conditioning 6x9 postcard back.',
+    robots: 'noindex, nofollow',
+  },
 };
 
 function escapeHtmlAttr(str) {
@@ -63,7 +73,7 @@ function escapeHtmlAttr(str) {
     .replace(/>/g, '&gt;');
 }
 
-function applySeo(html, { canonical, title, description }) {
+function applySeo(html, { canonical, title, description, robots }) {
   const t = escapeHtmlAttr(title);
   const d = escapeHtmlAttr(description);
   const c = escapeHtmlAttr(canonical);
@@ -75,6 +85,18 @@ function applySeo(html, { canonical, title, description }) {
     /<meta\s+name="description"\s+content="[^"]*"\s*\/>/i,
     `<meta name="description" content="${d}" />`
   );
+
+  if (robots) {
+    const r = escapeHtmlAttr(robots);
+    if (/<meta\s+name="robots"/i.test(out)) {
+      out = out.replace(/<meta\s+name="robots"\s+content="[^"]*"\s*\/>/i, `<meta name="robots" content="${r}" />`);
+    } else {
+      out = out.replace(
+        /<meta\s+name="description"\s+content="[^"]*"\s*\/>/i,
+        `<meta name="description" content="${d}" />\n    <meta name="robots" content="${r}" />`
+      );
+    }
+  }
 
   const seoBlock = `    <link rel="canonical" href="${c}" />
     <meta property="og:url" content="${c}" />
@@ -134,6 +156,7 @@ function buildSeoEntries() {
       canonical: `${SITE_URL}/${slug}`,
       title: meta.title,
       description: meta.description,
+      robots: meta.robots,
     });
   }
 
@@ -170,8 +193,8 @@ function main() {
   let homeWritten = false;
   let extraCount = 0;
 
-  for (const { fileSlug, canonical, title, description } of entries) {
-    const html = applySeo(template, { canonical, title, description });
+  for (const { fileSlug, canonical, title, description, robots } of entries) {
+    const html = applySeo(template, { canonical, title, description, robots });
     if (fileSlug == null) {
       fs.writeFileSync(indexPath, html);
       homeWritten = true;
