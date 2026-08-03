@@ -2,15 +2,19 @@ import { useState } from 'react';
 import { trackFormSubmit, trackLeadCaptured } from '../utils/analytics';
 import './Contact.css';
 
-export default function Contact({ initialZip = '' }) {
+const B2B_DEFAULT_MESSAGE =
+  'B2B partnership inquiry — please include property count, cities served, and whether you need maintenance, turnover installs, or emergency HVAC.';
+
+export default function Contact({ initialZip = '', variant = 'default' }) {
+  const isB2b = variant === 'b2b';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     zip: initialZip,
     address: '',
-    service: '',
-    message: '',
+    service: isB2b ? 'b2b' : '',
+    message: isB2b ? B2B_DEFAULT_MESSAGE : '',
     preferredDate: '',
     preferredTime: '',
   });
@@ -29,7 +33,7 @@ export default function Contact({ initialZip = '' }) {
     setUsedJobber(false);
     const payload = {
       ...formData,
-      source: 'contact_form',
+      source: isB2b ? 'b2b_contact_form' : 'contact_form',
       pageUrl: typeof window !== 'undefined' ? window.location.href : '',
       utm_source: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') : null,
       utm_medium: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_medium') : null,
@@ -55,7 +59,17 @@ export default function Contact({ initialZip = '' }) {
           setUsedJobber(false);
           trackFormSubmit('contact_form', { success: true, source: 'contact_form' });
           trackLeadCaptured('contact_form', false);
-          setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            zip: initialZip,
+            address: '',
+            service: isB2b ? 'b2b' : '',
+            message: isB2b ? B2B_DEFAULT_MESSAGE : '',
+            preferredDate: '',
+            preferredTime: '',
+          });
         } else {
           setStatus('error');
           setErrorMessage(contactData?.error || '');
@@ -66,9 +80,19 @@ export default function Contact({ initialZip = '' }) {
       if (res.ok && data.success) {
         setStatus('success');
         setUsedJobber(true);
-        trackFormSubmit('contact_form', { success: true, source: 'contact_form' });
+        trackFormSubmit('contact_form', { success: true, source: isB2b ? 'b2b_contact_form' : 'contact_form' });
         trackLeadCaptured('contact_form', true);
-        setFormData({ name: '', email: '', phone: '', zip: '', address: '', service: '', message: '', preferredDate: '', preferredTime: '' });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          zip: initialZip,
+          address: '',
+          service: isB2b ? 'b2b' : '',
+          message: isB2b ? B2B_DEFAULT_MESSAGE : '',
+          preferredDate: '',
+          preferredTime: '',
+        });
       } else {
         setStatus('error');
         setErrorMessage(data?.error || '');
@@ -84,8 +108,12 @@ export default function Contact({ initialZip = '' }) {
     <section id="contact" className="contact">
       <div className="container contact-inner">
         <div className="contact-info">
-          <h2>Get In Touch</h2>
-          <p>Ready to schedule service or have questions? We're here to help.</p>
+          <h2>{isB2b ? 'B2B Partnership Inquiry' : 'Get In Touch'}</h2>
+          <p>
+            {isB2b
+              ? 'Tell us about your portfolio or project pipeline. Our team responds with scope, pricing approach, and next steps.'
+              : "Ready to schedule service or have questions? We're here to help."}
+          </p>
           <div className="contact-details">
             <a href="tel:4079731523" className="contact-link">
               <strong className="contact-call-label">Call Us</strong>
@@ -95,7 +123,7 @@ export default function Contact({ initialZip = '' }) {
           </div>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
-          <h3>Request Service</h3>
+          <h3>{isB2b ? 'Request B2B Consultation' : 'Request Service'}</h3>
           <div className="form-row">
             <input
               type="text"
@@ -158,6 +186,7 @@ export default function Contact({ initialZip = '' }) {
           </div>
           <select name="service" value={formData.service} onChange={handleChange}>
             <option value="">Select Service</option>
+            {isB2b && <option value="b2b">B2B / Commercial Partnership</option>}
             <option value="ac">Cooling</option>
             <option value="heating">Heating</option>
             <option value="maintenance">Maintenance</option>
@@ -171,7 +200,7 @@ export default function Contact({ initialZip = '' }) {
             onChange={handleChange}
           />
           <button type="submit" className="btn-submit" disabled={status === 'sending'}>
-            {status === 'sending' ? 'Submitting...' : 'Book Appointment'}
+            {status === 'sending' ? 'Submitting...' : isB2b ? 'Submit B2B Inquiry' : 'Book Appointment'}
           </button>
           {status === 'success' && (
             <p className="form-success">

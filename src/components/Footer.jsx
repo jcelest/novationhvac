@@ -29,6 +29,7 @@ export default function Footer() {
             <Link to="/cooling">Cooling</Link>
             <Link to="/heating">Heating</Link>
             <Link to="/indoor-air-quality">Indoor Air Quality</Link>
+            <Link to="/hvac-contractor-b2b">B2B Partnerships</Link>
             <Link to="/specials">Specials</Link>
             <Link to="/service-areas">Areas we serve</Link>
             <Link to="/about">About</Link>

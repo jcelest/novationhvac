@@ -18,6 +18,7 @@ import {
   OG_IMAGE,
   SITE_NAME,
 } from '../src/utils/seoConstants.js';
+import { b2bHvacMeta } from '../src/data/b2bHvacData.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(__dirname, '../dist');
@@ -27,6 +28,10 @@ const STATIC_PAGE_META = {
     title: '24/7 Emergency AC Repair Central Florida | Same-Day Service | Novation',
     description:
       'Emergency-first intent: no-cool AC repair after hours and nights—same-day when available across Central Florida. Not your primary install or Orlando metro page. Call (407) 973-1523.',
+  },
+  'hvac-contractor-b2b': {
+    title: b2bHvacMeta.title,
+    description: b2bHvacMeta.description,
   },
   specials: {
     title: 'Veteran & Military Discount | 10% Off HVAC | Novation Heating and Air Conditioning',

@@ -21,6 +21,7 @@ import ContactPage from './pages/ContactPage';
 import BookAppointmentPage from './pages/BookAppointmentPage';
 import ServiceAreasPage from './pages/ServiceAreasPage';
 import EmergencyACPage from './pages/EmergencyACPage';
+import B2BHvacPage from './pages/B2BHvacPage';
 import FlyerViewPage from './pages/FlyerViewPage';
 import { coolingData, heatingData, indoorAirQualityData } from './data/serviceData';
 import {
@@ -78,6 +79,7 @@ export default function App() {
       <Route path="/heating" element={<ServicePage data={heatingData} />} />
       <Route path="/indoor-air-quality" element={<ServicePage data={indoorAirQualityData} />} />
       <Route path="/emergency-ac-repair" element={<EmergencyACPage />} />
+      <Route path="/hvac-contractor-b2b" element={<B2BHvacPage />} />
       <Route path="/specials" element={<SpecialsPage />} />
       <Route path="/service-areas" element={<ServiceAreasPage />} />
       <Route path="/about" element={<AboutPage />} />

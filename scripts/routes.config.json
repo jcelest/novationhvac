@@ -7,6 +7,7 @@
     { "path": "heating", "priority": "0.9", "changefreq": "monthly" },
     { "path": "indoor-air-quality", "priority": "0.9", "changefreq": "monthly" },
     { "path": "emergency-ac-repair", "priority": "0.9", "changefreq": "monthly" },
+    { "path": "hvac-contractor-b2b", "priority": "0.85", "changefreq": "monthly" },
     { "path": "specials", "priority": "0.8", "changefreq": "monthly" },
     { "path": "service-areas", "priority": "0.9", "changefreq": "monthly" },
     { "path": "about", "priority": "0.8", "changefreq": "monthly" },

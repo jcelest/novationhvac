@@ -1,0 +1,112 @@
+.b2b-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--blue-dark);
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin-bottom: 1rem;
+}
+
+.b2b-audience-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.b2b-audience-section h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--blue-dark);
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.b2b-audience-intro {
+  text-align: center;
+  color: var(--gray-700);
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.b2b-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.b2b-audience-card {
+  background: var(--gray-50);
+  border: 1px solid rgba(26, 82, 118, 0.1);
+  border-radius: 12px;
+  padding: 1.35rem 1.25rem;
+}
+
+.b2b-audience-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.65rem;
+}
+
+.b2b-audience-card p {
+  font-size: 0.92rem;
+  color: var(--gray-700);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.b2b-cta-strip {
+  padding: 2.5rem 0;
+  background: linear-gradient(135deg, var(--blue-dark) 0%, #2980b9 100%);
+  color: var(--white);
+  text-align: center;
+}
+
+.b2b-cta-strip h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.b2b-cta-strip p {
+  max-width: 36rem;
+  margin: 0 auto 1.25rem;
+  opacity: 0.92;
+  line-height: 1.55;
+}
+
+.b2b-cta-strip .hero-buttons {
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .b2b-audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .b2b-audience-section {
+    padding: 3rem 0;
+  }
+
+  .b2b-audience-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .b2b-cta-strip {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .b2b-audience-section {
+    padding: 2rem 0;
+  }
+}

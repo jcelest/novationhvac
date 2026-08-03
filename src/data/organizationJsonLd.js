@@ -83,6 +83,7 @@ export const organizationJsonLd = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Heating Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cooling Installation' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Indoor Air Quality' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'B2B HVAC Contractor Partnerships' } },
     ],
   },
 };
