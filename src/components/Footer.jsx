@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SERVICE_AREAS_HUB } from '../data/emphasisServiceAreas';
+import IntentCredit from './IntentCredit';
 import './Footer.css';
 
 export default function Footer() {
@@ -59,6 +60,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Novation Heating and Air Conditioning. License #CAC1823924</p>
         </div>
       </div>
+      <IntentCredit />
     </footer>
   );
 }
