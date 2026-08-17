@@ -100,7 +100,7 @@ export default function CityLanding({ cityData }) {
               <article className="service-card">
                 <div className="service-icon"><IAQIcon /></div>
                 <h3>Indoor Air Quality</h3>
-                <p>Air purification, humidity control, and duct cleaning for healthier air in your {name} home.</p>
+                <p>Air purification, filtration, and humidity control for healthier air in your {name} home.</p>
               </article>
               <article className="service-card">
                 <div className="service-icon"><MaintenanceIcon /></div>

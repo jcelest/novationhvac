@@ -117,18 +117,18 @@ export const heatingData = {
 };
 
 export const indoorAirQualityData = {
-  metaTitle: 'Indoor Air Quality & Duct Cleaning | Central Florida IAQ | Novation',
+  metaTitle: 'Indoor Air Quality | Central Florida IAQ | Novation',
   metaDescription:
-    'IAQ-focused services: duct cleaning, filtration, humidity control, and air purification—separate from generic AC repair pages. Central Florida. Licensed CAC1823924. (407) 973-1523.',
-  heroTitle: 'Indoor Air Quality & Duct Services',
-  heroTagline: 'Filtration, duct cleaning & humidity — not a substitute for your city AC repair page',
+    'IAQ-focused services: filtration, humidity control, and air purification—separate from generic AC repair pages. Central Florida. Licensed CAC1823924. (407) 973-1523.',
+  heroTitle: 'Indoor Air Quality Services',
+  heroTagline: 'Filtration, purification & humidity — not a substitute for your city AC repair page',
   heroImage: '/images/air-quality-hvac.png',
   sections: [
     {
-      title: 'Air Purification & Duct Cleaning',
+      title: 'Air Purification & Filtration',
       paragraphs: [
-        'Breathe easier with dedicated IAQ work: duct cleaning, whole-home filtration, UV options, and humidity control for homes and businesses across Central Florida. Pair these with your existing HVAC system—see city pages for AC repair and install priorities.',
-        'Dirty ducts, poor filtration, and humidity imbalances affect comfort and health. Our IAQ solutions include UV air purifiers, whole-home filtration, duct sealing, and dehumidifiers. Licensed (CAC1823924) and trusted throughout Florida.',
+        'Breathe easier with dedicated IAQ work: whole-home filtration, UV options, and humidity control for homes and businesses across Central Florida. Pair these with your existing HVAC system—see city pages for AC repair and install priorities.',
+        'Poor filtration and humidity imbalances affect comfort and health. Our IAQ solutions include UV air purifiers, whole-home filtration, duct sealing, and dehumidifiers. Licensed (CAC1823924) and trusted throughout Florida.',
       ],
       image: '/images/air-quality-hvac.png',
     },
@@ -142,8 +142,8 @@ export const indoorAirQualityData = {
     },
   ],
   faqs: [
-    { q: 'How often should I have my ducts cleaned?', a: 'We recommend duct cleaning every 3-5 years, or more often if you have allergies, pets, or recent renovations.' },
     { q: 'Do you install air purifiers?', a: 'Yes. We install UV air purifiers, HEPA filtration, and whole-home air purification systems.' },
-    { q: 'What causes poor indoor air quality?', a: 'Common causes include dirty ducts, inadequate filtration, high humidity, and poor ventilation. We can assess and recommend solutions.' },
+    { q: 'What causes poor indoor air quality?', a: 'Common causes include inadequate filtration, high humidity, and poor ventilation. We can assess and recommend solutions.' },
+    { q: 'Can you help with Florida humidity problems?', a: 'Yes. We install dehumidifiers, humidifiers, and ventilation systems to balance indoor humidity and protect your HVAC system.' },
   ],
 };

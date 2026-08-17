@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: 'Indoor Air Quality',
-    description: 'Air purification, humidity control, and duct cleaning for healthier air.',
+    description: 'Air purification, filtration, and humidity control for healthier indoor air.',
     Icon: IAQIcon,
   },
   {
