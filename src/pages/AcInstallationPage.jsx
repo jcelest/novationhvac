@@ -99,13 +99,16 @@ export default function AcInstallationPage() {
       <Header />
       <main id="main-content" className="service-page install-page">
         <section className="hero hero-compact">
-          <div
-            className="hero-bg"
-            style={{
-              background:
-                'linear-gradient(135deg, rgba(26, 82, 118, 0.92) 0%, rgba(41, 128, 185, 0.88) 50%, rgba(52, 152, 219, 0.85) 100%), url(/images/cooling-ac.png) center/cover no-repeat',
-            }}
-          />
+          <div className="hero-bg" aria-hidden="true">
+            <img
+              src="/images/ac-heating-maintenance-plan.png"
+              alt=""
+              className="hero-bg-img"
+              width={1024}
+              height={768}
+              decoding="async"
+            />
+          </div>
           <div className="hero-overlay" />
           <div className="hero-content container">
             <Breadcrumbs items={breadcrumbItems} />

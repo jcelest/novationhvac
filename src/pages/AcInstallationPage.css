@@ -1,5 +1,36 @@
+.install-page .hero-content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .install-page .hero-title {
-  max-width: 18ch;
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.install-page .hero-tagline {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.install-page .hero-buttons {
+  justify-content: center;
+}
+
+.install-page .breadcrumbs-list {
+  justify-content: center;
+}
+
+.install-page .hero-bg::after {
+  background: linear-gradient(135deg, rgba(26, 82, 118, 0.88) 0%, rgba(26, 82, 118, 0.8) 100%);
+}
+
+@media (max-width: 768px) {
+  .install-page .hero-bg::after {
+    background: linear-gradient(135deg, rgba(26, 82, 118, 0.92) 0%, rgba(26, 82, 118, 0.88) 100%);
+  }
 }
 
 .install-section {
