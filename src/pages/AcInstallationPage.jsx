@@ -103,13 +103,12 @@ export default function AcInstallationPage() {
             className="hero-bg"
             style={{
               background:
-                'linear-gradient(135deg, rgba(26, 82, 118, 0.93) 0%, rgba(41, 128, 185, 0.9) 55%, rgba(52, 152, 219, 0.86) 100%)',
+                'linear-gradient(135deg, rgba(26, 82, 118, 0.92) 0%, rgba(41, 128, 185, 0.88) 50%, rgba(52, 152, 219, 0.85) 100%), url(/images/cooling-ac.png) center/cover no-repeat',
             }}
           />
           <div className="hero-overlay" />
           <div className="hero-content container">
             <Breadcrumbs items={breadcrumbItems} />
-            <span className="install-badge">{installOffer.eyebrow}</span>
             <h1 className="hero-title">{installMeta.h1}</h1>
             <p className="hero-tagline">{installOffer.support}</p>
             <div className="hero-buttons">
