@@ -5,6 +5,7 @@ import { SITE_URL } from '../utils/seoConstants';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import ReplacementCta from '../components/ReplacementCta';
 import { serviceAreas } from '../data/serviceAreasData';
 import { EMPHASIS_SERVICE_SLUGS, EMPHASIS_SERVICE_AREAS } from '../data/emphasisServiceAreas';
 import '../components/Hero.css';
@@ -29,7 +30,7 @@ export default function ServiceAreasPage() {
         {renderSeoOgTags({ url: SA_URL, title: SA_TITLE, description: SA_DESC })}
       </Helmet>
       <Header />
-      <main className="service-areas-page">
+      <main id="main-content" className="service-areas-page">
         <section className="hero hero-compact">
           <div className="hero-bg" style={{ background: `linear-gradient(135deg, rgba(26, 82, 118, 0.92) 0%, rgba(41, 128, 185, 0.88) 50%, rgba(52, 152, 219, 0.85) 100%), url(https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80) center/cover no-repeat` }}></div>
           <div className="hero-overlay"></div>
@@ -46,11 +47,12 @@ export default function ServiceAreasPage() {
         <section className="service-areas-intro">
           <div className="container">
             <h2>Where we serve</h2>
+            <ReplacementCta location="service_areas" />
             <p className="service-areas-lead">
-              This hub lists cities and neighborhood pages—use it to find the right URL. City and service pages carry
+              This hub lists cities and neighborhood pages. Use it to find the right URL. City and service pages carry
               the detailed repair vs install angles; this index stays the map, not a duplicate Orlando or Polk landing.
               Based in Poinciana; we dispatch across Orlando, Winter Haven, Lakeland, and the broader region. No walk-in
-              public office—mobile service only.
+              public office. Mobile service only.
             </p>
           </div>
         </section>

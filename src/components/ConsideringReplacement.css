@@ -1,0 +1,51 @@
+.considering-replacement {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(26, 82, 118, 0.06) 0%, rgba(230, 126, 34, 0.08) 100%);
+}
+
+.considering-replacement-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.75rem;
+  align-items: center;
+  max-width: 900px;
+}
+
+.considering-replacement-icon {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.considering-replacement h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.75rem;
+}
+
+.considering-replacement p {
+  color: var(--gray-700);
+  margin-bottom: 1.25rem;
+  max-width: 40rem;
+}
+
+.considering-replacement-cta {
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .considering-replacement {
+    padding: 3rem 0;
+  }
+
+  .considering-replacement-inner {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .considering-replacement-icon {
+    width: 56px;
+    height: 56px;
+  }
+}

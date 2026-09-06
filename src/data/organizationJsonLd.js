@@ -10,9 +10,18 @@ import { SITE_URL } from '../utils/seoConstants';
 const POINCIANA_LAT = 28.1369;
 const POINCIANA_LON = -81.4856;
 
+export const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: 'Novation Heating and Air Conditioning',
+  url: SITE_URL,
+  publisher: { '@id': `${SITE_URL}/#business` },
+};
+
 export const organizationJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'HVACContractor',
+  '@type': ['HVACBusiness', 'HVACContractor'],
   '@id': `${SITE_URL}/#business`,
   name: 'Novation Heating and Air Conditioning',
   alternateName: 'Novation Heating and Cooling',
@@ -82,6 +91,7 @@ export const organizationJsonLd = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AC Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Heating Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cooling Installation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential AC Installation and Replacement' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Indoor Air Quality' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'B2B HVAC Contractor Partnerships' } },
     ],

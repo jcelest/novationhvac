@@ -23,4 +23,9 @@ export const GEO_INTERNAL_LINKS = {
     { to: '/winter-haven', label: 'Winter Haven' },
     { to: '/orlando', label: 'Orlando' },
   ],
+  davenport: [
+    { to: '/polk-county', label: 'Polk County HVAC overview' },
+    { to: '/kissimmee', label: 'Kissimmee' },
+    { to: '/poinciana', label: 'Poinciana — company home base' },
+  ],
 };

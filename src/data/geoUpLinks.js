@@ -8,6 +8,7 @@ export const GEO_UP_LINKS = {
   'osceola-county': { to: '/poinciana', label: 'HVAC in Poinciana (company home base)' },
   'orange-county': { to: '/orlando', label: 'Orlando metro AC & heating overview' },
   'polk-county': { to: '/service-areas', label: 'Browse Central Florida service areas' },
+  davenport: { to: '/polk-county', label: 'Polk County HVAC services overview' },
   auburndale: { to: '/winter-haven', label: 'Winter Haven HVAC hub (nearby Polk County)' },
   'haines-city': { to: '/lakeland', label: 'Lakeland HVAC services (Polk County)' },
   'dr-phillips': { to: '/orlando', label: 'Orlando metro AC & heating overview' },

@@ -31,3 +31,55 @@ export const MaintenanceIcon = () => (
     <path d="M46 18l6-6 4 4-6 6" stroke="#3498db" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
+
+export const ReplacementIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={iconStyle} aria-hidden="true">
+    <rect x="12" y="18" width="18" height="28" rx="3" stroke="#2980b9" strokeWidth="2" />
+    <rect x="34" y="14" width="18" height="32" rx="3" stroke="#e67e22" strokeWidth="2" />
+    <path d="M21 32h6M43 28v8" stroke="#3498db" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
+export const RepairPathIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={iconStyle} aria-hidden="true">
+    <circle cx="32" cy="32" r="20" stroke="#2980b9" strokeWidth="2" />
+    <path d="M32 20v14l8 5" stroke="#3498db" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const CompareIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={iconStyle} aria-hidden="true">
+    <rect x="10" y="16" width="18" height="32" rx="3" stroke="#2980b9" strokeWidth="2" />
+    <rect x="36" y="16" width="18" height="32" rx="3" stroke="#e67e22" strokeWidth="2" />
+    <path d="M16 26h6M16 34h6M42 26h6M42 34h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
+export const ClipboardIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={iconStyle} aria-hidden="true">
+    <rect x="16" y="14" width="32" height="40" rx="4" stroke="#2980b9" strokeWidth="2" />
+    <path d="M24 14h16v8H24z" fill="#3498db" />
+    <path d="M24 32h16M24 40h12" stroke="#1a5276" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
+export const StepsIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={iconStyle} aria-hidden="true">
+    <path d="M14 44h12v8H14zM26 32h12v20H26zM38 20h12v32H38z" fill="#3498db" opacity="0.25" stroke="#2980b9" strokeWidth="2" />
+  </svg>
+);
+
+export const WarningSignIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={iconStyle} aria-hidden="true">
+    <path d="M32 10 54 50H10L32 10z" stroke="#e67e22" strokeWidth="2" strokeLinejoin="round" />
+    <path d="M32 26v12" stroke="#d35400" strokeWidth="2.5" strokeLinecap="round" />
+    <circle cx="32" cy="44" r="2" fill="#d35400" />
+  </svg>
+);
+
+export const RebateIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={iconStyle} aria-hidden="true">
+    <circle cx="32" cy="32" r="18" stroke="#27ae60" strokeWidth="2" />
+    <path d="M26 32h12M32 24v16" stroke="#27ae60" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);

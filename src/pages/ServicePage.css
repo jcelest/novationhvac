@@ -74,6 +74,18 @@
   height: auto;
 }
 
+.service-related-links {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.service-related-links a {
+  color: var(--blue-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .service-faq {
   padding: 4rem 0;
   background: var(--gray-50);
@@ -90,6 +102,7 @@
   margin-bottom: 1.5rem;
 }
 
+.service-faq .faq-item h3,
 .service-faq .faq-item h4 {
   font-size: 1.05rem;
   font-weight: 600;

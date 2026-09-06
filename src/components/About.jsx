@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { trackReplacementCtaClick } from '../utils/analytics';
 import './About.css';
 
 export default function About() {
@@ -9,7 +11,17 @@ export default function About() {
           <h3>AC Repair & New System Installation — One Team</h3>
           <ul className="about-pillars">
             <li><strong>AC repair & maintenance:</strong> Diagnostics, refrigerant and electrical issues, tune-ups, and honest repair-versus-replace guidance.</li>
-            <li><strong>Installation & replacement:</strong> Right-sized equipment, high-efficiency options, and financing on qualifying systems—plus heating and indoor air quality.</li>
+            <li>
+              <strong>Installation and replacement:</strong> Right-sized equipment, high-efficiency
+              options, and financing on qualifying systems, plus heating and indoor air quality.{' '}
+              <Link
+                to="/ac-installation-replacement"
+                onClick={() => trackReplacementCtaClick('homepage_about')}
+              >
+                Request a free replacement estimate
+              </Link>
+              .
+            </li>
           </ul>
           <p>
             Based in Poinciana, we serve homeowners and businesses across Central Florida—including Orlando,

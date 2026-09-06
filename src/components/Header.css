@@ -1,3 +1,19 @@
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -100px;
+  z-index: 1100;
+  padding: 0.65rem 1rem;
+  background: var(--white);
+  color: var(--blue-dark);
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
 .header {
   position: fixed;
   top: 0;

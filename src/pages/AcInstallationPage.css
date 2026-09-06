@@ -1,0 +1,257 @@
+.install-page .hero-title {
+  max-width: 18ch;
+}
+
+.install-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--blue-dark);
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.install-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.install-section:nth-of-type(even) {
+  background: var(--gray-50);
+}
+
+.install-section h2 {
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.install-lead {
+  text-align: center;
+  color: var(--gray-700);
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+}
+
+.install-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.install-card {
+  background: var(--white);
+  border: 1px solid rgba(26, 82, 118, 0.1);
+  border-radius: 12px;
+  padding: 1.35rem 1.25rem;
+}
+
+.install-section:nth-of-type(even) .install-card {
+  background: var(--white);
+}
+
+.install-card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.install-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.5rem;
+}
+
+.install-card p,
+.install-card li {
+  color: var(--gray-700);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.install-card ul {
+  list-style: disc;
+  padding-left: 1.15rem;
+}
+
+.install-card li + li {
+  margin-top: 0.4rem;
+}
+
+.install-compare {
+  grid-template-columns: 1fr 1fr;
+}
+
+.install-list {
+  max-width: 720px;
+  margin: 0 auto;
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.install-list li {
+  color: var(--gray-700);
+  margin-bottom: 0.65rem;
+}
+
+.install-steps {
+  counter-reset: install-step;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.install-step {
+  position: relative;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.25rem 1.1rem 1.25rem 1.1rem;
+  border: 1px solid rgba(26, 82, 118, 0.1);
+}
+
+.install-step::before {
+  counter-increment: install-step;
+  content: counter(install-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 0.65rem;
+  border-radius: 50%;
+  background: var(--blue-primary);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.install-step h3 {
+  font-size: 1rem;
+  color: var(--blue-dark);
+  margin-bottom: 0.4rem;
+}
+
+.install-step p {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.install-reviews {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.install-review {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid rgba(26, 82, 118, 0.1);
+}
+
+.install-review-stars {
+  display: flex;
+  gap: 0.15rem;
+  color: var(--orange-primary);
+  margin-bottom: 0.5rem;
+}
+
+.install-review blockquote {
+  color: var(--gray-700);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.install-review cite {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--blue-dark);
+  font-size: 0.9rem;
+}
+
+.install-areas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.install-areas a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid rgba(41, 128, 185, 0.25);
+  color: var(--blue-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.install-areas a:hover,
+.install-areas a:focus-visible {
+  border-color: var(--orange-primary);
+  color: var(--orange-dark);
+}
+
+.install-related {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.install-related a {
+  color: var(--blue-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.install-page .contact-inner {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+@media (max-width: 1024px) {
+  .install-grid,
+  .install-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .install-section {
+    padding: 3rem 0;
+  }
+
+  .install-grid,
+  .install-compare,
+  .install-steps,
+  .install-reviews,
+  .install-page .contact-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .install-section {
+    padding: 2.25rem 0;
+  }
+}

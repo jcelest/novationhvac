@@ -35,6 +35,25 @@ export function trackCTAClick(ctaName, location = '') {
   });
 }
 
+export function trackReplacementCtaClick(location = '') {
+  trackEvent('replacement_cta_click', {
+    cta_location: location,
+  });
+}
+
+export function trackReplacementFormStart() {
+  trackEvent('replacement_form_start', {
+    form_name: 'replacement_estimate_form',
+  });
+}
+
+export function trackReplacementFormSubmit() {
+  trackEvent('replacement_form_submit', {
+    form_name: 'replacement_estimate_form',
+    success: true,
+  });
+}
+
 /**
  * Form view (when form enters viewport - optional)
  */

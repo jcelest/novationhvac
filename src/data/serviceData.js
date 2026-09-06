@@ -53,26 +53,33 @@ const iaqSvg = `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
 </svg>`;
 
 export const coolingData = {
-  metaTitle: 'Central Florida AC Repair & Cooling | Maintenance & Install | Novation',
+  metaTitle: 'Central Florida AC Repair & Cooling | Maintenance | Novation',
   metaDescription:
-    'Service-first cooling page: AC repair, tune-ups, and new cooling installation across Central Florida (Orlando, Kissimmee, Polk & Osceola routes). 24/7 emergency. Licensed CAC1823924. (407) 973-1523.',
+    'AC repair, tune-ups, and cooling service across Central Florida, including Orlando, Kissimmee, Polk, and Osceola routes. 24/7 emergency. Licensed CAC1823924. (407) 973-1523.',
   heroTitle: 'Central Florida AC Repair & Cooling Services',
-  heroTagline: 'Primary focus: fix failing systems fast — installs & replacements when you are ready',
+  heroTagline: 'Primary focus: diagnose and repair first. Request a replacement estimate when the system is at the end of its service life.',
   heroImage: '/images/cooling-ac.png',
+  breadcrumbName: 'Cooling',
+  relatedLinks: [
+    { to: '/ac-installation-replacement', label: 'Residential AC installation and replacement' },
+    { to: '/emergency-ac-repair', label: '24/7 emergency AC repair' },
+    { to: '/book-appointment', label: 'Book an appointment' },
+  ],
   sections: [
     {
-      title: 'AC Repair & Cooling Installation',
+      title: 'AC Repair and Cooling Service',
       paragraphs: [
-        'When you need AC repair or cooling work anywhere we dispatch—from Orlando and Kissimmee to Poinciana, Winter Haven, and Lakeland—Novation delivers. Our technicians prioritize accurate diagnosis and repair; we also size and install new cooling systems when replacement makes sense. This page is about cooling services regionally, not a single-city landing.',
-        'From ductless mini-split repair to central air conditioning installation, we handle all cooling systems. Same-day AC repair available. 24/7 emergency cooling service when you need it most. Licensed (CAC1823924), bonded, and insured.',
+        'When you need AC repair or cooling work anywhere we dispatch, from Orlando and Kissimmee to Poinciana, Winter Haven, and Lakeland, Novation delivers. Our technicians prioritize accurate diagnosis and repair. This page is about cooling service regionally, not a single-city landing.',
+        'From ductless mini-split repair to central air service, we handle cooling systems homeowners already have. Same-day AC repair is available when the schedule allows. 24/7 emergency cooling service when you need it most. Licensed (CAC1823924), bonded, and insured. If you are comparing a new system, use the replacement estimate page.',
       ],
       image: '/images/cooling-ac.png',
+      alt: 'Outdoor air conditioning equipment serviced by Novation HVAC',
     },
     {
       title: 'Preventive Cooling Maintenance',
       paragraphs: [
         'Regular AC maintenance extends system life and prevents costly repairs. Our cooling tune-ups include refrigerant checks, coil cleaning, filter replacement, and full system inspection. Schedule your AC maintenance today and stay cool all season.',
-        'Florida summers demand reliable cooling. Don\'t wait for a breakdown — proactive HVAC maintenance saves money and keeps your home comfortable. Ask about our maintenance plans.',
+        'Florida summers demand reliable cooling. Do not wait for a breakdown. Proactive HVAC maintenance helps catch problems early and keeps your home comfortable. Ask about our maintenance plans.',
       ],
       svg: coolingSvg,
     },
@@ -81,6 +88,7 @@ export const coolingData = {
     { q: 'How much does AC repair cost?', a: 'AC repair costs vary by issue. We offer free estimates and transparent pricing. Most repairs are completed same-day.' },
     { q: 'Do you offer 24/7 emergency AC repair?', a: 'Yes. Our team provides 24-hour emergency cooling repair throughout Central Florida.' },
     { q: 'What areas do you serve?', a: 'We serve Orlando, Kissimmee, Poinciana, Winter Haven, Auburndale, Haines City, Dr. Phillips, Windermere, Altamonte Springs, and all of Central Florida.' },
+    { q: 'Do you replace AC systems?', a: 'Yes. Use the AC installation and replacement page to request a free residential estimate, or call (407) 973-1523.' },
   ],
 };
 
@@ -88,8 +96,13 @@ export const heatingData = {
   metaTitle: 'Central Florida Heating Repair & Furnace Service | Heat Pumps | Novation',
   metaDescription:
     'Heating-first: furnace and heat pump repair, safety checks, and new heating equipment across Central Florida. 24/7 emergency when available. Licensed CAC1823924. (407) 973-1523.',
-  heroTitle: 'Heating Repair & Furnace Services — Central Florida',
-  heroTagline: 'Repairs and tune-ups first — new heat pumps & furnaces when replacement is the right call',
+  heroTitle: 'Heating Repair & Furnace Services, Central Florida',
+  heroTagline: 'Repairs and tune-ups first. New heat pumps and furnaces when replacement is the right call.',
+  breadcrumbName: 'Heating',
+  relatedLinks: [
+    { to: '/ac-installation-replacement', label: 'Residential AC and heat pump replacement estimate' },
+    { to: '/cooling', label: 'Cooling and AC repair' },
+  ],
   heroImage: 'https://images.unsplash.com/photo-1631545914468-f0f4ac229661?w=1920&q=80',
   sections: [
     {
@@ -121,7 +134,12 @@ export const indoorAirQualityData = {
   metaDescription:
     'IAQ-focused services: filtration, humidity control, and air purification—separate from generic AC repair pages. Central Florida. Licensed CAC1823924. (407) 973-1523.',
   heroTitle: 'Indoor Air Quality Services',
-  heroTagline: 'Filtration, purification & humidity — not a substitute for your city AC repair page',
+  heroTagline: 'Filtration, purification, and humidity. Not a substitute for your city AC repair page.',
+  breadcrumbName: 'Indoor Air Quality',
+  relatedLinks: [
+    { to: '/cooling', label: 'Cooling and AC repair' },
+    { to: '/ac-installation-replacement', label: 'AC installation and replacement' },
+  ],
   heroImage: '/images/air-quality-hvac.png',
   sections: [
     {

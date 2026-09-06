@@ -23,7 +23,7 @@ export default function SpecialsPage() {
         {renderSeoOgTags({ url: SPECIALS_URL, title: SPECIALS_TITLE, description: SPECIALS_DESC })}
       </Helmet>
       <Header />
-      <main>
+      <main id="main-content">
         <section className="hero hero-compact">
           <div className="hero-bg" style={{ background: `linear-gradient(135deg, rgba(26, 82, 118, 0.92) 0%, rgba(41, 128, 185, 0.88) 50%, rgba(52, 152, 219, 0.85) 100%), url(https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80) center/cover no-repeat` }}></div>
           <div className="hero-overlay"></div>

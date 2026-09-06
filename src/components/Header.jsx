@@ -21,6 +21,9 @@ export default function Header() {
 
   return (
     <header className="header">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <div className="header-top">
         <div className="container header-top-inner">
           <div className="zip-lookup">
@@ -71,6 +74,7 @@ export default function Header() {
         <div className="container nav-inner">
           <ul className="nav-links">
             <li><Link to="/cooling" onClick={() => setMenuOpen(false)}>Cooling</Link></li>
+            <li><Link to="/ac-installation-replacement" onClick={() => setMenuOpen(false)}>AC Replacement</Link></li>
             <li><Link to="/heating" onClick={() => setMenuOpen(false)}>Heating</Link></li>
             <li><Link to="/indoor-air-quality" onClick={() => setMenuOpen(false)}>Indoor Air Quality</Link></li>
             <li><Link to="/specials" onClick={() => setMenuOpen(false)}>Specials</Link></li>

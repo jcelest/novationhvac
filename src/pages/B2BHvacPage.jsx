@@ -66,7 +66,7 @@ export default function B2BHvacPage() {
         <script type="application/ld+json">{jsonLdStringify(faqSchema)}</script>
       </Helmet>
       <Header />
-      <main className="service-page">
+      <main id="main-content" className="service-page">
         <section className="hero hero-compact">
           <div
             className="hero-bg"

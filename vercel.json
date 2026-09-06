@@ -10,11 +10,5 @@
       "destination": "https://novationhvac.com/$1",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!api/|assets/|images/).*)",
-      "destination": "/index.html"
-    }
   ]
 }

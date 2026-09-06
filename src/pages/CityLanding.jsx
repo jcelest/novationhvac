@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Promos from '../components/Promos';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Breadcrumbs from '../components/Breadcrumbs';
 import { CoolingIcon, HeatingIcon, IAQIcon, MaintenanceIcon } from '../components/ServiceIcons';
 import '../components/Hero.css';
 import '../components/Services.css';
@@ -13,6 +14,7 @@ import '../components/Contact.css';
 import './CityLanding.css';
 import { renderSeoOgTags } from '../components/SeoOgTags';
 import GeoInternalLinks from '../components/GeoInternalLinks';
+import ReplacementCta from '../components/ReplacementCta';
 import CityHeroLcpImage from '../components/CityHeroLcpImage';
 import { SITE_URL } from '../utils/seoConstants';
 import { breadcrumbJsonLd } from '../utils/schemaBreadcrumb';
@@ -28,6 +30,28 @@ export default function CityLanding({ cityData }) {
     { name: 'Home', path: '/' },
     { name, path: `/${slug}` },
   ]);
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: metaTitle,
+    description: metaDescription,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${canonicalUrl}#service` },
+  };
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${canonicalUrl}#service`,
+    name: `HVAC Services in ${name}`,
+    description: metaDescription,
+    provider: { '@id': `${SITE_URL}/#business` },
+    areaServed: name,
+    serviceType: 'Heating, ventilation, and air conditioning',
+  };
 
   const faqSchema = seoContent?.faqs?.length > 0 ? {
     '@context': 'https://schema.org',
@@ -50,6 +74,8 @@ export default function CityLanding({ cityData }) {
         <link rel="canonical" href={canonicalUrl} />
         {renderSeoOgTags({ url: canonicalUrl, title: metaTitle, description: metaDescription })}
         <script type="application/ld+json">{jsonLdStringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{jsonLdStringify(webPageSchema)}</script>
+        <script type="application/ld+json">{jsonLdStringify(serviceSchema)}</script>
         {faqSchema && (
           <script type="application/ld+json">{jsonLdStringify(faqSchema)}</script>
         )}
@@ -58,19 +84,20 @@ export default function CityLanding({ cityData }) {
       <div className="city-banner">
         <span>HVAC Services in {name} — Same-Day & 24/7 Emergency</span>
       </div>
-      <main>
+      <main id="main-content">
         <section className="hero">
           <div className="hero-bg" aria-hidden="true">
             <CityHeroLcpImage />
           </div>
           <div className="hero-overlay"></div>
           <div className="hero-content container">
+            <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name, path: `/${slug}` }]} />
             <span className="city-badge">Serving {name}</span>
             <h1 className="hero-title">{heroTitle}</h1>
             <p className="hero-tagline">{heroTagline}</p>
             <div className="hero-buttons">
               <Link to="/book-appointment" className="btn-primary">Book Appointment</Link>
-              <a href="#contact" className="btn-secondary">Flexible Financing</a>
+              <Link to="/ac-installation-replacement" className="btn-secondary">Free Replacement Estimate</Link>
             </div>
             <GeoInternalLinks slug={slug} />
           </div>
@@ -85,6 +112,7 @@ export default function CityLanding({ cityData }) {
               <h2>HVAC & Cooling Services in {name}</h2>
               <p>{serviceIntro}</p>
               <Link to="/book-appointment" className="btn-book">Book Your Appointment</Link>
+              <ReplacementCta location={`city_${slug}`} />
             </div>
             <div className="services-grid">
               <article className="service-card">
@@ -133,15 +161,26 @@ export default function CityLanding({ cityData }) {
           </div>
         </section>
 
-        {seoContent && (
+        {(seoContent || cityData.relatedLinks?.length > 0) && (
           <section id="seo-content" className="about">
             <div className="container about-inner">
               <div className="about-content">
-                <h2>{seoContent.h2}</h2>
-                {seoContent.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-                {seoContent.faqs && (
+                {seoContent && (
+                  <>
+                    <h2>{seoContent.h2}</h2>
+                    {seoContent.paragraphs.map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </>
+                )}
+                {cityData.relatedLinks?.length > 0 && (
+                  <nav className="city-related-links" aria-label="Related service pages">
+                    {cityData.relatedLinks.map(({ to, label }) => (
+                      <Link key={to} to={to}>{label}</Link>
+                    ))}
+                  </nav>
+                )}
+                {seoContent?.faqs && (
                   <div className="seo-faqs">
                     <h3>Frequently Asked Questions</h3>
                     {seoContent.faqs.map((faq, i) => (

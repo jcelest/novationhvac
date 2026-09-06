@@ -19,6 +19,7 @@ import {
   SITE_NAME,
 } from '../src/utils/seoConstants.js';
 import { b2bHvacMeta } from '../src/data/b2bHvacData.js';
+import { INSTALL_SLUG, installMeta } from '../src/data/acInstallationData.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(__dirname, '../dist');
@@ -27,7 +28,12 @@ const STATIC_PAGE_META = {
   'emergency-ac-repair': {
     title: '24/7 Emergency AC Repair Central Florida | Same-Day Service | Novation',
     description:
-      'Emergency-first intent: no-cool AC repair after hours and nights—same-day when available across Central Florida. Not your primary install or Orlando metro page. Call (407) 973-1523.',
+      'Emergency-first intent: no-cool AC repair after hours and nights. Same-day when available across Central Florida. Not your primary install or Orlando metro page. Call (407) 973-1523.',
+  },
+  [INSTALL_SLUG]: {
+    title: installMeta.title,
+    description: installMeta.description,
+    robots: 'index, follow',
   },
   'hvac-contractor-b2b': {
     title: b2bHvacMeta.title,
@@ -213,6 +219,14 @@ function main() {
     console.error('inject-html-seo: home entry missing.');
     process.exit(1);
   }
+
+  const notFoundHtml = applySeo(template, {
+    canonical: `${SITE_URL}/`,
+    title: 'Page Not Found | Novation HVAC',
+    description: 'This page is not available. Return to Novation Heating and Air Conditioning.',
+    robots: 'noindex, nofollow',
+  });
+  fs.writeFileSync(path.join(distDir, '404.html'), notFoundHtml);
 
   console.log(`inject-html-seo: wrote dist/index.html + ${extraCount} route HTML files (${entries.length} total routes).`);
 }

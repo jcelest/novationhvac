@@ -13,6 +13,7 @@ import '../components/Contact.css';
 import './CityLanding.css';
 import { renderSeoOgTags } from '../components/SeoOgTags';
 import GeoInternalLinks from '../components/GeoInternalLinks';
+import ReplacementCta from '../components/ReplacementCta';
 import CityHeroLcpImage from '../components/CityHeroLcpImage';
 import { SITE_URL } from '../utils/seoConstants';
 import { breadcrumbJsonLd } from '../utils/schemaBreadcrumb';
@@ -59,7 +60,7 @@ export default function NeighborhoodLanding({ neighborhoodData }) {
       <div className="city-banner">
         <span>HVAC Services in {name} — Same-Day & 24/7 Emergency</span>
       </div>
-      <main>
+      <main id="main-content">
         <section className="hero">
           <div className="hero-bg" aria-hidden="true">
             <CityHeroLcpImage />
@@ -89,6 +90,7 @@ export default function NeighborhoodLanding({ neighborhoodData }) {
               <h2>HVAC & Cooling Services in {name}</h2>
               <p>{serviceIntro}</p>
               <Link to="/book-appointment" className="btn-book">Book Your Appointment</Link>
+              <ReplacementCta location={`neighborhood_${slug}`} />
             </div>
             <div className="services-grid">
               <article className="service-card">

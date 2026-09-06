@@ -65,6 +65,36 @@
   margin-bottom: 1.5rem;
 }
 
+.replacement-form-intro {
+  color: var(--gray-700);
+  font-size: 0.92rem;
+  margin: -0.75rem 0 1.25rem;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 0.35rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  margin-bottom: 0.35rem;
+}
+
+.form-field-error {
+  color: #c0392b;
+  font-size: 0.8rem;
+  margin: 0 0 0.35rem;
+}
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea {

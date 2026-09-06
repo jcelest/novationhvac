@@ -27,6 +27,7 @@ export default function Footer() {
           <div className="footer-links-group">
             <span className="footer-label">Services</span>
             <Link to="/cooling">Cooling</Link>
+            <Link to="/ac-installation-replacement">AC Installation</Link>
             <Link to="/heating">Heating</Link>
             <Link to="/indoor-air-quality">Indoor Air Quality</Link>
             <Link to="/hvac-contractor-b2b">B2B Partnerships</Link>

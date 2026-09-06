@@ -104,6 +104,7 @@ const createCityData = (name, slug, options = {}) => ({
   aboutPara1: options.aboutPara1 || `Novation Heating and Cooling proudly serves ${name} and Central Florida. Our certified technicians provide cooling repair, furnace repair, HVAC installation, and 24/7 emergency AC repair. We are licensed, bonded, and insured for your peace of mind.`,
   aboutPara2: options.aboutPara2 || `Florida's climate demands reliable cooling. Our HVAC services in ${name} include AC repair, maintenance plans, and new system installation. We offer same-day service and free estimates. Call for HVAC contractors ${name} residents trust.`,
   serviceIntro: options.serviceIntro || `AC repair ${name}, cooling repair, furnace repair, and HVAC installation. Novation delivers trusted heating and cooling services throughout ${name}.`,
+  relatedLinks: options.relatedLinks || [],
   seoContent: {
     h2: options.seoH2 || `Why ${name} Residents Choose Novation for HVAC & Cooling`,
     paragraphs: options.seoParagraphs || [
@@ -443,10 +444,55 @@ export const altamonteSpringsData = createCityData('Altamonte Springs', 'altamon
   ],
 });
 
+export const davenportData = createCityData('Davenport', 'davenport', {
+  metaTitle: 'Davenport FL AC Repair & Replacement | HVAC Service | Novation',
+  metaDescription:
+    'AC repair and replacement estimates for Davenport FL homeowners. US-27 corridor, Four Corners, and ChampionsGate communities. Licensed CAC1823924. (407) 973-1523.',
+  heroTitle: 'Davenport FL AC Repair and Replacement',
+  heroTagline: 'US-27 corridor and Four Corners communities — repair, replacement estimates, and emergency service',
+  aboutTitle: 'HVAC Service for Davenport and the Four Corners Area',
+  aboutSubtitle: 'Growing Polk County communities along US-27',
+  aboutPara1:
+    'Davenport is one of the fastest-growing areas in Central Florida, with newer subdivisions, vacation-rental communities, and established neighborhoods spread across the US-27 and US-192 corridors near the Four Corners. Novation dispatches licensed crews from our Poinciana base directly into Davenport, ChampionsGate, and surrounding Polk County communities for AC repair, heat pump service, and free replacement estimates.',
+  aboutPara2:
+    'Many Davenport homes built in the 2000s and early 2010s now carry systems approaching replacement age. We provide honest repair-versus-replace guidance so you can make an informed decision, not a rushed one. Call (407) 973-1523 or request a free replacement estimate online.',
+  serviceIntro:
+    'Davenport calls include vacation-rental turnovers, primary residences off US-27, and newer build communities near ChampionsGate. We stock common parts for both the repair run and the replacement conversation.',
+  seoH2: 'Davenport FL HVAC — AC repair, replacement, and US-27 corridor coverage',
+  seoParagraphs: [
+    'Davenport searches that land here typically combine phrases like "AC repair Davenport FL," "HVAC near US-27," "replacement estimate Davenport," and "heat pump service Four Corners." This page stays distinct from our Polk County umbrella and our Haines City page so each URL answers a specific geographic question.',
+    'Vacation-rental properties in the Davenport and ChampionsGate area require reliable systems year-round. We understand the urgency of a no-cool situation in a rental and work to address emergency calls as quickly as capacity allows. Property managers can call directly and let us know the access instructions.',
+    'For primary homeowners evaluating aging equipment, our free replacement estimate covers the current system, comfort concerns, sizing considerations, and a written scope — no commitment required to receive the evaluation. Financing on qualifying systems may be available; ask during the estimate.',
+  ],
+  relatedLinks: [
+    { to: '/cooling', label: 'AC repair and cooling services' },
+    { to: '/haines-city', label: 'Haines City HVAC service' },
+  ],
+  faqs: [
+    {
+      q: 'Do you service Davenport FL and ChampionsGate?',
+      a: 'Yes. We dispatch from Poinciana into Davenport, ChampionsGate, and nearby Four Corners communities for AC repair, maintenance, and replacement estimates.',
+    },
+    {
+      q: 'Can I get a free replacement estimate in Davenport?',
+      a: 'Yes. We offer free residential AC replacement estimates. Use the form at novationhvac.com/ac-installation-replacement or call (407) 973-1523.',
+    },
+    {
+      q: 'Is 24/7 emergency HVAC available in Davenport?',
+      a: 'Call (407) 973-1523 for emergency cooling and heating dispatch when technicians are available. We prioritize true no-cool situations.',
+    },
+    {
+      q: 'How is Davenport different from your Polk County page?',
+      a: 'The Polk County page covers the full county. This page focuses specifically on Davenport and the Four Corners corridor with localized content and routing.',
+    },
+  ],
+});
+
 export const allCityData = {
   orlando: orlandoData,
   kissimmee: kissimmeeData,
   poinciana: poincianaData,
+  davenport: davenportData,
   'osceola-county': osceolaCountyData,
   'orange-county': orangeCountyData,
   'polk-county': polkCountyData,

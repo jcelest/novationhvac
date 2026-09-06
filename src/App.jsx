@@ -22,12 +22,16 @@ import BookAppointmentPage from './pages/BookAppointmentPage';
 import ServiceAreasPage from './pages/ServiceAreasPage';
 import EmergencyACPage from './pages/EmergencyACPage';
 import B2BHvacPage from './pages/B2BHvacPage';
+import AcInstallationPage from './pages/AcInstallationPage';
+import NotFoundPage from './pages/NotFoundPage';
+import ConsideringReplacement from './components/ConsideringReplacement';
 import FlyerViewPage from './pages/FlyerViewPage';
 import { coolingData, heatingData, indoorAirQualityData } from './data/serviceData';
 import {
   orlandoData,
   kissimmeeData,
   poincianaData,
+  davenportData,
   osceolaCountyData,
   orangeCountyData,
   polkCountyData,
@@ -39,7 +43,7 @@ import {
   altamonteSpringsData,
 } from './data/cityData';
 import { allNeighborhoodData } from './data/neighborhoodData';
-import { organizationJsonLd } from './data/organizationJsonLd';
+import { organizationJsonLd, websiteJsonLd } from './data/organizationJsonLd';
 import { jsonLdStringify } from './utils/jsonLdScript';
 
 export default function App() {
@@ -49,6 +53,7 @@ export default function App() {
     <>
       <Helmet>
         <script type="application/ld+json">{jsonLdStringify(organizationJsonLd)}</script>
+        <script type="application/ld+json">{jsonLdStringify(websiteJsonLd)}</script>
       </Helmet>
       <ScrollToTop />
       <Routes>
@@ -63,10 +68,11 @@ export default function App() {
               {renderSeoOgTags({ url: `${SITE_URL}/`, title: HOME_PAGE_TITLE, description: HOME_PAGE_DESCRIPTION })}
             </Helmet>
             <Header />
-            <main>
+            <main id="main-content">
               <Hero />
               <Promos />
               <Services />
+              <ConsideringReplacement />
               <About />
               <Specials />
               <Contact />
@@ -79,6 +85,7 @@ export default function App() {
       <Route path="/heating" element={<ServicePage data={heatingData} />} />
       <Route path="/indoor-air-quality" element={<ServicePage data={indoorAirQualityData} />} />
       <Route path="/emergency-ac-repair" element={<EmergencyACPage />} />
+      <Route path="/ac-installation-replacement" element={<AcInstallationPage />} />
       <Route path="/hvac-contractor-b2b" element={<B2BHvacPage />} />
       <Route path="/specials" element={<SpecialsPage />} />
       <Route path="/service-areas" element={<ServiceAreasPage />} />
@@ -107,6 +114,7 @@ export default function App() {
       />
       <Route path="/orlando" element={<CityLanding cityData={orlandoData} />} />
       <Route path="/kissimmee" element={<CityLanding cityData={kissimmeeData} />} />
+      <Route path="/davenport" element={<CityLanding cityData={davenportData} />} />
       <Route path="/poinciana" element={<CityLanding cityData={poincianaData} />} />
       <Route path="/osceola-county" element={<CityLanding cityData={osceolaCountyData} />} />
       <Route path="/orange-county" element={<CityLanding cityData={orangeCountyData} />} />
@@ -120,6 +128,7 @@ export default function App() {
         {Object.entries(allNeighborhoodData).map(([slug, data]) => (
           <Route key={slug} path={`/${slug}`} element={<NeighborhoodLanding neighborhoodData={data} />} />
         ))}
+        <Route path="*" element={<NotFoundPage />} />
     </Routes>
     </>
   );

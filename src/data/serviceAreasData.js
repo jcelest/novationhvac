@@ -78,6 +78,13 @@ export const serviceAreas = [
     nearby: 'Winter Haven, Davenport, Polk County',
   },
   {
+    name: 'Davenport',
+    slug: 'davenport',
+    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
+    description: 'AC repair, replacement estimates, and HVAC service for Davenport, ChampionsGate, and the Four Corners area along US-27.',
+    nearby: 'Haines City, Kissimmee, Poinciana',
+  },
+  {
     name: 'Dr. Phillips',
     slug: 'dr-phillips',
     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',

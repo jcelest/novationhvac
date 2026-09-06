@@ -26,7 +26,7 @@ export default function ContactPage() {
         {renderSeoOgTags({ url: CONTACT_URL, title: CONTACT_TITLE, description: CONTACT_DESC })}
       </Helmet>
       <Header />
-      <main>
+      <main id="main-content">
         <section className="hero hero-compact">
           <div className="hero-bg" style={{ background: `linear-gradient(135deg, rgba(26, 82, 118, 0.92) 0%, rgba(41, 128, 185, 0.88) 50%, rgba(52, 152, 219, 0.85) 100%), url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80) center/cover no-repeat` }}></div>
           <div className="hero-overlay"></div>

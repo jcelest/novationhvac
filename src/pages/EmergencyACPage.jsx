@@ -8,6 +8,9 @@ import '../components/About.css';
 import '../components/Contact.css';
 import './ServicePage.css';
 import { renderSeoOgTags } from '../components/SeoOgTags';
+import ReplacementCta from '../components/ReplacementCta';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { breadcrumbJsonLd } from '../utils/schemaBreadcrumb';
 import { jsonLdStringify } from '../utils/jsonLdScript';
 import { SITE_URL } from '../utils/seoConstants';
 
@@ -44,14 +47,22 @@ export default function EmergencyACPage() {
         <meta name="description" content={EMERGENCY_DESC} />
         <link rel="canonical" href={EMERGENCY_CANONICAL} />
         {renderSeoOgTags({ url: EMERGENCY_CANONICAL, title: EMERGENCY_TITLE, description: EMERGENCY_DESC })}
+        <script type="application/ld+json">{jsonLdStringify(breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'Emergency AC Repair', path: '/emergency-ac-repair' },
+        ]))}</script>
         <script type="application/ld+json">{jsonLdStringify(faqSchema)}</script>
       </Helmet>
       <Header />
-      <main className="service-page">
+      <main id="main-content" className="service-page">
         <section className="hero hero-compact">
           <div className="hero-bg" style={{ background: `linear-gradient(135deg, rgba(192, 57, 43, 0.92) 0%, rgba(211, 84, 0, 0.9) 50%, rgba(230, 126, 34, 0.88) 100%), url(https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80) center/cover no-repeat` }}></div>
           <div className="hero-overlay"></div>
           <div className="hero-content container">
+            <Breadcrumbs items={[
+              { name: 'Home', path: '/' },
+              { name: 'Emergency AC Repair', path: '/emergency-ac-repair' },
+            ]} />
             <span className="emergency-badge">24/7 EMERGENCY</span>
             <h1 className="hero-title">24/7 Emergency AC Repair — No-Cool Response</h1>
             <p className="hero-tagline">After-hours breakdowns first—not scheduled installs. Same-day when available across Central Florida.</p>
@@ -82,6 +93,7 @@ export default function EmergencyACPage() {
                 <p>We prioritize emergency calls. When you contact us for 24-hour AC repair, our team works to get a technician to your home as quickly as possible. Many repairs are completed in a single visit—no waiting days for parts or follow-up appointments when we can fix it on the spot.</p>
                 <p>Serving Orlando, Kissimmee, Poinciana, St. Cloud, Celebration, Winter Park, Oviedo, and all of Central Florida. Same-day emergency AC repair and 24/7 HVAC service. Call <strong>(407) 973-1523</strong> now.</p>
                 <Link to="/book-appointment" className="btn-primary" style={{ marginTop: '1rem', display: 'inline-block' }}>Book Appointment</Link>
+                <ReplacementCta location="emergency_page" />
               </div>
             </div>
           </div>
